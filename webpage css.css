@@ -1,0 +1,296 @@
+html, body{
+	 margin:auto;
+	 }
+     .column{
+	   display:inline-block;
+	 }
+	 .headlabelcolor{
+	    color:white;
+	 }
+	 #label{
+	   text-align:left;
+	   padding:15px
+	 }
+	 .border_table{
+	 border:1px solid black;
+	 }
+	 .td{
+	 border:1px solid black;
+	 
+	 }
+	 .page_background_color{
+	 position:absolute;
+	 left:0px;
+	 top:0px;
+	 z-index:-1;
+	 color: gray;
+	 
+	 }
+	 .headlabel{
+		 position:absolute;
+		 left:0px;
+		 top:0px;
+		 z-index:1;
+	 }
+	 label{
+	  color:rgb(0, 0, 0);
+	 }
+
+	 .text_align_left{
+		text-align:left;
+	 }
+	 .headlabelhover:hover{
+	    color:gray;
+	 }
+
+	
+
+	 .forum{               /**/
+  position: relative;
+  margin: auto 90px;
+}
+.code .forum-1{            /*开启绝对定位*/
+  position: absolute;
+  overflow: hidden;
+  height: 0;
+  transition-duration: 0.5s;
+}
+.forum:hover .forum-1{    /*鼠标移入释放高度*/
+  height: 250px;
+}
+.code{
+  width: 250px;
+}
+.code dt{                     /*弹出菜单*/
+  float: left;
+  width: 300px;
+  height:30px;
+  background-color:black;
+  text-align: center;
+  margin: auto;
+  font-size: 20px;
+}
+
+a:hover{
+	color: red;
+}
+#fixed-bottom {
+	position:fixed;
+	bottom:0px;
+}
+.hfbackground {
+	background-color:black;
+}
+.text {
+	color:white;
+	}
+#footer{
+	    width:1750px;
+		text-align:center;
+}
+
+/*tr list*/
+.soundobject-list-tr{
+ /*stroke:black;*/
+ transition:transform 1s, height 1s;	
+ height: 150px;
+}
+.soundobject-list-tr:hover{
+	transform: scale(1.1);
+	height: 200px;
+	background-color: orange;
+	box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 10px 24px 0 rgba(0, 0, 0, 0.19);
+}
+/*soundobjectcombination tr*/
+.soundobject-combination-list-tr{
+	/*stroke:black;*/
+	transition:transform 1s;	
+	height: 280px;
+   }
+   .soundobject-combination-list-tr:hover{
+	   transform: scale(1.1);
+	   background-color: orange;
+	   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 10px 24px 0 rgba(0, 0, 0, 0.19);
+   }
+/*labelButton*/
+.labelButton{
+	width:200px;
+	height: 50px;
+	transition: width 1s, height 1s;
+}
+.labelButton:hover{
+	width:250px;
+	height:60px;
+	filter:drop-shadow(4px 4px 4px blue);
+}
+/*background animation*/
+body {
+				
+	animation-name: backgroundAnimi;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+	animation-timing-function:ease-in-out;
+	animation-play-state:running;
+
+	-webkit-animation-name: backgroundAnimi;
+	-webkit-animation-duration: 6s;
+}
+@keyframes backgroundAnimi {
+	0%{
+		background-image: linear-gradient(white,red);
+	}
+	16.7%{
+		background-image: linear-gradient(white,orange);
+	}
+	33.4%{
+		background-image: linear-gradient(white,yellow);
+	}
+	50.1%{
+		background-image: linear-gradient(white,green);
+	}
+	66.8%{
+		background-image: linear-gradient(white,blue);
+	}
+	83.5%{
+		background-image: linear-gradient(white,purple);
+	}
+	100%{
+		background-image: linear-gradient(white,red);
+	}
+
+	
+}
+@-webkit-keyframes backgroundAnimi {
+	0%{
+		background-image: linear-gradient(white,red);
+	}
+	16.7%{
+		background-image: linear-gradient(white,orange);
+	}
+	33.4%{
+		background-image: linear-gradient(white,yellow);
+	}
+	50.1%{
+		background-image: linear-gradient(white,green);
+	}
+	66.8%{
+		background-image: linear-gradient(white,blue);
+	}
+	83.5%{
+		background-image: linear-gradient(white,purple);
+	}
+	100%{
+		background-image: linear-gradient(white,red);
+	}	
+}
+/*expression window*/
+.div_expression{
+	width:300px;
+	height:510px;
+	border:2px solid;
+	border-radius: 50px 20px;
+	z-index: 1;
+	overflow: hidden;
+	transition: height 1s;
+}
+
+.div_expression:hover{
+	box-shadow:10px 10px 10px purple;
+	height:610px;
+}
+
+/*button transition*/
+.div-button{
+	height:75px;
+	width: 150px;
+	border-radius:10%;
+	background:black; 
+	z-index: 1;
+	transition: transform 2s, height 2s, border-radius 2s;
+}
+.div-button:hover{
+	transform: scale(1.5);
+	height:150px;
+	border-radius: 50%;
+	filter:drop-shadow(10px 10px 10px blue);
+}
+/*button hover control the position of the p at the same time*/
+.pbutton{
+	text-align: center;
+	padding-top: 15%;
+	transition: padding-top 2s;
+}
+.div-button:hover .pbutton{ 
+    padding-top: 40%;
+}
+/*p tips----button hover control the show of tips at the same time*/
+.tips{
+	color: black;
+	position: absolute;
+	display: none;
+}
+.div-button:hover .tips{
+	display: block;
+}
+
+/*p_title*/
+.p_title{ 
+	font-size: 20px;
+	transition: font-size 2s;
+}
+.p_title:hover{ 
+	font-size: 30px;
+}
+.pA{
+	animation-name: pAnimi;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+	animation-timing-function:ease-in-out;
+	animation-play-state:running;
+}
+@keyframes pAnimi {
+	0%{
+	 color:purple;
+	}
+	16.7%{
+	 color: blue;
+	}
+	33.4%{
+     color: green;		
+	}
+	50.1%{
+	 color:yellow;
+	}
+	66.8%{
+	 color: orange;
+	}
+	83.5%{
+	 color: red;
+	}
+	100%{
+		color: purple;
+	}
+
+	
+}
+
+/*div side*/
+.div_side{
+	background-color:aqua;
+	z-index: 0;
+	opacity: 0%;
+}
+.div_side:hover{
+	opacity: 30%;
+}
+/*other rect*/
+.anirect{
+	stroke-dasharray: 1000;
+	animation: anirect 7s linear infinite;
+	filter:blur(5px);
+}
+@keyframes anirect {
+	to{
+     stroke-dashoffset: 10000;
+	}
+}

@@ -1,0 +1,161 @@
+<html>
+<head style="padding:0px;width:100%;margin:0px">
+   <link type="text/css" rel="stylesheet" href="webpage css.css">
+     <table style = "width:100%;padding:10px;background-color:black;position:fixed;z-index:2">
+		    <th>
+			  <img class="text" id="footer" src="Musimorph---Blue.png" style="width: 100px;height:20px"></img>
+			</th>
+			<th style = "width:40%;">
+			</th>
+			<th>
+			  <label class="headlabelcolor headlabelhover" id="label">Make</label>
+			</th>
+			<th>
+				<label class="headlabelcolor headlabelhover" id="label">Position</label>
+			</th>
+			
+			<th>
+			  <label style = "text-align:right;" class="headlabelcolor headlabelhover">Use</label>
+			</th>
+		 </table>
+
+</head>
+<body>
+	<div style="height:80px"></div>
+	<div class="div_side" style="width:760px;height:750px;top:0px;left:0px;position: absolute">
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="top:150px;left:200px;position:absolute;z-index:1">
+			<rect width="100" height="100" style="stroke-width:10px;stroke:white;fill-opacity: 0"/>
+		</svg>
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="top:350px;left:100px;position:absolute;z-index:1">
+			<rect width="100" height="100" style="stroke-width:10px;stroke:white;fill-opacity: 0"/>
+		</svg>
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="top:550px;left:300px;position:absolute;z-index:1">
+			<rect width="100" height="100" style="stroke-width:10px;stroke:white;fill-opacity: 0"/>
+		</svg>
+	</div>
+	<div class="div_side" style="width:772px;height:750px;top:0px;right:0px;position: absolute">
+	    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="top:150px;right:100px;position:absolute;z-index:1">
+			<rect width="100" height="100" style="stroke-width:10px;stroke:white;fill-opacity: 0"/>
+		</svg>
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="top:350px;right:0px;position:absolute;z-index:1">
+			<rect width="100" height="100" style="stroke-width:10px;stroke:white;fill-opacity: 0"/>
+		</svg>
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="top:550px;right:200px;position:absolute;z-index:1">
+			<rect width="100" height="100" style="stroke-width:10px;stroke:white;fill-opacity: 0"/>
+		</svg>
+	</div>
+	<div class="column div_expression" style="left:170px;top:90px;position:absolute;">
+	 <p><h1>What is sound objects ?</h1>
+		Each of the commands is instantiated 
+		(for example, creating a class, naming and locating it) by a specific letter. For instance, 
+		let's move to the x and y coordinates (10, 10). The "Move to" command is called with the 
+		letter M. When the parser runs into this letter, it knows it needs to move to a point. 
+		So, to move to (10, 10) the command to use would be M 10 10. After that, the parser 
+		begins reading for the next command.
+
+        All of the commands also come in two variants. An uppercase letter specifies absolute 
+		coordinates on the page, and a lowercase letter specifies relative coordinates 
+		(e.g., move 10px up and 7px to the left from the last point).
+
+		Several Bézier curves can be strung together to create extended, smooth shapes. Often, 
+        the control point on one side of a point will be a reflection of the control point used 
+		on the other side to keep the slope constant. In this case, a shortcut version of the 
+		cubic Bézier can be used, designated by the command S (or s).
+
+	 </p>
+	 <table>
+		<tr>
+			<td>
+	            <img src="Cube.JPG" style="margin:10px;width: 50px;height: 50px;border-radius: 30%;"></img>
+		    </td>
+			<td>
+				<img src="ball.JPG" style="margin:10px;width: 50px;height:50px;border-radius: 30%;"></img>
+			</td>
+		    <td>
+				<img src="oval.JPG" style="margin:10px;width: 50px;height:50px;border-radius: 30%;"></img>
+			</td>
+			<td>
+				<img src="Triangle.JPG" style="margin:10px;width: 50px;height:50px;border-radius: 30%;"></img>
+			</td>
+		</tr>
+	 </table>
+	</div>
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="top:250px;left:500px;position:absolute;z-index:-2">
+		<rect class="anirect" width="500" height="800" style="stroke-width:10px;stroke:white;fill-opacity: 0"></rect>
+	</svg>
+	<div class="column" style="top: 320px;left:550px;position:absolute">
+    <table style="z-index: -1;">
+		<tr>
+			<td>
+				<div class="div-button"><p class="pA pbutton">Enter Sound Objects page 
+					<p class="tips" style="top:150px;margin-left: 36%;">Click!</p>
+				</div>
+			</td>
+			<td style="width:110px">
+			</td>
+			<td>
+				<div class="div-button"><p class="pA pbutton">Enter Sound Objects Combination page
+					<p class="tips" style="top:150px;margin-left: 36%;">Click!</p>
+				</div>
+			</td>
+		</tr>	
+	</table>
+	</div>
+	<div class="column div_expression" style="right: 170px;top: 90px;position:absolute;">
+		<p><h1>What is sound objects combination ?</h1>
+		The last set of coordinates here (x, y) specify where the line should end. 
+		The other two are control points. (x1, y1) is the control point for the 
+		start of the curve, and (x2, y2) is the control point for the end. The 
+		control points essentially describe the slope of the line starting at 
+		each point. The Bézier function then creates a smooth curve that 
+		transfers from the slope established at the beginning of the line, 
+		to the slope at the other end.
+
+		The example above creates nine cubic Bézier curves. As the curves move toward 
+		the right, the control points become spread out horizontally. As the curves 
+		move downward, they become further separated from the end points. The thing 
+		to note here is that the curve starts in the direction of the first control 
+		point, and then bends so that it arrives along the direction of the second 
+		control point.
+
+		on the other side to keep the slope constant. In this case, a shortcut version of the 
+		cubic Bézier can be used, designated by the command S (or s).
+       
+	</p>
+	<table>
+		<tr>
+			<td>
+	            <img src="temporary of sound objects.JPG" style="margin:10px;width: 50px;height: 50px;border-radius: 30%;"></img>
+		    </td>
+			<td>
+				<img src="Oval of Sound Objects.JPG" style="margin:10px;width: 50px;height:50px;border-radius: 30%;"></img>
+			</td>
+		    <td>
+				<img src="GridSoundObjects.JPG" style="margin:10px;width: 50px;height:50px;border-radius: 30%;"></img>
+			</td>
+			<td>
+				<img src="series of sound objects.JPG" style="margin:10px;width: 50px;height:50px;border-radius: 30%;"></img>
+			</td>
+		</tr>
+	 </table>
+    </div>
+	<div style="height:80px"></div>
+</body>
+<footer class="hfbackground" id="fixed-bottom">
+    <table>
+     <tr>
+      <td style="width:100%;text-align: center;">
+       <img class="text" id="footer" src="Musimorph---Blue.png" style="width: 100px;height:20px"></img>
+      </td>
+       <td>
+          <img src="social.png" alt="social" height="30" usemap="#workmap2">
+         <map name="workmap2">
+                <area shape="circle" coords="15,15,12" href="https://www.facebook.com/CymaticUniverse">
+            <area shape="circle" coords="48,16,12" href="https://twitter.com/search?q=cymatic&src=typed_query">
+            <area shape="circle" coords="83,16,12" href="https://www.instagram.com/cymatics.worldwide/">
+         </map>
+       </td>
+     </tr>
+   </table>
+  </footer>
+ </html> 
