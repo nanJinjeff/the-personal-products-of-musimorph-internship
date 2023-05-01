@@ -1,0 +1,697 @@
+<html>
+<head style="padding:0px;width:100%;margin:0px">
+   <link type="text/css" rel="stylesheet" href="webpage css.css">
+     <table style = "width:100%;padding:10px;background-color:black;position:fixed;z-index:2">
+		    <th>
+			  <img class="text" id="footer" src="Musimorph---Blue.png" style="width: 100px;height:20px"></img>
+			</th>
+			<th>
+			  <label class="headlabelcolor headlabelhover" id="label"><a href="homepage 2 titles in centre sound objects and combination.html">List switch function</a></label>
+			</th>
+			<th id="list label">
+			  <dl class="headlabelcolor headlabelhover forum code" id="label" start="">Sound Object List
+			        <dl class="forum-1">
+				     <dt style="text-align:left;padding:10px">Sound object image</dt>
+					 <dt style="text-align:left;padding:10px">Name</dt>
+					 <dt style="text-align:left;padding:10px">Illustration</dt>
+					 <dt style="text-align:left;padding:10px">type</dt>
+					</dl> 
+			  </dl>
+			</th>
+			<th style = "width:30%;">
+			</th>
+			<th>
+				<label class="headlabelcolor headlabelhover" id="label">Make</label>
+			  </th>
+			  <th>
+				  <label class="headlabelcolor headlabelhover" id="label">Position</label>
+			  </th>
+			<th>
+			  <label style = "text-align:right;" class="headlabelcolor headlabelhover">Use</label>
+			</th>
+		 </table>
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body style="background-image: linear-gradient(#7c7b7b, #8286b3,rgb(74, 74, 165),rgb(21, 21, 120));">
+	<div style="height:80px"></div>
+	<div>
+	<table style="border-spacing: 10px;margin-left: 60%;">
+		<td id="button1" class="td labelbutton" style="background-color: black;">
+			<label  style="margin: 10px;color:white;">Sound Ojbect</label>
+		</td>
+		<td id="button2" class="td labelButton" style="background-color: black;">
+            <label  style="margin: 10px;color:white">Sound Ojbect combination</label>
+		</td>
+	</table>
+	</div>
+	<div id="displaylist1" style="overflow-y: auto; margin-left: 10%;">
+      
+    </div>
+	<div id="displaylist2" style="overflow-y: auto; margin-left: 10%;">
+      
+    </div>
+    <div style="height: 50px;"></div>
+
+	<script>
+		// soundObject table content
+		class SoundObject {
+                 constructor(
+                           image,
+                           name,
+                           illustration,
+                           type_color,
+                            ){
+                           this.image = image;
+                           this.name = name;
+                           this.illustration = illustration;
+                           this.type_color = type_color;
+                          }
+                        }
+
+		const Cube = new SoundObject(
+                 "Cube.JPG",
+                 "Cube",
+                 "the sound wave form a 3D Cube pattern",
+                 "Blue"
+          )
+
+         const Ball = new SoundObject(
+                 "ball.JPG",
+                 "Ball",
+                 "the sound wave form a 3D ball pattern",
+                 "Green"
+          )
+
+          const Circle = new SoundObject(
+                  "circle.JPG",
+                  "Circle",
+                  "the sound wave form a 3D Circle pattern",
+                  "Purple"
+           )
+
+          const Cylinder = new SoundObject(
+                  "cylinder.JPG",
+                  "Cylinder",
+                  "the sound wave form a 3D Cylinder pattern",
+                  "Orange"
+           )
+
+           const Oval = new SoundObject(
+                  "oval.JPG",
+                  "Oval",
+                  "the sound wave form a 3D Oval pattern",
+                  "Yellow"
+            )
+
+            const Triangle = new SoundObject(
+                  "Triangle.JPG",
+                  "Triangle",
+                  "the sound wave form a 3D Triangle pattern",
+                  "Pink"
+            )
+
+           
+
+		   const content1 = `
+		  
+		  <tr>
+		    <th>
+              Sound Object
+		    </th>
+			<th>
+              Name
+		    </th>
+			<th>
+              Illustration
+		    </th>
+			<th>
+              Type_color
+		    </th>
+		  </tr>
+		  <tr>
+			<td colspan="5">
+                 <hr style="color: black;"></hr>
+			</td>
+		  </tr>
+		  <tr class="soundobject-list-tr">
+			<td style="text-align: center">
+				<img src="${Cube.image}"  width="100" height="100"/>
+				</td>
+			<td style="text-align: center">${Cube.name}</td>
+			<td style="text-align: center">${Cube.illustration}</td>
+			<td style="text-align: center">${Cube.type_color}</td>
+		  </tr>
+
+		  <tr class="soundobject-list-tr">
+			<td style="text-align: center">
+				<img src="${Ball.image}" width="100" height="100"/>
+				</td>
+			<td style="text-align: center">${Ball.name}</td>
+			<td style="text-align: center">${Ball.illustration}</td>
+			<td style="text-align: center">${Ball.type_color}</td>
+		  </tr>
+
+		  <tr class="soundobject-list-tr">
+			<td style="text-align: center">
+				<img src="${Circle.image}" width="100" height="100"/>
+				</td>
+			<td style="text-align: center">${Circle.name}</td>
+			<td style="text-align: center">${Circle.illustration}</td>
+			<td style="text-align: center">${Circle.type_color}</td>
+		  </tr>
+
+
+		  <tr class="soundobject-list-tr">
+			<td style="text-align: center">
+				<img src="${Cylinder.image}"  width="100" height="100"/>
+				</td>
+			<td style="text-align: center">${Cylinder.name}</td>
+			<td style="text-align: center">${Cylinder.illustration}</td>
+			<td style="text-align: center">${Cylinder.type_color}</td>
+		  </tr>
+
+		  <tr class="soundobject-list-tr">
+			<td style="text-align: center">
+				<img src="${Oval.image}"  width="100" height="100"/>
+				</td>
+			<td style="text-align: center">${Oval.name}</td>
+			<td style="text-align: center">${Oval.illustration}</td>
+			<td style="text-align: center">${Oval.type_color}</td>
+		  </tr>
+
+		  <tr class="soundobject-list-tr">
+			<td style="text-align: center">
+				<img src="${Triangle.image}"  width="100" height="100"/>
+				</td>
+			<td style="text-align: center">${Triangle.name}</td>
+			<td style="text-align: center">${Triangle.illustration}</td>
+			<td style="text-align: center">${Triangle.type_color}</td>
+		  </tr>
+
+		 
+		
+		  <tr>
+				<td colspan="5">
+					<hr style="color: black;"></hr>
+			   </td>
+		  </tr>
+	 
+		   `;
+
+		   // sound object combination list content.
+		   class SoundObjectCombination{
+                         constructor(
+                                   image,
+                                   name,
+                                   illustration,
+                                   combination_method,
+                                   used_SoundOjbects,
+                                   number_of_soundObjects
+                        ){
+                                   this.image = image;
+                                   this.name = name;
+                                   this.illustration = illustration;
+                                   this.combination_method = combination_method;
+                                   this.used_SoundOjbects = used_SoundOjbects;
+                                   this.number_of_soundObjects = number_of_soundObjects;
+                        }
+            }
+
+			const AlternatingSoundObject = new SoundObjectCombination(
+				         "Alternating Sound Objects.JPG",
+						 "Alternating Sound Objects",
+						 "by choosing different direction, you can get different sound object",
+						 "star shape",
+						 "Cube, Ball, Circle, Cylinder, Oval, Triangle",
+						 "6"
+			)
+
+			const Arrayofsoundobjects = new SoundObjectCombination(
+				         "Array of sound objects.JPG",
+						 "Array of sound objects",
+						 "the ball shape sound object has been connected in a line",
+						 "snake line shape",
+						 "Ball",
+						 "1"
+			)
+
+			const CirclesofSoundObjects  = new SoundObjectCombination(
+				         "Circles of Sound Objects.JPG",
+						 "Circles of Sound Objects",
+						 "different sound objects has been connected into a circle shape",
+						 "circle shape",
+						 "Cube, Ball, Circle, Cylinder, Oval, Triangle",
+						 "6"
+			)
+
+			const GridSoundObjects = new SoundObjectCombination(
+				         "GridSoundObjects.JPG",
+						 "Grid Sound Objects",
+						 "different sound object has been combined in a Grid",
+						 "Grid pattern",
+						 "Cube, Ball, Circle, Cylinder, Oval, Triangle",
+						 "6"
+			)
+
+			const HelixSoundObject = new SoundObjectCombination(
+				         "HelixSoundObject.JPG",
+						 "Helix Sound Object",
+						 "different sound object has formed a helix",
+						 "helix pattern",
+						 "Cube, Ball, Circle, Cylinder, Oval, Triangle",
+						 "6"
+			)
+
+			const Lineupofsoundobjects = new SoundObjectCombination(
+				         "Line up of sound objects.JPG",
+						 "Line up of sound objects",
+						 "oval sound objects has connected into a line and helix up",
+						 "helix and line up",
+						 "Oval",
+						 "1"
+			)
+
+			const Matrixofsoundobjects = new SoundObjectCombination(
+				         "Matrix of sound objects.JPG",
+						 "Matrix of sound objects",
+						 "cube sound objects has formed a matrix",
+						 "matrix shape",
+						 "Cube",
+						 "1"
+			)
+
+			const MegaCubeofSoundObjects = new SoundObjectCombination(
+				         "Mega Cube of Sound Objects.JPG",
+						 "Mega Cube of Sound Objects",
+						 "cube sound object has formed a mega cube",
+						 "mega cube shape",
+						 "Cube",
+						 "1"
+			)
+
+			const OvalofSoundObjects = new SoundObjectCombination(
+				         "Oval of Sound Objects.JPG",
+						 "Oval of Sound Objects",
+						 "different sound object has formed a oval",
+						 "oval shape",
+						 "Cube, Ball, Circle, Cylinder, Oval, Triangle",
+						 "6"
+			)
+
+			const ParadeofSoundObjects = new SoundObjectCombination(
+				         "Parade of Sound Objects.JPG",
+						 "Parade of Sound Objects",
+						 "different sound objects have formed a parade",
+						 "parade pattern",
+						 "Cube, Ball, Circle, Cylinder, Oval, Triangle",
+						 "6"
+			)
+
+			const ParallelLinesofSoundObjects = new SoundObjectCombination(
+				         "Parallel Lines of Sound Objects.JPG",
+						 "Parallel Lines of Sound Objects",
+						 "different sound objects have formed a parallel",
+						 "parallel pattern",
+						 "Cube, Ball,Cylinder, Oval",
+						 "4"
+			)
+
+			const Scaffordingofsoundobjects = new SoundObjectCombination(
+				         "Scaffording of sound objects.JPG",
+						 "Scaffording of sound objects",
+						 "two kinds of sound objects has formed a scafford",
+						 "scafford pattern",
+						 "Cylinder, Triangle",
+						 "2"
+			)
+
+			const seriesofsoundobjects = new SoundObjectCombination(
+				         "series of sound objects.JPG",
+						 "series of sound objects",
+						 "these are series of different sound objects, which are created from wave",
+						 "wave pattern and different sound objects",
+						 "Cube, Ball, Circle, Cylinder, Oval, Triangle",
+						 "6"
+			)
+
+			const temporarystructureofsoundobjects = new SoundObjectCombination(
+				         "temporary of sound objects.JPG",
+						 "temporary structure of sound objects",
+						 "different sound objects has formed a temporary ball shape",
+						 "ball shape",
+						 "Cube, Ball, Circle, Cylinder, Oval, Triangle",
+						 "6"
+			)
+
+
+			const content2 =`
+			    
+					<tr>
+					<th>Object combination Image</th>
+					<th>Combination Description</th>
+					</tr>
+					<tr>
+				        <td colspan="5">
+					<hr style="color: black;"></hr>
+			            </td>
+		            </tr>
+					<tr class="soundobject-combination-list-tr">
+						<td style="text-align: center">
+							<img src="${AlternatingSoundObject.image}"  width="250" height="250"/>
+						</td>
+						<td>
+							<dl>
+								<dt>Name:</dt>
+								<dd>${AlternatingSoundObject.name}</dd>
+								<dt>Illustration:</dt>
+								<dd>${AlternatingSoundObject.illustration}</dd>
+								<dt>Combination method:</dt>
+								<dd>${AlternatingSoundObject.combination_method}</dd>
+								<dt>Used sound objects:</dt>
+								<dd>${AlternatingSoundObject.used_SoundOjbects}</dd>
+								<dt>Number of sound objects:</dt>
+								<dd>${AlternatingSoundObject.number_of_soundObjects}</dd>
+						</td>
+					</tr>
+					<tr class="soundobject-combination-list-tr">
+						<td style="text-align: center">
+							<img src="${Arrayofsoundobjects.image}"  width="250" height="250"/>
+						</td>
+						<td>
+							<dl>
+								<dt>Name:</dt>
+								<dd>${Arrayofsoundobjects.name}</dd>
+								<dt>Illustration:</dt>
+								<dd>${Arrayofsoundobjects.illustration}</dd>
+								<dt>Combination method:</dt>
+								<dd>${Arrayofsoundobjects.combination_method}</dd>
+								<dt>Used sound objects:</dt>
+								<dd>${Arrayofsoundobjects.used_SoundOjbects}</dd>
+								<dt>Number of sound objects:</dt>
+								<dd>${Arrayofsoundobjects.number_of_soundObjects}</dd>
+						</td>
+					</tr>
+					<tr class="soundobject-combination-list-tr">
+						<td style="text-align: center">
+							<img src="${CirclesofSoundObjects.image}"  width="250" height="250"/>
+						</td>
+						<td>
+							<dl>
+								<dt>Name:</dt>
+								<dd>${CirclesofSoundObjects.name}</dd>
+								<dt>Illustration:</dt>
+								<dd>${CirclesofSoundObjects.illustration}</dd>
+								<dt>Combination method:</dt>
+								<dd>${CirclesofSoundObjects.combination_method}</dd>
+								<dt>Used sound objects:</dt>
+								<dd>${CirclesofSoundObjects.used_SoundOjbects}</dd>
+								<dt>Number of sound objects:</dt>
+								<dd>${CirclesofSoundObjects.number_of_soundObjects}</dd>
+						</td>
+					</tr>
+					<tr class="soundobject-combination-list-tr">
+						<td style="text-align: center">
+							<img src="${GridSoundObjects.image}"  width="250" height="250"/>
+						</td>
+						<td>
+							<dl>
+								<dt>Name:</dt>
+								<dd>${GridSoundObjects.name}</dd>
+								<dt>Illustration:</dt>
+								<dd>${GridSoundObjects.illustration}</dd>
+								<dt>Combination method:</dt>
+								<dd>${GridSoundObjects.combination_method}</dd>
+								<dt>Used sound objects:</dt>
+								<dd>${GridSoundObjects.used_SoundOjbects}</dd>
+								<dt>Number of sound objects:</dt>
+								<dd>${GridSoundObjects.number_of_soundObjects}</dd>
+						</td>
+					</tr>
+					<tr class="soundobject-combination-list-tr">
+						<td style="text-align: center">
+							<img src="${HelixSoundObject.image}"  width="250" height="250"/>
+						</td>
+						<td>
+							<dl>
+								<dt>Name:</dt>
+								<dd>${HelixSoundObject.name}</dd>
+								<dt>Illustration:</dt>
+								<dd>${HelixSoundObject.illustration}</dd>
+								<dt>Combination method:</dt>
+								<dd>${HelixSoundObject.combination_method}</dd>
+								<dt>Used sound objects:</dt>
+								<dd>${HelixSoundObject.used_SoundOjbects}</dd>
+								<dt>Number of sound objects:</dt>
+								<dd>${HelixSoundObject.number_of_soundObjects}</dd>
+						</td>
+					</tr>
+					<tr class="soundobject-combination-list-tr">
+						<td style="text-align: center">
+							<img src="${Lineupofsoundobjects.image}" width="250" height="250"/>
+						</td>
+						<td>
+							<dl>
+								<dt>Name:</dt>
+								<dd>${Lineupofsoundobjects.name}</dd>
+								<dt>Illustration:</dt>
+								<dd>${Lineupofsoundobjects.illustration}</dd>
+								<dt>Combination method:</dt>
+								<dd>${Lineupofsoundobjects.combination_method}</dd>
+								<dt>Used sound objects:</dt>
+								<dd>${Lineupofsoundobjects.used_SoundOjbects}</dd>
+								<dt>Number of sound objects:</dt>
+								<dd>${Lineupofsoundobjects.number_of_soundObjects}</dd>
+						</td>
+					</tr>
+					<tr class="soundobject-combination-list-tr">
+						<td style="text-align: center">
+							<img src="${Matrixofsoundobjects.image}" width="250" height="250"/>
+						</td>
+						<td>
+							<dl>
+								<dt>Name:</dt>
+								<dd>${Matrixofsoundobjects.name}</dd>
+								<dt>Illustration:</dt>
+								<dd>${Matrixofsoundobjects.illustration}</dd>
+								<dt>Combination method:</dt>
+								<dd>${Matrixofsoundobjects.combination_method}</dd>
+								<dt>Used sound objects:</dt>
+								<dd>${Matrixofsoundobjects.used_SoundOjbects}</dd>
+								<dt>Number of sound objects:</dt>
+								<dd>${Matrixofsoundobjects.number_of_soundObjects}</dd>
+						</td>
+					</tr>
+					<tr class="soundobject-combination-list-tr">
+						<td style="text-align: center">
+							<img src="${MegaCubeofSoundObjects.image}"  width="250" height="250"/>
+						</td>
+						<td>
+							<dl>
+								<dt>Name:</dt>
+								<dd>${MegaCubeofSoundObjects.name}</dd>
+								<dt>Illustration:</dt>
+								<dd>${MegaCubeofSoundObjects.illustration}</dd>
+								<dt>Combination method:</dt>
+								<dd>${MegaCubeofSoundObjects.combination_method}</dd>
+								<dt>Used sound objects:</dt>
+								<dd>${MegaCubeofSoundObjects.used_SoundOjbects}</dd>
+								<dt>Number of sound objects:</dt>
+								<dd>${MegaCubeofSoundObjects.number_of_soundObjects}</dd>
+						</td>
+					</tr>
+					<tr class="soundobject-combination-list-tr">
+						<td style="text-align: center">
+							<img src="${OvalofSoundObjects.image}"  width="250" height="250"/>
+						</td>
+						<td>
+							<dl>
+								<dt>Name:</dt>
+								<dd>${OvalofSoundObjects.name}</dd>
+								<dt>Illustration:</dt>
+								<dd>${OvalofSoundObjects.illustration}</dd>
+								<dt>Combination method:</dt>
+								<dd>${OvalofSoundObjects.combination_method}</dd>
+								<dt>Used sound objects:</dt>
+								<dd>${OvalofSoundObjects.used_SoundOjbects}</dd>
+								<dt>Number of sound objects:</dt>
+								<dd>${OvalofSoundObjects.number_of_soundObjects}</dd>
+						</td>
+					</tr>
+					<tr class="soundobject-combination-list-tr">
+						<td style="text-align: center">
+							<img src="${ParadeofSoundObjects.image}" width="250" height="250"/>
+						</td>
+						<td>
+							<dl>
+								<dt>Name:</dt>
+								<dd>${ParadeofSoundObjects.name}</dd>
+								<dt>Illustration:</dt>
+								<dd>${ParadeofSoundObjects.illustration}</dd>
+								<dt>Combination method:</dt>
+								<dd>${ParadeofSoundObjects.combination_method}</dd>
+								<dt>Used sound objects:</dt>
+								<dd>${ParadeofSoundObjects.used_SoundOjbects}</dd>
+								<dt>Number of sound objects:</dt>
+								<dd>${ParadeofSoundObjects.number_of_soundObjects}</dd>
+						</td>
+					</tr>
+					<tr class="soundobject-combination-list-tr">
+						<td style="text-align: center">
+							<img src="${ParallelLinesofSoundObjects.image}"  width="250" height="250"/>
+						</td>
+						<td>
+							<dl>
+								<dt>Name:</dt>
+								<dd>${ParallelLinesofSoundObjects.name}</dd>
+								<dt>Illustration:</dt>
+								<dd>${ParallelLinesofSoundObjects.illustration}</dd>
+								<dt>Combination method:</dt>
+								<dd>${ParallelLinesofSoundObjects.combination_method}</dd>
+								<dt>Used sound objects:</dt>
+								<dd>${ParallelLinesofSoundObjects.used_SoundOjbects}</dd>
+								<dt>Number of sound objects:</dt>
+								<dd>${ParallelLinesofSoundObjects.number_of_soundObjects}</dd>
+						</td>
+					</tr>
+					<tr class="soundobject-combination-list-tr">
+						<td style="text-align: center">
+							<img src="${Scaffordingofsoundobjects.image}"  width="250" height="250"/>
+						</td>
+						<td>
+							<dl>
+								<dt>Name:</dt>
+								<dd>${Scaffordingofsoundobjects.name}</dd>
+								<dt>Illustration:</dt>
+								<dd>${Scaffordingofsoundobjects.illustration}</dd>
+								<dt>Combination method:</dt>
+								<dd>${Scaffordingofsoundobjects.combination_method}</dd>
+								<dt>Used sound objects:</dt>
+								<dd>${Scaffordingofsoundobjects.used_SoundOjbects}</dd>
+								<dt>Number of sound objects:</dt>
+								<dd>${Scaffordingofsoundobjects.number_of_soundObjects}</dd>
+						</td>
+					</tr>
+					<tr class="soundobject-combination-list-tr">
+						<td style="text-align: center">
+							<img src="${seriesofsoundobjects.image}" width="250" height="250"/>
+						</td>
+						<td>
+							<dl>
+								<dt>Name:</dt>
+								<dd>${seriesofsoundobjects.name}</dd>
+								<dt>Illustration:</dt>
+								<dd>${seriesofsoundobjects.illustration}</dd>
+								<dt>Combination method:</dt>
+								<dd>${seriesofsoundobjects.combination_method}</dd>
+								<dt>Used sound objects:</dt>
+								<dd>${seriesofsoundobjects.used_SoundOjbects}</dd>
+								<dt>Number of sound objects:</dt>
+								<dd>${seriesofsoundobjects.number_of_soundObjects}</dd>
+						</td>
+					</tr>
+					<tr class="soundobject-combination-list-tr">
+						<td style="text-align: center">
+							<img src="${temporarystructureofsoundobjects.image}"  width="250" height="250"/>
+						</td>
+						<td>
+							<dl>
+								<dt>Name:</dt>
+								<dd>${temporarystructureofsoundobjects.name}</dd>
+								<dt>Illustration:</dt>
+								<dd>${temporarystructureofsoundobjects.illustration}</dd>
+								<dt>Combination method:</dt>
+								<dd>${temporarystructureofsoundobjects.combination_method}</dd>
+								<dt>Used sound objects:</dt>
+								<dd>${temporarystructureofsoundobjects.used_SoundOjbects}</dd>
+								<dt>Number of sound objects:</dt>
+								<dd>${temporarystructureofsoundobjects.number_of_soundObjects}</dd>
+						</td>
+					</tr>
+				  
+			`;
+
+
+			  const div1 = document.getElementById("displaylist1");
+              const newlist1 = document.createElement("table");
+              newlist1.style.width = "1200px";
+              newlist1.innerHTML=content1;
+              div1.append(newlist1);
+
+              const div2 = document.getElementById("displaylist2");
+			  div2.style.display = "none";
+              const newlist2 = document.createElement("table");
+              newlist2.style.width = "1200px";
+              newlist2.innerHTML=content2;
+              div2.append(newlist2);
+
+			   $(document).ready(function(){
+                     $("#button1").click(function(){
+                         $("#displaylist1").show("slow");
+	                     $("#displaylist2").hide();
+						 const content3 =`
+						<dl class="headlabelcolor headlabelhover forum code" id="label" start="">Sound Object List
+			                <dl class="forum-1">
+				             <dt style="text-align:left;padding:10px">Sound object image</dt>
+					         <dt style="text-align:left;padding:10px">Name</dt>
+					         <dt style="text-align:left;padding:10px">Illustration</dt>
+					         <dt style="text-align:left;padding:10px">type</dt>
+					        </dl> 
+			            </dl>
+						      `;
+						const newth = document.getElementById("list label");
+						newth.innerHTML=content3;
+						 
+                     });
+                     $("#button2").click(function(){
+                         $("#displaylist1").hide();
+	                     $("#displaylist2").show("slow");
+						 const content4 =`
+						<dl class="headlabelcolor headlabelhover forum code" id="label" start="">Sound Object Combination List
+			                <dl class="forum-1">
+				             <dt style="text-align:left;padding:10px">Sound Object Combination image</dt>
+					         <dt style="text-align:left;padding:10px">Combination description</dt>
+					        </dl> 
+			            </dl>
+						      `;
+						const newth = document.getElementById("list label");
+						newth.innerHTML=content4;
+                     });
+             });
+			  
+			 window.onload = function() {
+        // 获取保存在 sessionStorage 的清单编号
+        const selectedList = sessionStorage.getItem('selectedList');
+
+        // 隐藏所有清单
+        document.getElementById('displaylist1').style.display = 'none';
+        document.getElementById('displaylist2').style.display = 'none';
+
+        // 显示选定的清单
+        if (selectedList === '1') {
+            document.getElementById('displaylist1').style.display = 'block';
+        } else if (selectedList === '2') {
+            document.getElementById('displaylist2').style.display = 'block';
+        }
+    }
+
+	</script>
+    
+</body>
+<footer class="hfbackground" id="fixed-bottom">
+    <table>
+     <tr>
+      <td style="width:100%;text-align: center;">
+       <img class="text" id="footer" src="Musimorph---Blue.png" style="width: 100px;height:20px"></img>
+      </td>
+       <td>
+          <img src="social.png" alt="social" height="30" usemap="#workmap2">
+         <map name="workmap2">
+                <area shape="circle" coords="15,15,12" href="https://www.facebook.com/CymaticUniverse">
+            <area shape="circle" coords="48,16,12" href="https://twitter.com/search?q=cymatic&src=typed_query">
+            <area shape="circle" coords="83,16,12" href="https://www.instagram.com/cymatics.worldwide/">
+         </map>
+       </td>
+     </tr>
+   </table>
+  </footer>
+ </html> 

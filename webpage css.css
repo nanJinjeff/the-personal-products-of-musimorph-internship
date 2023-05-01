@@ -59,12 +59,12 @@ html, body{
   height: 250px;
 }
 .code{
-  width: 250px;
+  width: 300px;
 }
 .code dt{                     /*弹出菜单*/
   float: left;
-  width: 300px;
-  height:30px;
+  width: 350px;
+  height:15%;
   background-color:black;
   text-align: center;
   margin: auto;
@@ -186,17 +186,15 @@ body {
 /*expression window*/
 .div_expression{
 	width:300px;
-	height:510px;
+	height:550px;
 	border:2px solid;
 	border-radius: 50px 20px;
 	z-index: 1;
-	overflow: hidden;
 	transition: height 1s;
 }
 
 .div_expression:hover{
 	box-shadow:10px 10px 10px purple;
-	height:610px;
 }
 
 /*button transition*/
@@ -217,11 +215,11 @@ body {
 /*button hover control the position of the p at the same time*/
 .pbutton{
 	text-align: center;
-	padding-top: 15%;
+	padding-top: 5%;
 	transition: padding-top 2s;
 }
 .div-button:hover .pbutton{ 
-    padding-top: 40%;
+    padding-top: 30%;
 }
 /*p tips----button hover control the show of tips at the same time*/
 .tips{

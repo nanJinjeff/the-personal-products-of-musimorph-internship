@@ -51,16 +51,11 @@
 		let's move to the x and y coordinates (10, 10). The "Move to" command is called with the 
 		letter M. When the parser runs into this letter, it knows it needs to move to a point. 
 		So, to move to (10, 10) the command to use would be M 10 10. After that, the parser 
+		begins reading for the next command.it knows it needs to move to a point. 
+		So, to move to (10, 10) the command to use would be M 10 10. After that, the parser 
 		begins reading for the next command.
 
-        All of the commands also come in two variants. An uppercase letter specifies absolute 
-		coordinates on the page, and a lowercase letter specifies relative coordinates 
-		(e.g., move 10px up and 7px to the left from the last point).
-
-		Several Bézier curves can be strung together to create extended, smooth shapes. Often, 
-        the control point on one side of a point will be a reflection of the control point used 
-		on the other side to keep the slope constant. In this case, a shortcut version of the 
-		cubic Bézier can be used, designated by the command S (or s).
+		
 
 	 </p>
 	 <table>
@@ -87,14 +82,14 @@
     <table style="z-index: -1;">
 		<tr>
 			<td>
-				<div class="div-button"><p class="pA pbutton">Enter Sound Objects page 
+				<div class="div-button" onclick="showList(1)"><p class="pA pbutton">Enter Sound Objects page 
 					<p class="tips" style="top:150px;margin-left: 36%;">Click!</p>
 				</div>
 			</td>
 			<td style="width:110px">
 			</td>
 			<td>
-				<div class="div-button"><p class="pA pbutton">Enter Sound Objects Combination page
+				<div class="div-button" onclick="showList(2)"><p class="pA pbutton">Enter Sound Objects Combination page
 					<p class="tips" style="top:150px;margin-left: 36%;">Click!</p>
 				</div>
 			</td>
@@ -111,16 +106,7 @@
 		transfers from the slope established at the beginning of the line, 
 		to the slope at the other end.
 
-		The example above creates nine cubic Bézier curves. As the curves move toward 
-		the right, the control points become spread out horizontally. As the curves 
-		move downward, they become further separated from the end points. The thing 
-		to note here is that the curve starts in the direction of the first control 
-		point, and then bends so that it arrives along the direction of the second 
-		control point.
-
-		on the other side to keep the slope constant. In this case, a shortcut version of the 
-		cubic Bézier can be used, designated by the command S (or s).
-       
+	
 	</p>
 	<table>
 		<tr>
@@ -140,6 +126,17 @@
 	 </table>
     </div>
 	<div style="height:80px"></div>
+
+
+    <script>
+        function showList(listNumber) {
+            // 将选择的清单编号保存到 sessionStorage
+            sessionStorage.setItem('selectedList', listNumber);
+            // 跳转到 lists.html 页面
+            window.location.href = 'switch and listing.html';
+        }
+    </script>
+
 </body>
 <footer class="hfbackground" id="fixed-bottom">
     <table>
