@@ -1,0 +1,585 @@
+<html>
+  <head style="padding:0px;width:100%;margin:0px">
+    <link type="text/css" rel="stylesheet" href="webpage css.css">
+      <table style = "width:100%;padding:10px;background-color:black;position:fixed;z-index:2">
+         <th>
+         <a href="homepage 2 titles in centre sound objects and combination.html"><img class="text" id="footer" src="Musimorph---Blue.png" style="width: 100px;height:20px"></img></a>
+       </th>
+       <th style = "width:40%;">
+       </th>
+       <th>
+         <label class="headlabelcolor headlabelhover" id="label">Make</label>
+       </th>
+       <th>
+         <label class="headlabelcolor headlabelhover" id="label">Position</label>
+       </th>
+       
+       <th>
+         <label style = "text-align:right;" class="headlabelcolor headlabelhover">Use</label>
+       </th>
+      </table>
+ 
+ </head>
+    <body style="background-color:gray;margin:0px;">
+
+      <div style="height: 80px"></div>
+      <div style="text-align: center">
+         <img src="Musimorph---Blue.png" style="width: 200px;height:50px"></img>
+      </div>
+      <hr></hr>   
+      <div style="text-align: center;">
+        <canvas id = "myCanvas"></canvas>
+         <table style="border-spacing:10px;margin-left:32%;text-align: center">
+            <td class="td tdlabelbuttonhover" style="background-color:black">
+        <label id="button1"  style="margin:10px" class="labelbuttonhover">object connection 1</label>
+            </td>
+            <td class="td tdlabelbuttonhover" style="background-color:black">
+        <label id="button2"  style="margin:10px" class="labelbuttonhover">object connection 2</label>
+            </td>
+            <td class="td tdlabelbuttonhover" style="background-color:black">
+        <label id="button3"  style="margin:10px" class="labelbuttonhover">object connection 3</label>
+            </td>
+         </table>
+      </div>
+      <hr></hr>
+      <div style="height: 80"></div>
+   
+        <script>
+            var button1 = document.getElementById("button1");
+            var button2 = document.getElementById("button2");
+            var button3 = document.getElementById("button3");
+            var myCanvas = document.getElementById("myCanvas");
+            myCanvas.width=600;
+            myCanvas.height=600;
+            myCanvas.style.background = "grey";
+            var ctx = myCanvas.getContext("2d");
+            var i=0;
+            var closetype1=false,closetype2=false,closetype3=false;
+            var n=0;
+
+            button1.addEventListener("click", ()=>{
+
+               i=0;
+               n=16;
+               closetype2 = true;
+               closetype3 = true;
+               closetype1 = false;
+               ctx.clearRect(0,0,600,600);
+
+               ctx.beginPath();
+                ctx.fillStyle="white";
+                ctx.moveTo(100, 100);
+                ctx.lineTo(200, 100);
+                ctx.lineTo(200, 120); 
+                ctx.lineTo(180, 120);
+                ctx.lineTo(180, 140);
+                ctx.lineTo(200, 140);
+                ctx.lineTo(200, 160);
+                ctx.lineTo(180, 160);
+                ctx.lineTo(180, 180);
+                ctx.lineTo(200, 180);
+                ctx.lineTo(200, 200);
+                ctx.lineTo(100, 200);
+                ctx.lineTo(100, 100);
+                ctx.fill();
+
+                ctx.beginPath();
+                ctx.fillStyle="black"
+                ctx.moveTo(300, 100);
+                ctx.lineTo(400, 100);
+                ctx.lineTo(400, 200); 
+                ctx.lineTo(300, 200);
+                ctx.lineTo(300, 180);
+                ctx.lineTo(280, 180);
+                ctx.lineTo(280, 160);
+                ctx.lineTo(300, 160);
+                ctx.lineTo(300, 140);
+                ctx.lineTo(280, 140);
+                ctx.lineTo(280, 120);
+                ctx.lineTo(300, 120);
+                ctx.lineTo(300, 100);
+                ctx.fill();
+
+               myCanvas.addEventListener("click",function(){
+                  var ani1 = setInterval(() => {
+                     i++;
+                ctx.clearRect(0,0,600,600);
+               
+                ctx.beginPath();
+                ctx.fillStyle="white";
+                ctx.moveTo(100+i, 100);
+                ctx.lineTo(200+i, 100);
+                ctx.lineTo(200+i, 120); 
+                ctx.lineTo(180+i, 120);
+                ctx.lineTo(180+i, 140);
+                ctx.lineTo(200+i, 140);
+                ctx.lineTo(200+i, 160);
+                ctx.lineTo(180+i, 160);
+                ctx.lineTo(180+i, 180);
+                ctx.lineTo(200+i, 180);
+                ctx.lineTo(200+i, 200);
+                ctx.lineTo(100+i, 200);
+                ctx.lineTo(100+i, 100);
+                ctx.fill();
+
+                ctx.beginPath();
+                ctx.fillStyle="black";
+                ctx.moveTo(300-i, 100);
+                ctx.lineTo(400-i, 100);
+                ctx.lineTo(400-i, 200); 
+                ctx.lineTo(300-i, 200);
+                ctx.lineTo(300-i, 180);
+                ctx.lineTo(280-i, 180);
+                ctx.lineTo(280-i, 160);
+                ctx.lineTo(300-i, 160);
+                ctx.lineTo(300-i, 140);
+                ctx.lineTo(280-i, 140);
+                ctx.lineTo(280-i, 120);
+                ctx.lineTo(300-i, 120);
+                ctx.lineTo(300-i, 100);
+                ctx.fill();
+           
+           
+                if(i>=50){
+                  clearInterval(ani1)
+               };
+
+                if(closetype1){
+                 clearInterval(ani1);
+               }
+
+              }, n);
+
+
+            })
+                 
+                        
+               
+         });
+        button2.addEventListener("click",()=>{
+           i=0;
+           n=16;
+           closetype1 = true;
+           closetype3 = true;
+           closetype2 = false;
+           
+           ctx.clearRect(0,0,600,600);
+           
+                ctx.clearRect(0,0,600,600);
+                ctx.beginPath();
+                ctx.fillStyle = "pink";
+                ctx.moveTo(200, 200);
+                ctx.lineTo(250, 200);
+                ctx.lineTo(250, 150); 
+                ctx.lineTo(300, 150);
+                ctx.lineTo(300, 200);
+                ctx.lineTo(350, 200);
+                ctx.lineTo(350, 250);
+                ctx.lineTo(400, 250);
+                ctx.lineTo(400, 300);
+                ctx.lineTo(350, 300);
+                ctx.lineTo(350, 350);
+                ctx.lineTo(300, 350);
+                ctx.lineTo(300, 400);
+                ctx.lineTo(250, 400);
+                ctx.lineTo(250, 350);
+                ctx.lineTo(200, 350);
+                ctx.lineTo(200, 300);
+                ctx.lineTo(150, 300);
+                ctx.lineTo(150, 250);
+                ctx.lineTo(200, 250);
+                ctx.lineTo(200, 200);
+                ctx.fill();
+
+                ctx.beginPath();
+                ctx.fillStyle = "green";
+                ctx.moveTo(275, 0);
+                ctx.lineTo(350, 100);
+                ctx.lineTo(300, 100);
+                ctx.lineTo(300,50);
+                ctx.lineTo(250,50);
+                ctx.lineTo(250,100);
+                ctx.lineTo(200,100);
+                ctx.lineTo(275,0);
+                ctx.fill();
+
+                ctx.beginPath();
+                ctx.fillStyle = "red";
+                ctx.moveTo(0, 275);
+                ctx.lineTo(100, 200);
+                ctx.lineTo(100, 250);
+                ctx.lineTo(50,250);
+                ctx.lineTo(50,300);
+                ctx.lineTo(100,300);
+                ctx.lineTo(100,350);
+                ctx.lineTo(0,275);
+                ctx.fill();
+
+                ctx.beginPath();
+                ctx.fillStyle = "yellow";
+                ctx.moveTo(550, 275);
+                ctx.lineTo(450, 350);
+                ctx.lineTo(450, 300);
+                ctx.lineTo(500,300);
+                ctx.lineTo(500,250);
+                ctx.lineTo(450,250);
+                ctx.lineTo(450,200);
+                ctx.lineTo(550,275);
+                ctx.fill();
+
+                ctx.beginPath();
+                ctx.fillStyle = "purple";
+                ctx.moveTo(275, 550);
+                ctx.lineTo(350, 450);
+                ctx.lineTo(300, 450);
+                ctx.lineTo(300, 500);
+                ctx.lineTo(250, 500);
+                ctx.lineTo(250, 450);
+                ctx.lineTo(200, 450);
+                ctx.lineTo(275, 550);
+                ctx.fill();
+
+
+                
+
+               myCanvas.addEventListener("click",function(){
+                  var ani2 = setInterval(() => {
+                     i++;
+                ctx.clearRect(0,0,600,600);
+
+                ctx.beginPath();
+                ctx.fillStyle = "pink";
+                ctx.moveTo(200, 200);
+                ctx.lineTo(250, 200);
+                ctx.lineTo(250, 150); 
+                ctx.lineTo(300, 150);
+                ctx.lineTo(300, 200);
+                ctx.lineTo(350, 200);
+                ctx.lineTo(350, 250);
+                ctx.lineTo(400, 250);
+                ctx.lineTo(400, 300);
+                ctx.lineTo(350, 300);
+                ctx.lineTo(350, 350);
+                ctx.lineTo(300, 350);
+                ctx.lineTo(300, 400);
+                ctx.lineTo(250, 400);
+                ctx.lineTo(250, 350);
+                ctx.lineTo(200, 350);
+                ctx.lineTo(200, 300);
+                ctx.lineTo(150, 300);
+                ctx.lineTo(150, 250);
+                ctx.lineTo(200, 250);
+                ctx.lineTo(200, 200);
+                ctx.fill();
+               
+                ctx.beginPath();
+                ctx.fillStyle = "green";
+                ctx.moveTo(275, i);
+                ctx.lineTo(350, 100+i);
+                ctx.lineTo(300, 100+i);
+                ctx.lineTo(300,50+i);
+                ctx.lineTo(250,50+i);
+                ctx.lineTo(250,100+i);
+                ctx.lineTo(200,100+i);
+                ctx.lineTo(275,i);
+                ctx.fill();
+
+                ctx.beginPath();
+                ctx.fillStyle = "red";
+                ctx.moveTo(i, 275);
+                ctx.lineTo(100+i, 200);
+                ctx.lineTo(100+i, 250);
+                ctx.lineTo(50+i,250);
+                ctx.lineTo(50+i,300);
+                ctx.lineTo(100+i,300);
+                ctx.lineTo(100+i,350);
+                ctx.lineTo(i,275);
+                ctx.fill();
+
+                ctx.beginPath();
+                ctx.fillStyle = "yellow";
+                ctx.moveTo(550-i, 275);
+                ctx.lineTo(450-i, 350);
+                ctx.lineTo(450-i, 300);
+                ctx.lineTo(500-i,300);
+                ctx.lineTo(500-i,250);
+                ctx.lineTo(450-i,250);
+                ctx.lineTo(450-i,200);
+                ctx.lineTo(550-i,275);
+                ctx.fill();
+
+                ctx.beginPath();
+                ctx.fillStyle = "purple";
+                ctx.moveTo(275, 550-i);
+                ctx.lineTo(350, 450-i);
+                ctx.lineTo(300, 450-i);
+                ctx.lineTo(300, 500-i);
+                ctx.lineTo(250, 500-i);
+                ctx.lineTo(250, 450-i);
+                ctx.lineTo(200, 450-i);
+                ctx.lineTo(275, 550-i);
+                ctx.fill();
+                
+           
+           
+                if(i>=100){
+                  clearInterval(ani2)
+               };
+
+                if(closetype2){
+                 clearInterval(ani2);
+               }
+
+              }, n);
+
+
+            })
+                 
+        })
+
+        button3.addEventListener("click",()=>{
+           i=0;
+           n=16;
+           closetype1 = true;
+           closetype2 = true;
+           closetype3 = false;
+           
+           ctx.clearRect(0,0,600,600);
+
+           ctx.beginPath();
+           ctx.fillStyle="yellow";
+           ctx.arc(260, 200, 120, 0, Math.PI, true);
+           ctx.lineTo(170,200);
+           ctx.lineTo(170,180);
+           ctx.lineTo(190,180);
+           ctx.lineTo(190,200);
+           ctx.lineTo(210,200);
+           ctx.lineTo(210,180);
+           ctx.lineTo(230,180);
+           ctx.lineTo(230,200);
+           ctx.lineTo(250,200);
+           ctx.lineTo(250,180);
+           ctx.lineTo(270,180);
+           ctx.lineTo(270,200);
+           ctx.lineTo(290,200);
+           ctx.lineTo(290,180);
+           ctx.lineTo(310,180);
+           ctx.lineTo(310,200);
+           ctx.lineTo(330,200);
+           ctx.lineTo(330,180);
+           ctx.lineTo(350,180);
+           ctx.lineTo(350,200);
+           ctx.fill();
+
+           ctx.beginPath();
+           ctx.fillStyle="red";
+           ctx.arc(260, 400, 120, 0, Math.PI, false);
+           ctx.lineTo(170,400);
+           ctx.lineTo(170,380);
+           ctx.lineTo(190,380);
+           ctx.lineTo(190,400);
+           ctx.lineTo(210,400);
+           ctx.lineTo(210,380);
+           ctx.lineTo(230,380);
+           ctx.lineTo(230,400);
+           ctx.lineTo(250,400);
+           ctx.lineTo(250,380);
+           ctx.lineTo(270,380);
+           ctx.lineTo(270,400);
+           ctx.lineTo(290,400);
+           ctx.lineTo(290,380);
+           ctx.lineTo(310,380);
+           ctx.lineTo(310,400);
+           ctx.lineTo(330,400);
+           ctx.lineTo(330,380);
+           ctx.lineTo(350,380);
+           ctx.lineTo(350,400);
+           ctx.fill();
+
+           ctx.beginPath();
+           ctx.fillStyle="green"
+
+           ctx.lineTo(170,250);
+           ctx.lineTo(170,230);
+           ctx.lineTo(190,230);
+           ctx.lineTo(190,250);
+           ctx.lineTo(210,250);
+           ctx.lineTo(210,230);
+           ctx.lineTo(230,230);
+           ctx.lineTo(230,250);
+           ctx.lineTo(250,250);
+           ctx.lineTo(250,230);
+           ctx.lineTo(270,230);
+           ctx.lineTo(270,250);
+           ctx.lineTo(290,250);
+           ctx.lineTo(290,230);
+           ctx.lineTo(310,230);
+           ctx.lineTo(310,250);
+           ctx.lineTo(330,250);
+           ctx.lineTo(330,230);
+           ctx.lineTo(350,230);
+           ctx.lineTo(350,250);
+
+           ctx.lineTo(350,350);
+           ctx.lineTo(350,330);
+           ctx.lineTo(330,330);
+           ctx.lineTo(330,350);
+           ctx.lineTo(310,350);
+           ctx.lineTo(310,330);
+           ctx.lineTo(290,330);
+           ctx.lineTo(290,350);
+           ctx.lineTo(270,350);
+           ctx.lineTo(270,330);
+           ctx.lineTo(250,330);
+           ctx.lineTo(250,350);
+           ctx.lineTo(230,350);
+           ctx.lineTo(230,330);
+           ctx.lineTo(210,330);
+           ctx.lineTo(210,350);
+           ctx.lineTo(190,350);
+           ctx.lineTo(190,330);
+           ctx.lineTo(170,330);
+           ctx.lineTo(170,350);
+           ctx.fill();
+
+           myCanvas.addEventListener("click",function(){
+                  var ani3 = setInterval(() => {
+                     i++;
+                ctx.clearRect(0,0,600,600);
+
+                ctx.beginPath();
+           ctx.fillStyle="green"
+
+           ctx.lineTo(170,250);
+           ctx.lineTo(170,230);
+           ctx.lineTo(190,230);
+           ctx.lineTo(190,250);
+           ctx.lineTo(210,250);
+           ctx.lineTo(210,230);
+           ctx.lineTo(230,230);
+           ctx.lineTo(230,250);
+           ctx.lineTo(250,250);
+           ctx.lineTo(250,230);
+           ctx.lineTo(270,230);
+           ctx.lineTo(270,250);
+           ctx.lineTo(290,250);
+           ctx.lineTo(290,230);
+           ctx.lineTo(310,230);
+           ctx.lineTo(310,250);
+           ctx.lineTo(330,250);
+           ctx.lineTo(330,230);
+           ctx.lineTo(350,230);
+           ctx.lineTo(350,250);
+
+           ctx.lineTo(350,350);
+           ctx.lineTo(350,330);
+           ctx.lineTo(330,330);
+           ctx.lineTo(330,350);
+           ctx.lineTo(310,350);
+           ctx.lineTo(310,330);
+           ctx.lineTo(290,330);
+           ctx.lineTo(290,350);
+           ctx.lineTo(270,350);
+           ctx.lineTo(270,330);
+           ctx.lineTo(250,330);
+           ctx.lineTo(250,350);
+           ctx.lineTo(230,350);
+           ctx.lineTo(230,330);
+           ctx.lineTo(210,330);
+           ctx.lineTo(210,350);
+           ctx.lineTo(190,350);
+           ctx.lineTo(190,330);
+           ctx.lineTo(170,330);
+           ctx.lineTo(170,350);
+           ctx.fill();
+
+                ctx.beginPath();
+                ctx.fillStyle="yellow";
+           ctx.arc(260, 200+i, 120, 0, Math.PI, true);
+           ctx.lineTo(170,200+i);
+           ctx.lineTo(170,180+i);
+           ctx.lineTo(190,180+i);
+           ctx.lineTo(190,200+i);
+           ctx.lineTo(210,200+i);
+           ctx.lineTo(210,180+i);
+           ctx.lineTo(230,180+i);
+           ctx.lineTo(230,200+i);
+           ctx.lineTo(250,200+i);
+           ctx.lineTo(250,180+i);
+           ctx.lineTo(270,180+i);
+           ctx.lineTo(270,200+i);
+           ctx.lineTo(290,200+i);
+           ctx.lineTo(290,180+i);
+           ctx.lineTo(310,180+i);
+           ctx.lineTo(310,200+i);
+           ctx.lineTo(330,200+i);
+           ctx.lineTo(330,180+i);
+           ctx.lineTo(350,180+i);
+           ctx.lineTo(350,200+i);
+           ctx.fill();
+
+
+           
+         
+           ctx.beginPath();
+           ctx.fillStyle="red"
+           ctx.arc(260, 400-i, 120, 0, Math.PI, false);
+           ctx.lineTo(170,400-i);
+           ctx.lineTo(170,380-i);
+           ctx.lineTo(190,380-i);
+           ctx.lineTo(190,400-i);
+           ctx.lineTo(210,400-i);
+           ctx.lineTo(210,380-i);
+           ctx.lineTo(230,380-i);
+           ctx.lineTo(230,400-i);
+           ctx.lineTo(250,400-i);
+           ctx.lineTo(250,380-i);
+           ctx.lineTo(270,380-i);
+           ctx.lineTo(270,400-i);
+           ctx.lineTo(290,400-i);
+           ctx.lineTo(290,380-i);
+           ctx.lineTo(310,380-i);
+           ctx.lineTo(310,400-i);
+           ctx.lineTo(330,400-i);
+           ctx.lineTo(330,380-i);
+           ctx.lineTo(350,380-i);
+           ctx.lineTo(350,400-i);
+           ctx.fill();
+                        
+               
+                     
+           if(i>=50){
+            clearInterval(ani3);
+           }
+                if(closetype3){
+                  clearInterval(ani3);
+                }
+                
+            }, n);
+         })
+        })
+        
+    </script>
+       
+
+
+
+    </body>
+    <footer class="hfbackground" id="fixed-bottom">
+      <table>
+       <tr>
+        <td style="width:100%;text-align: center;">
+         <img class="text" id="footer" src="Musimorph---Blue.png" style="width: 100px;height:20px"></img>
+        </td>
+         <td>
+            <img src="social.png" alt="social" height="30" usemap="#workmap2">
+           <map name="workmap2">
+                  <area shape="circle" coords="15,15,12" href="https://www.facebook.com/CymaticUniverse">
+              <area shape="circle" coords="48,16,12" href="https://twitter.com/search?q=cymatic&src=typed_query">
+              <area shape="circle" coords="83,16,12" href="https://www.instagram.com/cymatics.worldwide/">
+           </map>
+         </td>
+       </tr>
+     </table>
+    </footer>
+</html>

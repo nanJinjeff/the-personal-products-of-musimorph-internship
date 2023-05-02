@@ -123,6 +123,16 @@ a:hover{
 	height:60px;
 	filter:drop-shadow(4px 4px 4px blue);
 }
+/*labelButton2*/
+.labelButton2{
+	width:200px;
+	height: 50px;
+	transition: transform 2s;
+}
+.labelButton2:hover{
+	transform: scale(1.5);
+	filter:drop-shadow(4px 4px 4px blue);
+}
 /*background animation*/
 body {
 				
@@ -290,5 +300,317 @@ body {
 @keyframes anirect {
 	to{
      stroke-dashoffset: 10000;
+	}
+}
+html, body{
+	margin:auto;
+	}
+	.column{
+	  display:inline-block;
+	}
+	.headlabelcolor{
+	   color:white;
+	}
+	#label{
+	  text-align:left;
+	  padding:15px
+	}
+	.music_menu_table{
+	border:1px solid black;
+	}
+	.td{
+	border:1px solid black;
+	
+	}
+	.page_background_color{
+	position:absolute;
+	left:0px;
+	top:0px;
+	z-index:-1;
+	
+	}
+	.headlabel{
+		position:absolute;
+		left:0px;
+		top:0px;
+		z-index:1;
+	}
+	label{
+	 color:white;
+	}
+	.buttonlabel:hover{
+		color:red;
+	}
+	.text_align_left{
+	   text-align:left;
+	}
+	.headlabelhover:hover{
+	   color:gray;
+	}
+	#buttonhover:hover{
+	   background-color:8FBC8F;
+	}
+	.labelbuttonhover:hover{
+	   color:blue;
+	}
+	.tdlabelbuttonhover:hover{
+	  filter:drop-shadow(1px 1px 2px blue);
+	}
+	.artistlabel:hover{
+	  color:black;
+	}
+	.forum{               /**/
+ position: relative;
+ margin: auto 90px;
+}
+.code .forum-1{            /*开启绝对定位*/
+ position: absolute;
+ overflow: hidden;
+ height: 0;
+ transition-duration: 0.5s;
+}
+.forum:hover .forum-1{    /*鼠标移入释放高度*/
+ height: 150px;
+}
+.code{
+ width: 200px;
+}
+.code dt{                     /*弹出菜单*/
+ float: left;
+ width: 300px;
+ height:30px;
+ background-color:black;
+ text-align: center;
+ margin: auto;
+ font-size: 20px;
+}
+dt:hover{
+ color:white;
+}
+a:hover{
+   color: red;
+}
+#fixed-bottom {
+   position:fixed;
+   bottom:0px;
+}
+.hfbackground {
+   background-color:black;
+}
+.text {
+   color:white;
+   }
+#footer{
+	   width:1750px;
+	   text-align:center;
+}
+/*hover label to show image*/
+#image1 {
+    display: none;
+}
+#image2 {
+    display: none;
+}
+#image3 {
+    display: none;
+}
+#image4 {
+    display: none;
+}
+#image5 {
+    display: none;
+}
+/*p_title*/
+.p_title{ 
+	font-size: 20px;
+	transition: font-size 2s;
+}
+.p_title:hover{ 
+	font-size: 30px;
+}
+.pA{
+	animation-name: Animi1;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+	animation-timing-function:ease-in-out;
+	animation-play-state:running;
+}
+@keyframes Animi1 {
+	0%{
+	 color:purple;
+	}
+	16.7%{
+	 color: blue;
+	}
+	33.4%{
+     color: green;		
+	}
+	50.1%{
+	 color:yellow;
+	}
+	66.8%{
+	 color: orange;
+	}
+	83.5%{
+	 color: red;
+	}
+	100%{
+		color: purple;
+	}
+
+	
+}
+
+/*div side*/
+.div_side{
+	background-color:aqua;
+	z-index: 0;
+	opacity: 0%;
+}
+.div_side:hover{
+	opacity: 30%;
+}
+/*other rect*/
+.anirect{
+	stroke-dasharray: 1000;
+	animation: anirect 7s linear infinite;
+	filter:blur(5px);
+}
+@keyframes anirect {
+	to{
+     stroke-dashoffset: 10000;
+	}
+}
+/*animi triangle2*/
+.Tr2{
+	animation-name: Animitr2;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+	animation-timing-function:ease-in-out;
+	animation-play-state:running;
+}
+@keyframes Animitr2 {
+	0%{
+	 stroke:purple;
+	}
+	16.7%{
+	 stroke: blue;
+	}
+	33.4%{
+     stroke: green;		
+	}
+	50.1%{
+	 stroke:yellow;
+	}
+	66.8%{
+	 stroke: orange;
+	}
+	83.5%{
+	 stroke: red;
+	}
+	100%{
+	 stroke: purple;
+	}
+}
+/*animi triangle1*/
+.Tr1{
+	animation-name: Animitr1;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function:ease-in-out;
+	animation-play-state:running;
+}
+@keyframes Animitr1 {
+	0%{
+	 stroke:purple;
+	}
+	16.7%{
+		stroke: red;
+	}
+	33.4%{
+		stroke: orange;		
+	}
+	50.1%{
+	 stroke:yellow;
+	}
+	66.8%{
+	 stroke: green;
+	}
+	83.5%{
+	 stroke: blue;
+	}
+	100%{
+	 stroke: purple;
+	}
+}
+/*animi polygon*/
+.pol{
+	animation-name: Animip;
+	animation-duration: 8s;
+	animation-iteration-count: infinite;
+	animation-timing-function:ease-in-out;
+	animation-play-state:running;
+}
+@keyframes Animip {
+	0%{
+	 stroke:purple;
+	}
+	16.7%{
+		stroke: red;
+	}
+	33.4%{
+		stroke: orange;		
+	}
+	50.1%{
+	 stroke:yellow;
+	}
+	66.8%{
+	 stroke: green;
+	}
+	83.5%{
+	 stroke: blue;
+	}
+	100%{
+	 stroke: purple;
+	}
+}
+
+/*animi ball*/
+.bal{
+	stroke-dasharray: 10;
+	animation-name: Animib;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function:ease-in-out;
+	animation-play-state:running;
+}
+@keyframes Animib {
+	0%{
+	 stroke:purple;
+	 stroke-dashoffset: 1000;
+	}
+	16.7%{
+		stroke: red;
+		
+	}
+	33.4%{
+		stroke: orange;		
+		
+	}
+	50.1%{
+	 stroke:yellow;
+	 
+	}
+	66.8%{
+	 stroke: green;
+	 
+	}
+	83.5%{
+	 stroke: blue;
+	 
+	}
+	100%{
+	 stroke: purple;
+	 
 	}
 }

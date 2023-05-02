@@ -1,0 +1,3735 @@
+<html>
+     <head style="padding:0px;width:100%;margin:0px">
+      <link type="text/css" rel="stylesheet" href="webpage css.css">
+        <table style = "width:100%;padding:10px;background-color:black;position:fixed;z-index:2">
+             <th>
+              <a href="homepage 2 titles in centre sound objects and combination.html"><img class="text" id="footer" src="Musimorph---Blue.png" style="width: 100px;height:20px"></img></a>
+            </th>
+            <th style = "width:40%;">
+            </th>
+            <th>
+              <label class="headlabelcolor headlabelhover" id="label">Make</label>
+            </th>
+            <th>
+               <label class="headlabelcolor headlabelhover" id="label">Position</label>
+            </th>
+            
+            <th>
+              <label style = "text-align:right;" class="headlabelcolor headlabelhover">Use</label>
+            </th>
+          </table>
+   <style>
+        canvas{
+           border:1px solid black;
+        }
+     </style>
+   </head>
+
+<body>
+   <body style="background-color:gray;margin:0px;">
+      <div style="height:80px"></div>  
+      <hr></hr>
+      <div style="margin-left: 10%" class="column">
+        <canvas id = "myCanvas" style="filter: blur(1.5px);"></canvas>
+      </div>
+      <div class="column">
+         <table style="border-spacing:10px;margin-left:5%;text-align: left;width:240px">
+            <tr>
+            <td class="td tdlabelbuttonhover" style="background-color:black">
+        <label id="button1"  style="margin:10px" class="labelbuttonhover">show sound object together</label>
+            </td>
+            </tr>
+            <tr>
+            <td class="td tdlabelbuttonhover" style="background-color:black">
+        <label id="button2"  style="margin:10px" class="labelbuttonhover">show sound object red</label>
+            </td>
+            </tr>
+            <tr>
+            <td class="td tdlabelbuttonhover" style="background-color:black">
+        <label id="button3"  style="margin:10px" class="labelbuttonhover">show sound object green</label>
+            </td>
+            </tr>
+         </table>
+      </div>
+      <hr></hr>
+      <div style="height:80px"></div>
+    <script>
+            var button1 = document.getElementById("button1");
+            var button2 = document.getElementById("button2");
+            var button3 = document.getElementById("button3");
+            var myCanvas = document.getElementById("myCanvas");
+            myCanvas.width=900;
+            myCanvas.height=700;
+            myCanvas.style.background = "black";
+            var ctx = myCanvas.getContext("2d");
+            var i=0,y=0,z=0,n=0;
+            var button1switch, button2switch, button3switch;
+
+            let lastUpdate = 0;
+
+           
+            button1.addEventListener("click",function(){
+            button1switch=false;
+            button2switch=true;
+            button3switch=true;
+            i=0;
+            n=20;
+
+         var anim1 =  setInterval(function(){
+            i++;
+            
+            if(y<=10&&y>=-10){
+               y++;
+               if(y==10){
+                  z=10;
+               }
+           
+            ctx.clearRect(0,0,900,700);
+
+            ctx.beginPath();
+            ctx.lineWidth="2";
+            ctx.strokeStyle = "red";
+            ctx.moveTo(50, 200);
+            ctx.quadraticCurveTo(75, 200-y, 100, 200);
+            ctx.quadraticCurveTo(125, 200+y, 150, 200);
+            ctx.quadraticCurveTo(175,200-y,200,200);
+            ctx.quadraticCurveTo(225,200+y,250,200);
+            ctx.quadraticCurveTo(275,200-y,300,200);
+            ctx.quadraticCurveTo(325,200+y,350,200);
+            ctx.quadraticCurveTo(375,200-y,400,200);
+            ctx.quadraticCurveTo(425,200+y,450,200);
+            ctx.quadraticCurveTo(475,200-y,500,200);
+            ctx.quadraticCurveTo(525,200+y,550,200);
+            ctx.quadraticCurveTo(575,200-y,600,200);
+            ctx.quadraticCurveTo(625,200+y,650,200);
+            ctx.quadraticCurveTo(675,200-y,700,200);
+            ctx.quadraticCurveTo(725,200+y,750,200);
+            ctx.quadraticCurveTo(775,200-y,800,200);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.moveTo(50,200);
+            ctx.strokeStyle = "red";
+            ctx.quadraticCurveTo(100,200+y,150,200);
+            ctx.quadraticCurveTo(200,200-y,250,200);
+            ctx.quadraticCurveTo(300,200+y,350,200);
+            ctx.quadraticCurveTo(400,200-y,450,200);
+            ctx.quadraticCurveTo(500,200+y,550,200);
+            ctx.quadraticCurveTo(600,200-y,650,200);
+            ctx.quadraticCurveTo(700,200+y,750,200);
+            ctx.quadraticCurveTo(800,200-y,850,200);            
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "orange";
+            ctx.moveTo(50, 220);
+            ctx.quadraticCurveTo(75, 220+y, 100, 220);
+            ctx.quadraticCurveTo(125, 220-y, 150, 220);
+            ctx.quadraticCurveTo(175,220+y,200,220);
+            ctx.quadraticCurveTo(225,220-y,250,220);
+            ctx.quadraticCurveTo(275,220+y,300,220);
+            ctx.quadraticCurveTo(325,220-y,350,220);
+            ctx.quadraticCurveTo(375,220+y,400,220);
+            ctx.quadraticCurveTo(425,220-y,450,220);
+            ctx.quadraticCurveTo(475,220+y,500,220);
+            ctx.quadraticCurveTo(525,220-y,550,220);
+            ctx.quadraticCurveTo(575,220+y,600,220);
+            ctx.quadraticCurveTo(625,220-y,650,220);
+            ctx.quadraticCurveTo(675,220+y,700,220);
+            ctx.quadraticCurveTo(725,220-y,750,220);
+            ctx.quadraticCurveTo(775,220+y,800,220);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "orange";
+            ctx.moveTo(50,220);
+            ctx.quadraticCurveTo(100,220+y,150,220);
+            ctx.quadraticCurveTo(200,220-y,250,220);
+            ctx.quadraticCurveTo(300,220+y,350,220);
+            ctx.quadraticCurveTo(400,220-y,450,220);
+            ctx.quadraticCurveTo(500,220+y,550,220);
+            ctx.quadraticCurveTo(600,220-y,650,220);
+            ctx.quadraticCurveTo(700,220+y,750,220);
+            ctx.quadraticCurveTo(800,220-y,850,220);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "yellow";
+            ctx.moveTo(50, 240);
+            ctx.quadraticCurveTo(75, 240-y, 100, 240);
+            ctx.quadraticCurveTo(125, 240+y, 150, 240);
+            ctx.quadraticCurveTo(175,240-y,200,240);
+            ctx.quadraticCurveTo(225,240+y,250,240);
+            ctx.quadraticCurveTo(275,240-y,300,240);
+            ctx.quadraticCurveTo(325,240+y,350,240);
+            ctx.quadraticCurveTo(375,240-y,400,240);
+            ctx.quadraticCurveTo(425,240+y,450,240);
+            ctx.quadraticCurveTo(475,240-y,500,240);
+            ctx.quadraticCurveTo(525,240+y,550,240);
+            ctx.quadraticCurveTo(575,240-y,600,240);
+            ctx.quadraticCurveTo(625,240+y,650,240);
+            ctx.quadraticCurveTo(675,240-y,700,240);
+            ctx.quadraticCurveTo(725,240+y,750,240);
+            ctx.quadraticCurveTo(775,240-y,800,240);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "yellow";
+            ctx.moveTo(50,240);
+            ctx.quadraticCurveTo(100,240-y,150,240);
+            ctx.quadraticCurveTo(200,240+y,250,240);
+            ctx.quadraticCurveTo(300,240-y,350,240);
+            ctx.quadraticCurveTo(400,240+y,450,240);
+            ctx.quadraticCurveTo(500,240-y,550,240);
+            ctx.quadraticCurveTo(600,240+y,650,240);
+            ctx.quadraticCurveTo(700,240-y,750,240);
+            ctx.quadraticCurveTo(800,240+y,850,240);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "green";
+            ctx.moveTo(50, 260);
+            ctx.quadraticCurveTo(75, 260-y, 100, 260);
+            ctx.quadraticCurveTo(125, 260+y, 150, 260);
+            ctx.quadraticCurveTo(175,260-y,200,260);
+            ctx.quadraticCurveTo(225,260+y,250,260);
+            ctx.quadraticCurveTo(275,260-y,300,260);
+            ctx.quadraticCurveTo(325,260+y,350,260);
+            ctx.quadraticCurveTo(375,260-y,400,260);
+            ctx.quadraticCurveTo(425,260+y,450,260);
+            ctx.quadraticCurveTo(475,260-y,500,260);
+            ctx.quadraticCurveTo(525,260+y,550,260);
+            ctx.quadraticCurveTo(575,260-y,600,260);
+            ctx.quadraticCurveTo(625,260+y,650,260);
+            ctx.quadraticCurveTo(675,260-y,700,260);
+            ctx.quadraticCurveTo(725,260+y,750,260);
+            ctx.quadraticCurveTo(775,260-y,800,260);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "green";
+            ctx.moveTo(50,260);
+            ctx.quadraticCurveTo(100,260-y,150,260);
+            ctx.quadraticCurveTo(200,260+y,250,260);
+            ctx.quadraticCurveTo(300,260-y,350,260);
+            ctx.quadraticCurveTo(400,260+y,450,260);
+            ctx.quadraticCurveTo(500,260-y,550,260);
+            ctx.quadraticCurveTo(600,260+y,650,260);
+            ctx.quadraticCurveTo(700,260-y,750,260);
+            ctx.quadraticCurveTo(800,260+y,850,260);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "#55A9A9";
+            ctx.moveTo(50, 280);
+            ctx.quadraticCurveTo(75, 280+y, 100, 280);
+            ctx.quadraticCurveTo(125, 280-y, 150, 280);
+            ctx.quadraticCurveTo(175,280+y,200,280);
+            ctx.quadraticCurveTo(225,280-y,250,280);
+            ctx.quadraticCurveTo(275,280+y,300,280);
+            ctx.quadraticCurveTo(325,280-y,350,280);
+            ctx.quadraticCurveTo(375,280+y,400,280);
+            ctx.quadraticCurveTo(425,280-y,450,280);
+            ctx.quadraticCurveTo(475,280+y,500,280);
+            ctx.quadraticCurveTo(525,280-y,550,280);
+            ctx.quadraticCurveTo(575,280+y,600,280);
+            ctx.quadraticCurveTo(625,280-y,650,280);
+            ctx.quadraticCurveTo(675,280+y,700,280);
+            ctx.quadraticCurveTo(725,280-y,750,280);
+            ctx.quadraticCurveTo(775,280+y,800,280);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "#55A9A9";
+            ctx.moveTo(50,280);
+            ctx.quadraticCurveTo(100,280-y,150,280);
+            ctx.quadraticCurveTo(200,280+y,250,280);
+            ctx.quadraticCurveTo(300,280-y,350,280);
+            ctx.quadraticCurveTo(400,280+y,450,280);
+            ctx.quadraticCurveTo(500,280-y,550,280);
+            ctx.quadraticCurveTo(600,280+y,650,280);
+            ctx.quadraticCurveTo(700,280-y,750,280);
+            ctx.quadraticCurveTo(800,280+y,850,280);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "blue";
+            ctx.moveTo(50, 300);
+            ctx.quadraticCurveTo(75, 300-y, 100, 300);
+            ctx.quadraticCurveTo(125, 300+y, 150, 300);
+            ctx.quadraticCurveTo(175,300-y,200,300);
+            ctx.quadraticCurveTo(225,300+y,250,300);
+            ctx.quadraticCurveTo(275,300-y,300,300);
+            ctx.quadraticCurveTo(325,300+y,350,300);
+            ctx.quadraticCurveTo(375,300-y,400,300);
+            ctx.quadraticCurveTo(425,300+y,450,300);
+            ctx.quadraticCurveTo(475,300-y,500,300);
+            ctx.quadraticCurveTo(525,300+y,550,300);
+            ctx.quadraticCurveTo(575,300-y,600,300);
+            ctx.quadraticCurveTo(625,300+y,650,300);
+            ctx.quadraticCurveTo(675,300-y,700,300);
+            ctx.quadraticCurveTo(725,300+y,750,300);
+            ctx.quadraticCurveTo(775,300-y,800,300);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "blue";
+            ctx.moveTo(50,300);
+            ctx.quadraticCurveTo(100,300-y,150,300);
+            ctx.quadraticCurveTo(200,300+y,250,300);
+            ctx.quadraticCurveTo(300,300-y,350,300);
+            ctx.quadraticCurveTo(400,300+y,450,300);
+            ctx.quadraticCurveTo(500,300-y,550,300);
+            ctx.quadraticCurveTo(600,300+y,650,300);
+            ctx.quadraticCurveTo(700,300-y,750,300);
+            ctx.quadraticCurveTo(800,300+y,850,300);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "purple";
+            ctx.moveTo(50, 320);
+            ctx.quadraticCurveTo(75, 320+y, 100, 320);
+            ctx.quadraticCurveTo(125, 320-y, 150, 320);
+            ctx.quadraticCurveTo(175,320+y,200,320);
+            ctx.quadraticCurveTo(225,320-y,250,320);
+            ctx.quadraticCurveTo(275,320+y,300,320);
+            ctx.quadraticCurveTo(325,320-y,350,320);
+            ctx.quadraticCurveTo(375,320+y,400,320);
+            ctx.quadraticCurveTo(425,320-y,450,320);
+            ctx.quadraticCurveTo(475,320+y,500,320);
+            ctx.quadraticCurveTo(525,320-y,550,320);
+            ctx.quadraticCurveTo(575,320+y,600,320);
+            ctx.quadraticCurveTo(625,320-y,650,320);
+            ctx.quadraticCurveTo(675,320+y,700,320);
+            ctx.quadraticCurveTo(725,320-y,750,320);
+            ctx.quadraticCurveTo(775,320+y,800,320);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "purple";
+            ctx.moveTo(50,320);
+            ctx.quadraticCurveTo(100,320-y,150,320);
+            ctx.quadraticCurveTo(200,320+y,250,320);
+            ctx.quadraticCurveTo(300,320-y,350,320);
+            ctx.quadraticCurveTo(400,320+y,450,320);
+            ctx.quadraticCurveTo(500,320-y,550,320);
+            ctx.quadraticCurveTo(600,320+y,650,320);
+            ctx.quadraticCurveTo(700,320-y,750,320);
+            ctx.quadraticCurveTo(800,320+y,850,320);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "red";
+            ctx.moveTo(50, 340);
+            ctx.quadraticCurveTo(75, 340-y, 100, 340);
+            ctx.quadraticCurveTo(125, 340+y, 150, 340);
+            ctx.quadraticCurveTo(175,340-y,200,340);
+            ctx.quadraticCurveTo(225,340+y,250,340);
+            ctx.quadraticCurveTo(275,340-y,300,340);
+            ctx.quadraticCurveTo(325,340+y,350,340);
+            ctx.quadraticCurveTo(375,340-y,400,340);
+            ctx.quadraticCurveTo(425,340+y,450,340);
+            ctx.quadraticCurveTo(475,340-y,500,340);
+            ctx.quadraticCurveTo(525,340+y,550,340);
+            ctx.quadraticCurveTo(575,340-y,600,340);
+            ctx.quadraticCurveTo(625,340+y,650,340);
+            ctx.quadraticCurveTo(675,340-y,700,340);
+            ctx.quadraticCurveTo(725,340+y,750,340);
+            ctx.quadraticCurveTo(775,340-y,800,340);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "red";
+            ctx.moveTo(50,340);
+            ctx.quadraticCurveTo(100,340-y,150,340);
+            ctx.quadraticCurveTo(200,340+y,250,340);
+            ctx.quadraticCurveTo(300,340-y,350,340);
+            ctx.quadraticCurveTo(400,340+y,450,340);
+            ctx.quadraticCurveTo(500,340-y,550,340);
+            ctx.quadraticCurveTo(600,340+y,650,340);
+            ctx.quadraticCurveTo(700,340-y,750,340);
+            ctx.quadraticCurveTo(800,340+y,850,340);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "orange";
+            ctx.moveTo(50, 360);
+            ctx.quadraticCurveTo(75, 360+y, 100, 360);
+            ctx.quadraticCurveTo(125, 360-y, 150, 360);
+            ctx.quadraticCurveTo(175,360+y,200,360);
+            ctx.quadraticCurveTo(225,360-y,250,360);
+            ctx.quadraticCurveTo(275,360+y,300,360);
+            ctx.quadraticCurveTo(325,360-y,350,360);
+            ctx.quadraticCurveTo(375,360+y,400,360);
+            ctx.quadraticCurveTo(425,360-y,450,360);
+            ctx.quadraticCurveTo(475,360+y,500,360);
+            ctx.quadraticCurveTo(525,360-y,550,360);
+            ctx.quadraticCurveTo(575,360+y,600,360);
+            ctx.quadraticCurveTo(625,360-y,650,360);
+            ctx.quadraticCurveTo(675,360+y,700,360);
+            ctx.quadraticCurveTo(725,360-y,750,360);
+            ctx.quadraticCurveTo(775,360+y,800,360);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "orange";
+            ctx.moveTo(50,360);
+            ctx.quadraticCurveTo(100,360-y,150,360);
+            ctx.quadraticCurveTo(200,360+y,250,360);
+            ctx.quadraticCurveTo(300,360-y,350,360);
+            ctx.quadraticCurveTo(400,360+y,450,360);
+            ctx.quadraticCurveTo(500,360-y,550,360);
+            ctx.quadraticCurveTo(600,360+y,650,360);
+            ctx.quadraticCurveTo(700,360-y,750,360);
+            ctx.quadraticCurveTo(800,360+y,850,360);            
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "yellow";
+            ctx.moveTo(50, 380);
+            ctx.quadraticCurveTo(75, 380-y, 100, 380);
+            ctx.quadraticCurveTo(125, 380+y, 150, 380);
+            ctx.quadraticCurveTo(175,380-y,200,380);
+            ctx.quadraticCurveTo(225,380+y,250,380);
+            ctx.quadraticCurveTo(275,380-y,300,380);
+            ctx.quadraticCurveTo(325,380+y,350,380);
+            ctx.quadraticCurveTo(375,380-y,400,380);
+            ctx.quadraticCurveTo(425,380+y,450,380);
+            ctx.quadraticCurveTo(475,380-y,500,380);
+            ctx.quadraticCurveTo(525,380+y,550,380);
+            ctx.quadraticCurveTo(575,380-y,600,380);
+            ctx.quadraticCurveTo(625,380+y,650,380);
+            ctx.quadraticCurveTo(675,380-y,700,380);
+            ctx.quadraticCurveTo(725,380+y,750,380);
+            ctx.quadraticCurveTo(775,380-y,800,380);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "yellow";
+            ctx.moveTo(50,380);
+            ctx.quadraticCurveTo(100,380-y,150,380);
+            ctx.quadraticCurveTo(200,380+y,250,380);
+            ctx.quadraticCurveTo(300,380-y,350,380);
+            ctx.quadraticCurveTo(400,380+y,450,380);
+            ctx.quadraticCurveTo(500,380-y,550,380);
+            ctx.quadraticCurveTo(600,380+y,650,380);
+            ctx.quadraticCurveTo(700,380-y,750,380);
+            ctx.quadraticCurveTo(800,380+y,850,380);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "green";
+            ctx.moveTo(50, 400);
+            ctx.quadraticCurveTo(75, 400+y, 100, 400);
+            ctx.quadraticCurveTo(125, 400-y, 150, 400);
+            
+            ctx.quadraticCurveTo(175,400-y,200,400);
+            ctx.quadraticCurveTo(225,400+y,250,400);
+            ctx.quadraticCurveTo(275,400-y,300,400);
+            ctx.quadraticCurveTo(325,400+y,350,400);
+            ctx.quadraticCurveTo(375,400-y,400,400);
+            ctx.quadraticCurveTo(425,400+y,450,400);
+            ctx.quadraticCurveTo(475,400-y,500,400);
+            ctx.quadraticCurveTo(525,400+y,550,400);
+            ctx.quadraticCurveTo(575,400-y,600,400);
+            ctx.quadraticCurveTo(625,400+y,650,400);
+            ctx.quadraticCurveTo(675,400-y,700,400);
+            ctx.quadraticCurveTo(725,400+y,750,400);
+            ctx.quadraticCurveTo(775,400-y,800,400);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "green";
+            ctx.moveTo(50,400);
+            ctx.quadraticCurveTo(100,400-y,150,400);
+            ctx.quadraticCurveTo(200,400+y,250,400);
+            ctx.quadraticCurveTo(300,400-y,350,400);
+            ctx.quadraticCurveTo(400,400+y,450,400);
+            ctx.quadraticCurveTo(500,400-y,550,400);
+            ctx.quadraticCurveTo(600,400+y,650,400);
+            ctx.quadraticCurveTo(700,400-y,750,400);
+            ctx.quadraticCurveTo(800,400+y,850,400);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "#55A9A9";
+            ctx.moveTo(50, 420);
+            ctx.quadraticCurveTo(75, 420-y, 100, 420);
+            ctx.quadraticCurveTo(125, 420+y, 150, 420);
+            ctx.quadraticCurveTo(175,420-y,200,420);
+            ctx.quadraticCurveTo(225,420+y,250,420);
+            ctx.quadraticCurveTo(275,420-y,300,420);
+            ctx.quadraticCurveTo(325,420+y,350,420);
+            ctx.quadraticCurveTo(375,420-y,400,420);
+            ctx.quadraticCurveTo(425,420+y,450,420);
+            ctx.quadraticCurveTo(475,420-y,500,420);
+            ctx.quadraticCurveTo(525,420+y,550,420);
+            ctx.quadraticCurveTo(575,420-y,600,420);
+            ctx.quadraticCurveTo(625,420+y,650,420);
+            ctx.quadraticCurveTo(675,420-y,700,420);
+            ctx.quadraticCurveTo(725,420+y,750,420);
+            ctx.quadraticCurveTo(775,420-y,800,420);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "#55A9A9";
+            ctx.moveTo(50,420);
+            ctx.quadraticCurveTo(100,420-y,150,420);
+            ctx.quadraticCurveTo(200,420+y,250,420);
+            ctx.quadraticCurveTo(300,420-y,350,420);
+            ctx.quadraticCurveTo(400,420+y,450,420);
+            ctx.quadraticCurveTo(500,420-y,550,420);
+            ctx.quadraticCurveTo(600,420+y,650,420);
+            ctx.quadraticCurveTo(700,420-y,750,420);
+            ctx.quadraticCurveTo(800,420+y,850,420);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "blue";
+            ctx.moveTo(50, 440);
+            ctx.quadraticCurveTo(75, 440+y, 100, 440);
+            ctx.quadraticCurveTo(125, 440-y, 150, 440);
+            ctx.quadraticCurveTo(175,440+y,200,440);
+            ctx.quadraticCurveTo(225,440-y,250,440);
+            ctx.quadraticCurveTo(275,440+y,300,440);
+            ctx.quadraticCurveTo(325,440-y,350,440);
+            ctx.quadraticCurveTo(375,440+y,400,440);
+            ctx.quadraticCurveTo(425,440-y,450,440);
+            ctx.quadraticCurveTo(475,440+y,500,440);
+            ctx.quadraticCurveTo(525,440-y,550,440);
+            ctx.quadraticCurveTo(575,440+y,600,440);
+            ctx.quadraticCurveTo(625,440-y,650,440);
+            ctx.quadraticCurveTo(675,440+y,700,440);
+            ctx.quadraticCurveTo(725,440-y,750,440);
+            ctx.quadraticCurveTo(775,440+y,800,440);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "blue";
+            ctx.moveTo(50,440);
+            ctx.quadraticCurveTo(100,440-y,150,440);
+            ctx.quadraticCurveTo(200,440+y,250,440);
+            ctx.quadraticCurveTo(300,440-y,350,440);
+            ctx.quadraticCurveTo(400,440+y,450,440);
+            ctx.quadraticCurveTo(500,440-y,550,440);
+            ctx.quadraticCurveTo(600,440+y,650,440);
+            ctx.quadraticCurveTo(700,440-y,750,440);
+            ctx.quadraticCurveTo(800,440+y,850,440);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "purple";
+            ctx.moveTo(50, 460);
+            ctx.quadraticCurveTo(75, 460+y, 100, 460);
+            ctx.quadraticCurveTo(125, 460-y, 150, 460);
+            ctx.quadraticCurveTo(175,460+y,200,460);
+            ctx.quadraticCurveTo(225,460-y,250,460);
+            ctx.quadraticCurveTo(275,460+y,300,460);
+            ctx.quadraticCurveTo(325,460-y,350,460);
+            ctx.quadraticCurveTo(375,460+y,400,460);
+            ctx.quadraticCurveTo(425,460-y,450,460);
+            ctx.quadraticCurveTo(475,460+y,500,460);
+            ctx.quadraticCurveTo(525,460-y,550,460);
+            ctx.quadraticCurveTo(575,460+y,600,460);
+            ctx.quadraticCurveTo(625,460-y,650,460);
+            ctx.quadraticCurveTo(675,460+y,700,460);
+            ctx.quadraticCurveTo(725,460-y,750,460);
+            ctx.quadraticCurveTo(775,460+y,800,460);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "purple";
+            ctx.moveTo(50,460);
+            ctx.quadraticCurveTo(100,460+y,150,460);
+            ctx.quadraticCurveTo(200,460-y,250,460);
+            ctx.quadraticCurveTo(300,460+y,350,460);
+            ctx.quadraticCurveTo(400,460-y,450,460);
+            ctx.quadraticCurveTo(500,460+y,550,460);
+            ctx.quadraticCurveTo(600,460-y,650,460);
+            ctx.quadraticCurveTo(700,460+y,750,460);
+            ctx.quadraticCurveTo(800,460-y,850,460);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "red";
+            ctx.moveTo(50, 480);
+            ctx.quadraticCurveTo(75, 480-y, 100, 480);
+            ctx.quadraticCurveTo(125, 480+y, 150, 480);
+            ctx.quadraticCurveTo(175,480-y,200,480);
+            ctx.quadraticCurveTo(225,480+y,250,480);
+            ctx.quadraticCurveTo(275,480-y,300,480);
+            ctx.quadraticCurveTo(325,480+y,350,480);
+            ctx.quadraticCurveTo(375,480-y,400,480);
+            ctx.quadraticCurveTo(425,480+y,450,480);
+            ctx.quadraticCurveTo(475,480-y,500,480);
+            ctx.quadraticCurveTo(525,480+y,550,480);
+            ctx.quadraticCurveTo(575,480-y,600,480);
+            ctx.quadraticCurveTo(625,480+y,650,480);
+            ctx.quadraticCurveTo(675,480-y,700,480);
+            ctx.quadraticCurveTo(725,480+y,750,480);
+            ctx.quadraticCurveTo(775,480-y,800,480);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "red";
+            ctx.moveTo(50,480);
+            ctx.quadraticCurveTo(100,480-y,150,480);
+            ctx.quadraticCurveTo(200,480+y,250,480);
+            ctx.quadraticCurveTo(300,480-y,350,480);
+            ctx.quadraticCurveTo(400,480+y,450,480);
+            ctx.quadraticCurveTo(500,480-y,550,480);
+            ctx.quadraticCurveTo(600,480+y,650,480);
+            ctx.quadraticCurveTo(700,480-y,750,480);
+            ctx.quadraticCurveTo(800,480+y,850,480);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "orange";
+            ctx.moveTo(50, 500);
+            ctx.quadraticCurveTo(75, 500+y, 100, 500);
+            ctx.quadraticCurveTo(125, 500-y, 150, 500);
+            ctx.quadraticCurveTo(175,500+y,200,500);
+            ctx.quadraticCurveTo(225,500-y,250,500);
+            ctx.quadraticCurveTo(275,500+y,300,500);
+            ctx.quadraticCurveTo(325,500-y,350,500);
+            ctx.quadraticCurveTo(375,500+y,400,500);
+            ctx.quadraticCurveTo(425,500-y,450,500);
+            ctx.quadraticCurveTo(475,500+y,500,500);
+            ctx.quadraticCurveTo(525,500-y,550,500);
+            ctx.quadraticCurveTo(575,500+y,600,500);
+            ctx.quadraticCurveTo(625,500-y,650,500);
+            ctx.quadraticCurveTo(675,500+y,700,500);
+            ctx.quadraticCurveTo(725,500-y,750,500);
+            ctx.quadraticCurveTo(775,500+y,800,500);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "orange";
+            ctx.moveTo(50,500);
+            ctx.quadraticCurveTo(100,500-y,150,500);
+            ctx.quadraticCurveTo(200,500+y,250,500);
+            ctx.quadraticCurveTo(300,500-y,350,500);
+            ctx.quadraticCurveTo(400,500+y,450,500);
+            ctx.quadraticCurveTo(500,500-y,550,500);
+            ctx.quadraticCurveTo(600,500+y,650,500);
+            ctx.quadraticCurveTo(700,500-y,750,500);
+            ctx.quadraticCurveTo(800,500+y,850,500);    
+            ctx.stroke();
+         }
+
+         if(z>=-10&&z<=10){
+               z--;
+               if(z==-10){
+                  y=-10;
+               }
+           
+            ctx.clearRect(0,0,900,700);
+
+            ctx.beginPath();
+            ctx.lineWidth="2";
+            ctx.strokeStyle = "red";
+            ctx.moveTo(50, 200);
+            ctx.quadraticCurveTo(75, 200-z, 100, 200);
+            ctx.quadraticCurveTo(125, 200+z, 150, 200);
+            ctx.quadraticCurveTo(175,200-z,200,200);
+            ctx.quadraticCurveTo(225,200+z,250,200);
+            ctx.quadraticCurveTo(275,200-z,300,200);
+            ctx.quadraticCurveTo(325,200+z,350,200);
+            ctx.quadraticCurveTo(375,200-z,400,200);
+            ctx.quadraticCurveTo(425,200+z,450,200);
+            ctx.quadraticCurveTo(475,200-z,500,200);
+            ctx.quadraticCurveTo(525,200+z,550,200);
+            ctx.quadraticCurveTo(575,200-z,600,200);
+            ctx.quadraticCurveTo(625,200+z,650,200);
+            ctx.quadraticCurveTo(675,200-z,700,200);
+            ctx.quadraticCurveTo(725,200+z,750,200);
+            ctx.quadraticCurveTo(775,200-z,800,200);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.moveTo(50,200);
+            ctx.strokeStyle = "red";
+            ctx.quadraticCurveTo(100,200+z,150,200);
+            ctx.quadraticCurveTo(200,200-z,250,200);
+            ctx.quadraticCurveTo(300,200+z,350,200);
+            ctx.quadraticCurveTo(400,200-z,450,200);
+            ctx.quadraticCurveTo(500,200+z,550,200);
+            ctx.quadraticCurveTo(600,200-z,650,200);
+            ctx.quadraticCurveTo(700,200+z,750,200);
+            ctx.quadraticCurveTo(800,200-z,850,200);            
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "orange";
+            ctx.moveTo(50, 220);
+            ctx.quadraticCurveTo(75, 220+z, 100, 220);
+            ctx.quadraticCurveTo(125, 220-z, 150, 220);
+            ctx.quadraticCurveTo(175,220+z,200,220);
+            ctx.quadraticCurveTo(225,220-z,250,220);
+            ctx.quadraticCurveTo(275,220+z,300,220);
+            ctx.quadraticCurveTo(325,220-z,350,220);
+            ctx.quadraticCurveTo(375,220+z,400,220);
+            ctx.quadraticCurveTo(425,220-z,450,220);
+            ctx.quadraticCurveTo(475,220+z,500,220);
+            ctx.quadraticCurveTo(525,220-z,550,220);
+            ctx.quadraticCurveTo(575,220+z,600,220);
+            ctx.quadraticCurveTo(625,220-z,650,220);
+            ctx.quadraticCurveTo(675,220+z,700,220);
+            ctx.quadraticCurveTo(725,220-z,750,220);
+            ctx.quadraticCurveTo(775,220+z,800,220);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "orange";
+            ctx.moveTo(50,220);
+            ctx.quadraticCurveTo(100,220+z,150,220);
+            ctx.quadraticCurveTo(200,220-z,250,220);
+            ctx.quadraticCurveTo(300,220+z,350,220);
+            ctx.quadraticCurveTo(400,220-z,450,220);
+            ctx.quadraticCurveTo(500,220+z,550,220);
+            ctx.quadraticCurveTo(600,220-z,650,220);
+            ctx.quadraticCurveTo(700,220+z,750,220);
+            ctx.quadraticCurveTo(800,220-z,850,220);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "yellow";
+            ctx.moveTo(50, 240);
+            ctx.quadraticCurveTo(75, 240-z, 100, 240);
+            ctx.quadraticCurveTo(125, 240+z, 150, 240);
+            ctx.quadraticCurveTo(175,240-z,200,240);
+            ctx.quadraticCurveTo(225,240+z,250,240);
+            ctx.quadraticCurveTo(275,240-z,300,240);
+            ctx.quadraticCurveTo(325,240+z,350,240);
+            ctx.quadraticCurveTo(375,240-z,400,240);
+            ctx.quadraticCurveTo(425,240+z,450,240);
+            ctx.quadraticCurveTo(475,240-z,500,240);
+            ctx.quadraticCurveTo(525,240+z,550,240);
+            ctx.quadraticCurveTo(575,240-z,600,240);
+            ctx.quadraticCurveTo(625,240+z,650,240);
+            ctx.quadraticCurveTo(675,240-z,700,240);
+            ctx.quadraticCurveTo(725,240+z,750,240);
+            ctx.quadraticCurveTo(775,240-z,800,240);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "yellow";
+            ctx.moveTo(50,240);
+            ctx.quadraticCurveTo(100,240-z,150,240);
+            ctx.quadraticCurveTo(200,240+z,250,240);
+            ctx.quadraticCurveTo(300,240-z,350,240);
+            ctx.quadraticCurveTo(400,240+z,450,240);
+            ctx.quadraticCurveTo(500,240-z,550,240);
+            ctx.quadraticCurveTo(600,240+z,650,240);
+            ctx.quadraticCurveTo(700,240-z,750,240);
+            ctx.quadraticCurveTo(800,240+z,850,240);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "green";
+            ctx.moveTo(50, 260);
+            ctx.quadraticCurveTo(75, 260-z, 100, 260);
+            ctx.quadraticCurveTo(125, 260+z, 150, 260);
+            ctx.quadraticCurveTo(175,260-z,200,260);
+            ctx.quadraticCurveTo(225,260+z,250,260);
+            ctx.quadraticCurveTo(275,260-z,300,260);
+            ctx.quadraticCurveTo(325,260+z,350,260);
+            ctx.quadraticCurveTo(375,260-z,400,260);
+            ctx.quadraticCurveTo(425,260+z,450,260);
+            ctx.quadraticCurveTo(475,260-z,500,260);
+            ctx.quadraticCurveTo(525,260+z,550,260);
+            ctx.quadraticCurveTo(575,260-z,600,260);
+            ctx.quadraticCurveTo(625,260+z,650,260);
+            ctx.quadraticCurveTo(675,260-z,700,260);
+            ctx.quadraticCurveTo(725,260+z,750,260);
+            ctx.quadraticCurveTo(775,260-z,800,260);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "green";
+            ctx.moveTo(50,260);
+            ctx.quadraticCurveTo(100,260-z,150,260);
+            ctx.quadraticCurveTo(200,260+z,250,260);
+            ctx.quadraticCurveTo(300,260-z,350,260);
+            ctx.quadraticCurveTo(400,260+z,450,260);
+            ctx.quadraticCurveTo(500,260-z,550,260);
+            ctx.quadraticCurveTo(600,260+z,650,260);
+            ctx.quadraticCurveTo(700,260-z,750,260);
+            ctx.quadraticCurveTo(800,260+z,850,260);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "#55A9A9";
+            ctx.moveTo(50, 280);
+            ctx.quadraticCurveTo(75, 280+z, 100, 280);
+            ctx.quadraticCurveTo(125, 280-z, 150, 280);
+            ctx.quadraticCurveTo(175,280+z,200,280);
+            ctx.quadraticCurveTo(225,280-z,250,280);
+            ctx.quadraticCurveTo(275,280+z,300,280);
+            ctx.quadraticCurveTo(325,280-z,350,280);
+            ctx.quadraticCurveTo(375,280+z,400,280);
+            ctx.quadraticCurveTo(425,280-z,450,280);
+            ctx.quadraticCurveTo(475,280+z,500,280);
+            ctx.quadraticCurveTo(525,280-z,550,280);
+            ctx.quadraticCurveTo(575,280+z,600,280);
+            ctx.quadraticCurveTo(625,280-z,650,280);
+            ctx.quadraticCurveTo(675,280+z,700,280);
+            ctx.quadraticCurveTo(725,280-z,750,280);
+            ctx.quadraticCurveTo(775,280+z,800,280);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "#55A9A9";
+            ctx.moveTo(50,280);
+            ctx.quadraticCurveTo(100,280-z,150,280);
+            ctx.quadraticCurveTo(200,280+z,250,280);
+            ctx.quadraticCurveTo(300,280-z,350,280);
+            ctx.quadraticCurveTo(400,280+z,450,280);
+            ctx.quadraticCurveTo(500,280-z,550,280);
+            ctx.quadraticCurveTo(600,280+z,650,280);
+            ctx.quadraticCurveTo(700,280-z,750,280);
+            ctx.quadraticCurveTo(800,280+z,850,280);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "blue";
+            ctx.moveTo(50, 300);
+            ctx.quadraticCurveTo(75, 300-z, 100, 300);
+            ctx.quadraticCurveTo(125, 300+z, 150, 300);
+            ctx.quadraticCurveTo(175,300-z,200,300);
+            ctx.quadraticCurveTo(225,300+z,250,300);
+            ctx.quadraticCurveTo(275,300-z,300,300);
+            ctx.quadraticCurveTo(325,300+z,350,300);
+            ctx.quadraticCurveTo(375,300-z,400,300);
+            ctx.quadraticCurveTo(425,300+z,450,300);
+            ctx.quadraticCurveTo(475,300-z,500,300);
+            ctx.quadraticCurveTo(525,300+z,550,300);
+            ctx.quadraticCurveTo(575,300-z,600,300);
+            ctx.quadraticCurveTo(625,300+z,650,300);
+            ctx.quadraticCurveTo(675,300-z,700,300);
+            ctx.quadraticCurveTo(725,300+z,750,300);
+            ctx.quadraticCurveTo(775,300-z,800,300);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "blue";
+            ctx.moveTo(50,300);
+            ctx.quadraticCurveTo(100,300-z,150,300);
+            ctx.quadraticCurveTo(200,300+z,250,300);
+            ctx.quadraticCurveTo(300,300-z,350,300);
+            ctx.quadraticCurveTo(400,300+z,450,300);
+            ctx.quadraticCurveTo(500,300-z,550,300);
+            ctx.quadraticCurveTo(600,300+z,650,300);
+            ctx.quadraticCurveTo(700,300-z,750,300);
+            ctx.quadraticCurveTo(800,300+z,850,300);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "purple";
+            ctx.moveTo(50, 320);
+            ctx.quadraticCurveTo(75, 320+z, 100, 320);
+            ctx.quadraticCurveTo(125, 320-z, 150, 320);
+            ctx.quadraticCurveTo(175,320+z,200,320);
+            ctx.quadraticCurveTo(225,320-z,250,320);
+            ctx.quadraticCurveTo(275,320+z,300,320);
+            ctx.quadraticCurveTo(325,320-z,350,320);
+            ctx.quadraticCurveTo(375,320+z,400,320);
+            ctx.quadraticCurveTo(425,320-z,450,320);
+            ctx.quadraticCurveTo(475,320+z,500,320);
+            ctx.quadraticCurveTo(525,320-z,550,320);
+            ctx.quadraticCurveTo(575,320+z,600,320);
+            ctx.quadraticCurveTo(625,320-z,650,320);
+            ctx.quadraticCurveTo(675,320+z,700,320);
+            ctx.quadraticCurveTo(725,320-z,750,320);
+            ctx.quadraticCurveTo(775,320+z,800,320);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "purple";
+            ctx.moveTo(50,320);
+            ctx.quadraticCurveTo(100,320-z,150,320);
+            ctx.quadraticCurveTo(200,320+z,250,320);
+            ctx.quadraticCurveTo(300,320-z,350,320);
+            ctx.quadraticCurveTo(400,320+z,450,320);
+            ctx.quadraticCurveTo(500,320-z,550,320);
+            ctx.quadraticCurveTo(600,320+z,650,320);
+            ctx.quadraticCurveTo(700,320-z,750,320);
+            ctx.quadraticCurveTo(800,320+z,850,320);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "red";
+            ctx.moveTo(50, 340);
+            ctx.quadraticCurveTo(75, 340-z, 100, 340);
+            ctx.quadraticCurveTo(125, 340+z, 150, 340);
+            ctx.quadraticCurveTo(175,340-z,200,340);
+            ctx.quadraticCurveTo(225,340+z,250,340);
+            ctx.quadraticCurveTo(275,340-z,300,340);
+            ctx.quadraticCurveTo(325,340+z,350,340);
+            ctx.quadraticCurveTo(375,340-z,400,340);
+            ctx.quadraticCurveTo(425,340+z,450,340);
+            ctx.quadraticCurveTo(475,340-z,500,340);
+            ctx.quadraticCurveTo(525,340+z,550,340);
+            ctx.quadraticCurveTo(575,340-z,600,340);
+            ctx.quadraticCurveTo(625,340+z,650,340);
+            ctx.quadraticCurveTo(675,340-z,700,340);
+            ctx.quadraticCurveTo(725,340+z,750,340);
+            ctx.quadraticCurveTo(775,340-z,800,340);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "red";
+            ctx.moveTo(50,340);
+            ctx.quadraticCurveTo(100,340-z,150,340);
+            ctx.quadraticCurveTo(200,340+z,250,340);
+            ctx.quadraticCurveTo(300,340-z,350,340);
+            ctx.quadraticCurveTo(400,340+z,450,340);
+            ctx.quadraticCurveTo(500,340-z,550,340);
+            ctx.quadraticCurveTo(600,340+z,650,340);
+            ctx.quadraticCurveTo(700,340-z,750,340);
+            ctx.quadraticCurveTo(800,340+z,850,340);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "orange";
+            ctx.moveTo(50, 360);
+            ctx.quadraticCurveTo(75, 360+z, 100, 360);
+            ctx.quadraticCurveTo(125, 360-z, 150, 360);
+            ctx.quadraticCurveTo(175,360+z,200,360);
+            ctx.quadraticCurveTo(225,360-z,250,360);
+            ctx.quadraticCurveTo(275,360+z,300,360);
+            ctx.quadraticCurveTo(325,360-z,350,360);
+            ctx.quadraticCurveTo(375,360+z,400,360);
+            ctx.quadraticCurveTo(425,360-z,450,360);
+            ctx.quadraticCurveTo(475,360+z,500,360);
+            ctx.quadraticCurveTo(525,360-z,550,360);
+            ctx.quadraticCurveTo(575,360+z,600,360);
+            ctx.quadraticCurveTo(625,360-z,650,360);
+            ctx.quadraticCurveTo(675,360+z,700,360);
+            ctx.quadraticCurveTo(725,360-z,750,360);
+            ctx.quadraticCurveTo(775,360+z,800,360);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "orange";
+            ctx.moveTo(50,360);
+            ctx.quadraticCurveTo(100,360-z,150,360);
+            ctx.quadraticCurveTo(200,360+z,250,360);
+            ctx.quadraticCurveTo(300,360-z,350,360);
+            ctx.quadraticCurveTo(400,360+z,450,360);
+            ctx.quadraticCurveTo(500,360-z,550,360);
+            ctx.quadraticCurveTo(600,360+z,650,360);
+            ctx.quadraticCurveTo(700,360-z,750,360);
+            ctx.quadraticCurveTo(800,360+z,850,360);            
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "yellow";
+            ctx.moveTo(50, 380);
+            ctx.quadraticCurveTo(75, 380-z, 100, 380);
+            ctx.quadraticCurveTo(125, 380+z, 150, 380);
+            ctx.quadraticCurveTo(175,380-z,200,380);
+            ctx.quadraticCurveTo(225,380+z,250,380);
+            ctx.quadraticCurveTo(275,380-z,300,380);
+            ctx.quadraticCurveTo(325,380+z,350,380);
+            ctx.quadraticCurveTo(375,380-z,400,380);
+            ctx.quadraticCurveTo(425,380+z,450,380);
+            ctx.quadraticCurveTo(475,380-z,500,380);
+            ctx.quadraticCurveTo(525,380+z,550,380);
+            ctx.quadraticCurveTo(575,380-z,600,380);
+            ctx.quadraticCurveTo(625,380+z,650,380);
+            ctx.quadraticCurveTo(675,380-z,700,380);
+            ctx.quadraticCurveTo(725,380+z,750,380);
+            ctx.quadraticCurveTo(775,380-z,800,380);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "yellow";
+            ctx.moveTo(50,380);
+            ctx.quadraticCurveTo(100,380-z,150,380);
+            ctx.quadraticCurveTo(200,380+z,250,380);
+            ctx.quadraticCurveTo(300,380-z,350,380);
+            ctx.quadraticCurveTo(400,380+z,450,380);
+            ctx.quadraticCurveTo(500,380-z,550,380);
+            ctx.quadraticCurveTo(600,380+z,650,380);
+            ctx.quadraticCurveTo(700,380-z,750,380);
+            ctx.quadraticCurveTo(800,380+z,850,380);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "green";
+            ctx.moveTo(50, 400);
+            ctx.quadraticCurveTo(75, 400+z, 100, 400);
+            ctx.quadraticCurveTo(125, 400-z, 150, 400);
+            
+            ctx.quadraticCurveTo(175,400-z,200,400);
+            ctx.quadraticCurveTo(225,400+z,250,400);
+            ctx.quadraticCurveTo(275,400-z,300,400);
+            ctx.quadraticCurveTo(325,400+z,350,400);
+            ctx.quadraticCurveTo(375,400-z,400,400);
+            ctx.quadraticCurveTo(425,400+z,450,400);
+            ctx.quadraticCurveTo(475,400-z,500,400);
+            ctx.quadraticCurveTo(525,400+z,550,400);
+            ctx.quadraticCurveTo(575,400-z,600,400);
+            ctx.quadraticCurveTo(625,400+z,650,400);
+            ctx.quadraticCurveTo(675,400-z,700,400);
+            ctx.quadraticCurveTo(725,400+z,750,400);
+            ctx.quadraticCurveTo(775,400-z,800,400);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "green";
+            ctx.moveTo(50,400);
+            ctx.quadraticCurveTo(100,400-z,150,400);
+            ctx.quadraticCurveTo(200,400+z,250,400);
+            ctx.quadraticCurveTo(300,400-z,350,400);
+            ctx.quadraticCurveTo(400,400+z,450,400);
+            ctx.quadraticCurveTo(500,400-z,550,400);
+            ctx.quadraticCurveTo(600,400+z,650,400);
+            ctx.quadraticCurveTo(700,400-z,750,400);
+            ctx.quadraticCurveTo(800,400+z,850,400);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "#55A9A9";
+            ctx.moveTo(50, 420);
+            ctx.quadraticCurveTo(75, 420-z, 100, 420);
+            ctx.quadraticCurveTo(125, 420+z, 150, 420);
+            ctx.quadraticCurveTo(175,420-z,200,420);
+            ctx.quadraticCurveTo(225,420+z,250,420);
+            ctx.quadraticCurveTo(275,420-z,300,420);
+            ctx.quadraticCurveTo(325,420+z,350,420);
+            ctx.quadraticCurveTo(375,420-z,400,420);
+            ctx.quadraticCurveTo(425,420+z,450,420);
+            ctx.quadraticCurveTo(475,420-z,500,420);
+            ctx.quadraticCurveTo(525,420+z,550,420);
+            ctx.quadraticCurveTo(575,420-z,600,420);
+            ctx.quadraticCurveTo(625,420+z,650,420);
+            ctx.quadraticCurveTo(675,420-z,700,420);
+            ctx.quadraticCurveTo(725,420+z,750,420);
+            ctx.quadraticCurveTo(775,420-z,800,420);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "#55A9A9";
+            ctx.moveTo(50,420);
+            ctx.quadraticCurveTo(100,420-z,150,420);
+            ctx.quadraticCurveTo(200,420+z,250,420);
+            ctx.quadraticCurveTo(300,420-z,350,420);
+            ctx.quadraticCurveTo(400,420+z,450,420);
+            ctx.quadraticCurveTo(500,420-z,550,420);
+            ctx.quadraticCurveTo(600,420+z,650,420);
+            ctx.quadraticCurveTo(700,420-z,750,420);
+            ctx.quadraticCurveTo(800,420+z,850,420);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "blue";
+            ctx.moveTo(50, 440);
+            ctx.quadraticCurveTo(75, 440+z, 100, 440);
+            ctx.quadraticCurveTo(125, 440-z, 150, 440);
+            ctx.quadraticCurveTo(175,440+z,200,440);
+            ctx.quadraticCurveTo(225,440-z,250,440);
+            ctx.quadraticCurveTo(275,440+z,300,440);
+            ctx.quadraticCurveTo(325,440-z,350,440);
+            ctx.quadraticCurveTo(375,440+z,400,440);
+            ctx.quadraticCurveTo(425,440-z,450,440);
+            ctx.quadraticCurveTo(475,440+z,500,440);
+            ctx.quadraticCurveTo(525,440-z,550,440);
+            ctx.quadraticCurveTo(575,440+z,600,440);
+            ctx.quadraticCurveTo(625,440-z,650,440);
+            ctx.quadraticCurveTo(675,440+z,700,440);
+            ctx.quadraticCurveTo(725,440-z,750,440);
+            ctx.quadraticCurveTo(775,440+z,800,440);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "blue";
+            ctx.moveTo(50,440);
+            ctx.quadraticCurveTo(100,440-z,150,440);
+            ctx.quadraticCurveTo(200,440+z,250,440);
+            ctx.quadraticCurveTo(300,440-z,350,440);
+            ctx.quadraticCurveTo(400,440+z,450,440);
+            ctx.quadraticCurveTo(500,440-z,550,440);
+            ctx.quadraticCurveTo(600,440+z,650,440);
+            ctx.quadraticCurveTo(700,440-z,750,440);
+            ctx.quadraticCurveTo(800,440+z,850,440);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "purple";
+            ctx.moveTo(50, 460);
+            ctx.quadraticCurveTo(75, 460+z, 100, 460);
+            ctx.quadraticCurveTo(125, 460-z, 150, 460);
+            ctx.quadraticCurveTo(175,460+z,200,460);
+            ctx.quadraticCurveTo(225,460-z,250,460);
+            ctx.quadraticCurveTo(275,460+z,300,460);
+            ctx.quadraticCurveTo(325,460-z,350,460);
+            ctx.quadraticCurveTo(375,460+z,400,460);
+            ctx.quadraticCurveTo(425,460-z,450,460);
+            ctx.quadraticCurveTo(475,460+z,500,460);
+            ctx.quadraticCurveTo(525,460-z,550,460);
+            ctx.quadraticCurveTo(575,460+z,600,460);
+            ctx.quadraticCurveTo(625,460-z,650,460);
+            ctx.quadraticCurveTo(675,460+z,700,460);
+            ctx.quadraticCurveTo(725,460-z,750,460);
+            ctx.quadraticCurveTo(775,460+z,800,460);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "purple";
+            ctx.moveTo(50,460);
+            ctx.quadraticCurveTo(100,460+z,150,460);
+            ctx.quadraticCurveTo(200,460-z,250,460);
+            ctx.quadraticCurveTo(300,460+z,350,460);
+            ctx.quadraticCurveTo(400,460-z,450,460);
+            ctx.quadraticCurveTo(500,460+z,550,460);
+            ctx.quadraticCurveTo(600,460-z,650,460);
+            ctx.quadraticCurveTo(700,460+z,750,460);
+            ctx.quadraticCurveTo(800,460-z,850,460);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "red";
+            ctx.moveTo(50, 480);
+            ctx.quadraticCurveTo(75, 480-z, 100, 480);
+            ctx.quadraticCurveTo(125, 480+z, 150, 480);
+            ctx.quadraticCurveTo(175,480-z,200,480);
+            ctx.quadraticCurveTo(225,480+z,250,480);
+            ctx.quadraticCurveTo(275,480-z,300,480);
+            ctx.quadraticCurveTo(325,480+z,350,480);
+            ctx.quadraticCurveTo(375,480-z,400,480);
+            ctx.quadraticCurveTo(425,480+z,450,480);
+            ctx.quadraticCurveTo(475,480-z,500,480);
+            ctx.quadraticCurveTo(525,480+z,550,480);
+            ctx.quadraticCurveTo(575,480-z,600,480);
+            ctx.quadraticCurveTo(625,480+z,650,480);
+            ctx.quadraticCurveTo(675,480-z,700,480);
+            ctx.quadraticCurveTo(725,480+z,750,480);
+            ctx.quadraticCurveTo(775,480-z,800,480);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "red";
+            ctx.moveTo(50,480);
+            ctx.quadraticCurveTo(100,480-z,150,480);
+            ctx.quadraticCurveTo(200,480+z,250,480);
+            ctx.quadraticCurveTo(300,480-z,350,480);
+            ctx.quadraticCurveTo(400,480+z,450,480);
+            ctx.quadraticCurveTo(500,480-z,550,480);
+            ctx.quadraticCurveTo(600,480+z,650,480);
+            ctx.quadraticCurveTo(700,480-z,750,480);
+            ctx.quadraticCurveTo(800,480+z,850,480);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "orange";
+            ctx.moveTo(50, 500);
+            ctx.quadraticCurveTo(75, 500+z, 100, 500);
+            ctx.quadraticCurveTo(125, 500-z, 150, 500);
+            ctx.quadraticCurveTo(175,500+z,200,500);
+            ctx.quadraticCurveTo(225,500-z,250,500);
+            ctx.quadraticCurveTo(275,500+z,300,500);
+            ctx.quadraticCurveTo(325,500-z,350,500);
+            ctx.quadraticCurveTo(375,500+z,400,500);
+            ctx.quadraticCurveTo(425,500-z,450,500);
+            ctx.quadraticCurveTo(475,500+z,500,500);
+            ctx.quadraticCurveTo(525,500-z,550,500);
+            ctx.quadraticCurveTo(575,500+z,600,500);
+            ctx.quadraticCurveTo(625,500-z,650,500);
+            ctx.quadraticCurveTo(675,500+z,700,500);
+            ctx.quadraticCurveTo(725,500-z,750,500);
+            ctx.quadraticCurveTo(775,500+z,800,500);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "orange";
+            ctx.moveTo(50,500);
+            ctx.quadraticCurveTo(100,500-z,150,500);
+            ctx.quadraticCurveTo(200,500+z,250,500);
+            ctx.quadraticCurveTo(300,500-z,350,500);
+            ctx.quadraticCurveTo(400,500+z,450,500);
+            ctx.quadraticCurveTo(500,500-z,550,500);
+            ctx.quadraticCurveTo(600,500+z,650,500);
+            ctx.quadraticCurveTo(700,500-z,750,500);
+            ctx.quadraticCurveTo(800,500+z,850,500);    
+            ctx.stroke();
+         }
+
+
+         if(i>=450&&i<=1060){
+
+            ctx.beginPath();
+            ctx.moveTo(550, 220);
+            ctx.lineTo(650, 480);
+            ctx.lineTo(450, 480);
+            ctx.lineTo(550, 220);
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.lineWidth="9";
+            ctx.strokeStyle = "red";
+            ctx.moveTo(550, 220);
+            ctx.lineTo(650, 480);
+            ctx.lineTo(450, 480);
+            ctx.lineTo(550, 220);
+            ctx.stroke();
+         }
+
+         if(i>=460&&i<=1040){
+            ctx.beginPath();
+            ctx.lineWidth="9";
+            ctx.strokeStyle = "orange";
+            ctx.moveTo(550, 235);
+            ctx.lineTo(640, 470);
+            ctx.lineTo(460, 470);
+            ctx.lineTo(550, 235);
+            ctx.stroke();
+         }
+
+         if(i>=470&&i<=1020){
+            ctx.beginPath();
+            ctx.lineWidth="9";
+            ctx.strokeStyle = "yellow";
+            ctx.moveTo(550, 250);
+            ctx.lineTo(630, 460);
+            ctx.lineTo(470, 460);
+            ctx.lineTo(550, 250);
+            ctx.stroke();
+         }
+
+         if(i>=480&&i<=1000){
+            ctx.beginPath();
+            ctx.lineWidth="9";
+            ctx.strokeStyle = "green";
+            ctx.moveTo(550, 265);
+            ctx.lineTo(620, 450);
+            ctx.lineTo(480, 450);
+            ctx.lineTo(550, 265);
+            ctx.stroke();
+         }
+
+         if(i>=490&&i<=980){
+            ctx.beginPath();
+            ctx.lineWidth="9";
+            ctx.strokeStyle = "#55A9A9";
+            ctx.moveTo(550, 280);
+            ctx.lineTo(610, 440);
+            ctx.lineTo(490, 440);
+            ctx.lineTo(550, 280);
+            ctx.stroke();
+         }
+
+         if(i>=500&&i<=960){
+            ctx.beginPath();
+            ctx.lineWidth="9";
+            ctx.strokeStyle = "blue";
+            ctx.moveTo(550, 295);
+            ctx.lineTo(600, 430);
+            ctx.lineTo(500, 430);
+            ctx.lineTo(550, 295);
+            ctx.stroke();
+         }
+
+         if(i>=510&&i<=940){
+            ctx.beginPath();
+            ctx.lineWidth="9";
+            ctx.strokeStyle = "purple";
+            ctx.moveTo(550, 310);
+            ctx.lineTo(590, 420);
+            ctx.lineTo(510, 420);
+            ctx.lineTo(550, 310);
+            ctx.stroke();
+         
+
+        }
+
+
+            if(i>=600&&i<=920){
+               ctx.fillRect(100,220,260,260);
+               ctx.lineWidth="10";
+               ctx.strokeStyle="red";
+               ctx.strokeRect(110, 230, 240, 240);
+            }
+
+            if(i>=620&&i<900){
+               ctx.lineWidth="10";
+               ctx.strokeStyle="orange";
+               ctx.strokeRect(120,240,220,220);
+            }
+
+            if(i>=640&&i<=880){
+
+               ctx.lineWidth="10";
+               ctx.strokeStyle="yellow";
+               ctx.strokeRect(130,250,200,200);
+            }
+
+            if(i>=660&&i<=860){
+               ctx.lineWidth="10";
+               ctx.strokeStyle="green";
+               ctx.strokeRect(140,260,180,180);
+            }
+
+            if(i>=680&&i<=840){
+               ctx.lineWidth="10";
+               ctx.strokeStyle="#55A9A9";
+               ctx.strokeRect(150,270,160,160);
+            }
+
+            if(i>=700&&i<=820){
+               ctx.lineWidth="10";
+               ctx.strokeStyle="blue";
+               ctx.strokeRect(160,280,140,140);
+            }
+
+            if(i>=720&&i<=800){
+               ctx.lineWidth="10";
+               ctx.strokeStyle="purple";
+               ctx.strokeRect(170,290,120,120);
+            }
+
+
+            ctx.fillRect(i+5,100,900,110);
+            ctx.fillRect(i+10,120,900,130);
+            ctx.fillRect(i+15,140,900,150);
+            ctx.fillRect(i+20,160,900,170);
+            ctx.fillRect(i+25,180,900,190);
+            ctx.fillRect(i+30,200,900,210);
+            ctx.fillRect(i+35,220,900,230);
+            ctx.fillRect(i+40,240,900,250);
+            ctx.fillRect(i+45,260,900,270);
+            ctx.fillRect(i+50,280,900,290);
+            ctx.fillRect(i+55,300,900,310);
+            ctx.fillRect(i+60,320,900,330);
+            ctx.fillRect(i+65,340,900,350);
+           
+            
+            if(i==1100){
+               i=0;
+            }        
+
+            if(button1switch){
+               clearInterval(anim1);
+            }
+
+        },n)
+      });
+
+            button2.addEventListener("click",function(){
+            button2switch=false;
+            button1switch=true;
+            button3switch=true;
+            i=0;
+            n=20;
+
+            var anim2 =  setInterval(function(){
+            i++;
+            
+            if(y<=10&&y>=-10){
+               y++;
+               if(y==10){
+                  z=10;
+               }
+           
+            ctx.clearRect(0,0,900,700);
+
+            ctx.beginPath();
+            ctx.lineWidth="2";
+            ctx.strokeStyle = "red";
+            ctx.moveTo(50, 200);
+            ctx.quadraticCurveTo(75, 200-y, 100, 200);
+            ctx.quadraticCurveTo(125, 200+y, 150, 200);
+            ctx.quadraticCurveTo(175,200-y,200,200);
+            ctx.quadraticCurveTo(225,200+y,250,200);
+            ctx.quadraticCurveTo(275,200-y,300,200);
+            ctx.quadraticCurveTo(325,200+y,350,200);
+            ctx.quadraticCurveTo(375,200-y,400,200);
+            ctx.quadraticCurveTo(425,200+y,450,200);
+            ctx.quadraticCurveTo(475,200-y,500,200);
+            ctx.quadraticCurveTo(525,200+y,550,200);
+            ctx.quadraticCurveTo(575,200-y,600,200);
+            ctx.quadraticCurveTo(625,200+y,650,200);
+            ctx.quadraticCurveTo(675,200-y,700,200);
+            ctx.quadraticCurveTo(725,200+y,750,200);
+            ctx.quadraticCurveTo(775,200-y,800,200);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.moveTo(50,200);
+            ctx.strokeStyle = "red";
+            ctx.quadraticCurveTo(100,200+y,150,200);
+            ctx.quadraticCurveTo(200,200-y,250,200);
+            ctx.quadraticCurveTo(300,200+y,350,200);
+            ctx.quadraticCurveTo(400,200-y,450,200);
+            ctx.quadraticCurveTo(500,200+y,550,200);
+            ctx.quadraticCurveTo(600,200-y,650,200);
+            ctx.quadraticCurveTo(700,200+y,750,200);
+            ctx.quadraticCurveTo(800,200-y,850,200);            
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "orange";
+            ctx.moveTo(50, 220);
+            ctx.quadraticCurveTo(75, 220+y, 100, 220);
+            ctx.quadraticCurveTo(125, 220-y, 150, 220);
+            ctx.quadraticCurveTo(175,220+y,200,220);
+            ctx.quadraticCurveTo(225,220-y,250,220);
+            ctx.quadraticCurveTo(275,220+y,300,220);
+            ctx.quadraticCurveTo(325,220-y,350,220);
+            ctx.quadraticCurveTo(375,220+y,400,220);
+            ctx.quadraticCurveTo(425,220-y,450,220);
+            ctx.quadraticCurveTo(475,220+y,500,220);
+            ctx.quadraticCurveTo(525,220-y,550,220);
+            ctx.quadraticCurveTo(575,220+y,600,220);
+            ctx.quadraticCurveTo(625,220-y,650,220);
+            ctx.quadraticCurveTo(675,220+y,700,220);
+            ctx.quadraticCurveTo(725,220-y,750,220);
+            ctx.quadraticCurveTo(775,220+y,800,220);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "orange";
+            ctx.moveTo(50,220);
+            ctx.quadraticCurveTo(100,220+y,150,220);
+            ctx.quadraticCurveTo(200,220-y,250,220);
+            ctx.quadraticCurveTo(300,220+y,350,220);
+            ctx.quadraticCurveTo(400,220-y,450,220);
+            ctx.quadraticCurveTo(500,220+y,550,220);
+            ctx.quadraticCurveTo(600,220-y,650,220);
+            ctx.quadraticCurveTo(700,220+y,750,220);
+            ctx.quadraticCurveTo(800,220-y,850,220);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "yellow";
+            ctx.moveTo(50, 240);
+            ctx.quadraticCurveTo(75, 240-y, 100, 240);
+            ctx.quadraticCurveTo(125, 240+y, 150, 240);
+            ctx.quadraticCurveTo(175,240-y,200,240);
+            ctx.quadraticCurveTo(225,240+y,250,240);
+            ctx.quadraticCurveTo(275,240-y,300,240);
+            ctx.quadraticCurveTo(325,240+y,350,240);
+            ctx.quadraticCurveTo(375,240-y,400,240);
+            ctx.quadraticCurveTo(425,240+y,450,240);
+            ctx.quadraticCurveTo(475,240-y,500,240);
+            ctx.quadraticCurveTo(525,240+y,550,240);
+            ctx.quadraticCurveTo(575,240-y,600,240);
+            ctx.quadraticCurveTo(625,240+y,650,240);
+            ctx.quadraticCurveTo(675,240-y,700,240);
+            ctx.quadraticCurveTo(725,240+y,750,240);
+            ctx.quadraticCurveTo(775,240-y,800,240);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "yellow";
+            ctx.moveTo(50,240);
+            ctx.quadraticCurveTo(100,240-y,150,240);
+            ctx.quadraticCurveTo(200,240+y,250,240);
+            ctx.quadraticCurveTo(300,240-y,350,240);
+            ctx.quadraticCurveTo(400,240+y,450,240);
+            ctx.quadraticCurveTo(500,240-y,550,240);
+            ctx.quadraticCurveTo(600,240+y,650,240);
+            ctx.quadraticCurveTo(700,240-y,750,240);
+            ctx.quadraticCurveTo(800,240+y,850,240);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "green";
+            ctx.moveTo(50, 260);
+            ctx.quadraticCurveTo(75, 260-y, 100, 260);
+            ctx.quadraticCurveTo(125, 260+y, 150, 260);
+            ctx.quadraticCurveTo(175,260-y,200,260);
+            ctx.quadraticCurveTo(225,260+y,250,260);
+            ctx.quadraticCurveTo(275,260-y,300,260);
+            ctx.quadraticCurveTo(325,260+y,350,260);
+            ctx.quadraticCurveTo(375,260-y,400,260);
+            ctx.quadraticCurveTo(425,260+y,450,260);
+            ctx.quadraticCurveTo(475,260-y,500,260);
+            ctx.quadraticCurveTo(525,260+y,550,260);
+            ctx.quadraticCurveTo(575,260-y,600,260);
+            ctx.quadraticCurveTo(625,260+y,650,260);
+            ctx.quadraticCurveTo(675,260-y,700,260);
+            ctx.quadraticCurveTo(725,260+y,750,260);
+            ctx.quadraticCurveTo(775,260-y,800,260);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "green";
+            ctx.moveTo(50,260);
+            ctx.quadraticCurveTo(100,260-y,150,260);
+            ctx.quadraticCurveTo(200,260+y,250,260);
+            ctx.quadraticCurveTo(300,260-y,350,260);
+            ctx.quadraticCurveTo(400,260+y,450,260);
+            ctx.quadraticCurveTo(500,260-y,550,260);
+            ctx.quadraticCurveTo(600,260+y,650,260);
+            ctx.quadraticCurveTo(700,260-y,750,260);
+            ctx.quadraticCurveTo(800,260+y,850,260);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "#55A9A9";
+            ctx.moveTo(50, 280);
+            ctx.quadraticCurveTo(75, 280+y, 100, 280);
+            ctx.quadraticCurveTo(125, 280-y, 150, 280);
+            ctx.quadraticCurveTo(175,280+y,200,280);
+            ctx.quadraticCurveTo(225,280-y,250,280);
+            ctx.quadraticCurveTo(275,280+y,300,280);
+            ctx.quadraticCurveTo(325,280-y,350,280);
+            ctx.quadraticCurveTo(375,280+y,400,280);
+            ctx.quadraticCurveTo(425,280-y,450,280);
+            ctx.quadraticCurveTo(475,280+y,500,280);
+            ctx.quadraticCurveTo(525,280-y,550,280);
+            ctx.quadraticCurveTo(575,280+y,600,280);
+            ctx.quadraticCurveTo(625,280-y,650,280);
+            ctx.quadraticCurveTo(675,280+y,700,280);
+            ctx.quadraticCurveTo(725,280-y,750,280);
+            ctx.quadraticCurveTo(775,280+y,800,280);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "#55A9A9";
+            ctx.moveTo(50,280);
+            ctx.quadraticCurveTo(100,280-y,150,280);
+            ctx.quadraticCurveTo(200,280+y,250,280);
+            ctx.quadraticCurveTo(300,280-y,350,280);
+            ctx.quadraticCurveTo(400,280+y,450,280);
+            ctx.quadraticCurveTo(500,280-y,550,280);
+            ctx.quadraticCurveTo(600,280+y,650,280);
+            ctx.quadraticCurveTo(700,280-y,750,280);
+            ctx.quadraticCurveTo(800,280+y,850,280);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "blue";
+            ctx.moveTo(50, 300);
+            ctx.quadraticCurveTo(75, 300-y, 100, 300);
+            ctx.quadraticCurveTo(125, 300+y, 150, 300);
+            ctx.quadraticCurveTo(175,300-y,200,300);
+            ctx.quadraticCurveTo(225,300+y,250,300);
+            ctx.quadraticCurveTo(275,300-y,300,300);
+            ctx.quadraticCurveTo(325,300+y,350,300);
+            ctx.quadraticCurveTo(375,300-y,400,300);
+            ctx.quadraticCurveTo(425,300+y,450,300);
+            ctx.quadraticCurveTo(475,300-y,500,300);
+            ctx.quadraticCurveTo(525,300+y,550,300);
+            ctx.quadraticCurveTo(575,300-y,600,300);
+            ctx.quadraticCurveTo(625,300+y,650,300);
+            ctx.quadraticCurveTo(675,300-y,700,300);
+            ctx.quadraticCurveTo(725,300+y,750,300);
+            ctx.quadraticCurveTo(775,300-y,800,300);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "blue";
+            ctx.moveTo(50,300);
+            ctx.quadraticCurveTo(100,300-y,150,300);
+            ctx.quadraticCurveTo(200,300+y,250,300);
+            ctx.quadraticCurveTo(300,300-y,350,300);
+            ctx.quadraticCurveTo(400,300+y,450,300);
+            ctx.quadraticCurveTo(500,300-y,550,300);
+            ctx.quadraticCurveTo(600,300+y,650,300);
+            ctx.quadraticCurveTo(700,300-y,750,300);
+            ctx.quadraticCurveTo(800,300+y,850,300);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "purple";
+            ctx.moveTo(50, 320);
+            ctx.quadraticCurveTo(75, 320+y, 100, 320);
+            ctx.quadraticCurveTo(125, 320-y, 150, 320);
+            ctx.quadraticCurveTo(175,320+y,200,320);
+            ctx.quadraticCurveTo(225,320-y,250,320);
+            ctx.quadraticCurveTo(275,320+y,300,320);
+            ctx.quadraticCurveTo(325,320-y,350,320);
+            ctx.quadraticCurveTo(375,320+y,400,320);
+            ctx.quadraticCurveTo(425,320-y,450,320);
+            ctx.quadraticCurveTo(475,320+y,500,320);
+            ctx.quadraticCurveTo(525,320-y,550,320);
+            ctx.quadraticCurveTo(575,320+y,600,320);
+            ctx.quadraticCurveTo(625,320-y,650,320);
+            ctx.quadraticCurveTo(675,320+y,700,320);
+            ctx.quadraticCurveTo(725,320-y,750,320);
+            ctx.quadraticCurveTo(775,320+y,800,320);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "purple";
+            ctx.moveTo(50,320);
+            ctx.quadraticCurveTo(100,320-y,150,320);
+            ctx.quadraticCurveTo(200,320+y,250,320);
+            ctx.quadraticCurveTo(300,320-y,350,320);
+            ctx.quadraticCurveTo(400,320+y,450,320);
+            ctx.quadraticCurveTo(500,320-y,550,320);
+            ctx.quadraticCurveTo(600,320+y,650,320);
+            ctx.quadraticCurveTo(700,320-y,750,320);
+            ctx.quadraticCurveTo(800,320+y,850,320);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "red";
+            ctx.moveTo(50, 340);
+            ctx.quadraticCurveTo(75, 340-y, 100, 340);
+            ctx.quadraticCurveTo(125, 340+y, 150, 340);
+            ctx.quadraticCurveTo(175,340-y,200,340);
+            ctx.quadraticCurveTo(225,340+y,250,340);
+            ctx.quadraticCurveTo(275,340-y,300,340);
+            ctx.quadraticCurveTo(325,340+y,350,340);
+            ctx.quadraticCurveTo(375,340-y,400,340);
+            ctx.quadraticCurveTo(425,340+y,450,340);
+            ctx.quadraticCurveTo(475,340-y,500,340);
+            ctx.quadraticCurveTo(525,340+y,550,340);
+            ctx.quadraticCurveTo(575,340-y,600,340);
+            ctx.quadraticCurveTo(625,340+y,650,340);
+            ctx.quadraticCurveTo(675,340-y,700,340);
+            ctx.quadraticCurveTo(725,340+y,750,340);
+            ctx.quadraticCurveTo(775,340-y,800,340);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "red";
+            ctx.moveTo(50,340);
+            ctx.quadraticCurveTo(100,340-y,150,340);
+            ctx.quadraticCurveTo(200,340+y,250,340);
+            ctx.quadraticCurveTo(300,340-y,350,340);
+            ctx.quadraticCurveTo(400,340+y,450,340);
+            ctx.quadraticCurveTo(500,340-y,550,340);
+            ctx.quadraticCurveTo(600,340+y,650,340);
+            ctx.quadraticCurveTo(700,340-y,750,340);
+            ctx.quadraticCurveTo(800,340+y,850,340);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "orange";
+            ctx.moveTo(50, 360);
+            ctx.quadraticCurveTo(75, 360+y, 100, 360);
+            ctx.quadraticCurveTo(125, 360-y, 150, 360);
+            ctx.quadraticCurveTo(175,360+y,200,360);
+            ctx.quadraticCurveTo(225,360-y,250,360);
+            ctx.quadraticCurveTo(275,360+y,300,360);
+            ctx.quadraticCurveTo(325,360-y,350,360);
+            ctx.quadraticCurveTo(375,360+y,400,360);
+            ctx.quadraticCurveTo(425,360-y,450,360);
+            ctx.quadraticCurveTo(475,360+y,500,360);
+            ctx.quadraticCurveTo(525,360-y,550,360);
+            ctx.quadraticCurveTo(575,360+y,600,360);
+            ctx.quadraticCurveTo(625,360-y,650,360);
+            ctx.quadraticCurveTo(675,360+y,700,360);
+            ctx.quadraticCurveTo(725,360-y,750,360);
+            ctx.quadraticCurveTo(775,360+y,800,360);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "orange";
+            ctx.moveTo(50,360);
+            ctx.quadraticCurveTo(100,360-y,150,360);
+            ctx.quadraticCurveTo(200,360+y,250,360);
+            ctx.quadraticCurveTo(300,360-y,350,360);
+            ctx.quadraticCurveTo(400,360+y,450,360);
+            ctx.quadraticCurveTo(500,360-y,550,360);
+            ctx.quadraticCurveTo(600,360+y,650,360);
+            ctx.quadraticCurveTo(700,360-y,750,360);
+            ctx.quadraticCurveTo(800,360+y,850,360);            
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "yellow";
+            ctx.moveTo(50, 380);
+            ctx.quadraticCurveTo(75, 380-y, 100, 380);
+            ctx.quadraticCurveTo(125, 380+y, 150, 380);
+            ctx.quadraticCurveTo(175,380-y,200,380);
+            ctx.quadraticCurveTo(225,380+y,250,380);
+            ctx.quadraticCurveTo(275,380-y,300,380);
+            ctx.quadraticCurveTo(325,380+y,350,380);
+            ctx.quadraticCurveTo(375,380-y,400,380);
+            ctx.quadraticCurveTo(425,380+y,450,380);
+            ctx.quadraticCurveTo(475,380-y,500,380);
+            ctx.quadraticCurveTo(525,380+y,550,380);
+            ctx.quadraticCurveTo(575,380-y,600,380);
+            ctx.quadraticCurveTo(625,380+y,650,380);
+            ctx.quadraticCurveTo(675,380-y,700,380);
+            ctx.quadraticCurveTo(725,380+y,750,380);
+            ctx.quadraticCurveTo(775,380-y,800,380);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "yellow";
+            ctx.moveTo(50,380);
+            ctx.quadraticCurveTo(100,380-y,150,380);
+            ctx.quadraticCurveTo(200,380+y,250,380);
+            ctx.quadraticCurveTo(300,380-y,350,380);
+            ctx.quadraticCurveTo(400,380+y,450,380);
+            ctx.quadraticCurveTo(500,380-y,550,380);
+            ctx.quadraticCurveTo(600,380+y,650,380);
+            ctx.quadraticCurveTo(700,380-y,750,380);
+            ctx.quadraticCurveTo(800,380+y,850,380);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "green";
+            ctx.moveTo(50, 400);
+            ctx.quadraticCurveTo(75, 400+y, 100, 400);
+            ctx.quadraticCurveTo(125, 400-y, 150, 400);
+            
+            ctx.quadraticCurveTo(175,400-y,200,400);
+            ctx.quadraticCurveTo(225,400+y,250,400);
+            ctx.quadraticCurveTo(275,400-y,300,400);
+            ctx.quadraticCurveTo(325,400+y,350,400);
+            ctx.quadraticCurveTo(375,400-y,400,400);
+            ctx.quadraticCurveTo(425,400+y,450,400);
+            ctx.quadraticCurveTo(475,400-y,500,400);
+            ctx.quadraticCurveTo(525,400+y,550,400);
+            ctx.quadraticCurveTo(575,400-y,600,400);
+            ctx.quadraticCurveTo(625,400+y,650,400);
+            ctx.quadraticCurveTo(675,400-y,700,400);
+            ctx.quadraticCurveTo(725,400+y,750,400);
+            ctx.quadraticCurveTo(775,400-y,800,400);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "green";
+            ctx.moveTo(50,400);
+            ctx.quadraticCurveTo(100,400-y,150,400);
+            ctx.quadraticCurveTo(200,400+y,250,400);
+            ctx.quadraticCurveTo(300,400-y,350,400);
+            ctx.quadraticCurveTo(400,400+y,450,400);
+            ctx.quadraticCurveTo(500,400-y,550,400);
+            ctx.quadraticCurveTo(600,400+y,650,400);
+            ctx.quadraticCurveTo(700,400-y,750,400);
+            ctx.quadraticCurveTo(800,400+y,850,400);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "#55A9A9";
+            ctx.moveTo(50, 420);
+            ctx.quadraticCurveTo(75, 420-y, 100, 420);
+            ctx.quadraticCurveTo(125, 420+y, 150, 420);
+            ctx.quadraticCurveTo(175,420-y,200,420);
+            ctx.quadraticCurveTo(225,420+y,250,420);
+            ctx.quadraticCurveTo(275,420-y,300,420);
+            ctx.quadraticCurveTo(325,420+y,350,420);
+            ctx.quadraticCurveTo(375,420-y,400,420);
+            ctx.quadraticCurveTo(425,420+y,450,420);
+            ctx.quadraticCurveTo(475,420-y,500,420);
+            ctx.quadraticCurveTo(525,420+y,550,420);
+            ctx.quadraticCurveTo(575,420-y,600,420);
+            ctx.quadraticCurveTo(625,420+y,650,420);
+            ctx.quadraticCurveTo(675,420-y,700,420);
+            ctx.quadraticCurveTo(725,420+y,750,420);
+            ctx.quadraticCurveTo(775,420-y,800,420);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "#55A9A9";
+            ctx.moveTo(50,420);
+            ctx.quadraticCurveTo(100,420-y,150,420);
+            ctx.quadraticCurveTo(200,420+y,250,420);
+            ctx.quadraticCurveTo(300,420-y,350,420);
+            ctx.quadraticCurveTo(400,420+y,450,420);
+            ctx.quadraticCurveTo(500,420-y,550,420);
+            ctx.quadraticCurveTo(600,420+y,650,420);
+            ctx.quadraticCurveTo(700,420-y,750,420);
+            ctx.quadraticCurveTo(800,420+y,850,420);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "blue";
+            ctx.moveTo(50, 440);
+            ctx.quadraticCurveTo(75, 440+y, 100, 440);
+            ctx.quadraticCurveTo(125, 440-y, 150, 440);
+            ctx.quadraticCurveTo(175,440+y,200,440);
+            ctx.quadraticCurveTo(225,440-y,250,440);
+            ctx.quadraticCurveTo(275,440+y,300,440);
+            ctx.quadraticCurveTo(325,440-y,350,440);
+            ctx.quadraticCurveTo(375,440+y,400,440);
+            ctx.quadraticCurveTo(425,440-y,450,440);
+            ctx.quadraticCurveTo(475,440+y,500,440);
+            ctx.quadraticCurveTo(525,440-y,550,440);
+            ctx.quadraticCurveTo(575,440+y,600,440);
+            ctx.quadraticCurveTo(625,440-y,650,440);
+            ctx.quadraticCurveTo(675,440+y,700,440);
+            ctx.quadraticCurveTo(725,440-y,750,440);
+            ctx.quadraticCurveTo(775,440+y,800,440);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "blue";
+            ctx.moveTo(50,440);
+            ctx.quadraticCurveTo(100,440-y,150,440);
+            ctx.quadraticCurveTo(200,440+y,250,440);
+            ctx.quadraticCurveTo(300,440-y,350,440);
+            ctx.quadraticCurveTo(400,440+y,450,440);
+            ctx.quadraticCurveTo(500,440-y,550,440);
+            ctx.quadraticCurveTo(600,440+y,650,440);
+            ctx.quadraticCurveTo(700,440-y,750,440);
+            ctx.quadraticCurveTo(800,440+y,850,440);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "purple";
+            ctx.moveTo(50, 460);
+            ctx.quadraticCurveTo(75, 460+y, 100, 460);
+            ctx.quadraticCurveTo(125, 460-y, 150, 460);
+            ctx.quadraticCurveTo(175,460+y,200,460);
+            ctx.quadraticCurveTo(225,460-y,250,460);
+            ctx.quadraticCurveTo(275,460+y,300,460);
+            ctx.quadraticCurveTo(325,460-y,350,460);
+            ctx.quadraticCurveTo(375,460+y,400,460);
+            ctx.quadraticCurveTo(425,460-y,450,460);
+            ctx.quadraticCurveTo(475,460+y,500,460);
+            ctx.quadraticCurveTo(525,460-y,550,460);
+            ctx.quadraticCurveTo(575,460+y,600,460);
+            ctx.quadraticCurveTo(625,460-y,650,460);
+            ctx.quadraticCurveTo(675,460+y,700,460);
+            ctx.quadraticCurveTo(725,460-y,750,460);
+            ctx.quadraticCurveTo(775,460+y,800,460);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "purple";
+            ctx.moveTo(50,460);
+            ctx.quadraticCurveTo(100,460+y,150,460);
+            ctx.quadraticCurveTo(200,460-y,250,460);
+            ctx.quadraticCurveTo(300,460+y,350,460);
+            ctx.quadraticCurveTo(400,460-y,450,460);
+            ctx.quadraticCurveTo(500,460+y,550,460);
+            ctx.quadraticCurveTo(600,460-y,650,460);
+            ctx.quadraticCurveTo(700,460+y,750,460);
+            ctx.quadraticCurveTo(800,460-y,850,460);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "red";
+            ctx.moveTo(50, 480);
+            ctx.quadraticCurveTo(75, 480-y, 100, 480);
+            ctx.quadraticCurveTo(125, 480+y, 150, 480);
+            ctx.quadraticCurveTo(175,480-y,200,480);
+            ctx.quadraticCurveTo(225,480+y,250,480);
+            ctx.quadraticCurveTo(275,480-y,300,480);
+            ctx.quadraticCurveTo(325,480+y,350,480);
+            ctx.quadraticCurveTo(375,480-y,400,480);
+            ctx.quadraticCurveTo(425,480+y,450,480);
+            ctx.quadraticCurveTo(475,480-y,500,480);
+            ctx.quadraticCurveTo(525,480+y,550,480);
+            ctx.quadraticCurveTo(575,480-y,600,480);
+            ctx.quadraticCurveTo(625,480+y,650,480);
+            ctx.quadraticCurveTo(675,480-y,700,480);
+            ctx.quadraticCurveTo(725,480+y,750,480);
+            ctx.quadraticCurveTo(775,480-y,800,480);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "red";
+            ctx.moveTo(50,480);
+            ctx.quadraticCurveTo(100,480-y,150,480);
+            ctx.quadraticCurveTo(200,480+y,250,480);
+            ctx.quadraticCurveTo(300,480-y,350,480);
+            ctx.quadraticCurveTo(400,480+y,450,480);
+            ctx.quadraticCurveTo(500,480-y,550,480);
+            ctx.quadraticCurveTo(600,480+y,650,480);
+            ctx.quadraticCurveTo(700,480-y,750,480);
+            ctx.quadraticCurveTo(800,480+y,850,480);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "orange";
+            ctx.moveTo(50, 500);
+            ctx.quadraticCurveTo(75, 500+y, 100, 500);
+            ctx.quadraticCurveTo(125, 500-y, 150, 500);
+            ctx.quadraticCurveTo(175,500+y,200,500);
+            ctx.quadraticCurveTo(225,500-y,250,500);
+            ctx.quadraticCurveTo(275,500+y,300,500);
+            ctx.quadraticCurveTo(325,500-y,350,500);
+            ctx.quadraticCurveTo(375,500+y,400,500);
+            ctx.quadraticCurveTo(425,500-y,450,500);
+            ctx.quadraticCurveTo(475,500+y,500,500);
+            ctx.quadraticCurveTo(525,500-y,550,500);
+            ctx.quadraticCurveTo(575,500+y,600,500);
+            ctx.quadraticCurveTo(625,500-y,650,500);
+            ctx.quadraticCurveTo(675,500+y,700,500);
+            ctx.quadraticCurveTo(725,500-y,750,500);
+            ctx.quadraticCurveTo(775,500+y,800,500);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "orange";
+            ctx.moveTo(50,500);
+            ctx.quadraticCurveTo(100,500-y,150,500);
+            ctx.quadraticCurveTo(200,500+y,250,500);
+            ctx.quadraticCurveTo(300,500-y,350,500);
+            ctx.quadraticCurveTo(400,500+y,450,500);
+            ctx.quadraticCurveTo(500,500-y,550,500);
+            ctx.quadraticCurveTo(600,500+y,650,500);
+            ctx.quadraticCurveTo(700,500-y,750,500);
+            ctx.quadraticCurveTo(800,500+y,850,500);    
+            ctx.stroke();
+         }
+
+         if(z>=-10&&z<=10){
+               z--;
+               if(z==-10){
+                  y=-10;
+               }
+           
+            ctx.clearRect(0,0,900,700);
+
+            ctx.beginPath();
+            ctx.lineWidth="2";
+            ctx.strokeStyle = "red";
+            ctx.moveTo(50, 200);
+            ctx.quadraticCurveTo(75, 200-z, 100, 200);
+            ctx.quadraticCurveTo(125, 200+z, 150, 200);
+            ctx.quadraticCurveTo(175,200-z,200,200);
+            ctx.quadraticCurveTo(225,200+z,250,200);
+            ctx.quadraticCurveTo(275,200-z,300,200);
+            ctx.quadraticCurveTo(325,200+z,350,200);
+            ctx.quadraticCurveTo(375,200-z,400,200);
+            ctx.quadraticCurveTo(425,200+z,450,200);
+            ctx.quadraticCurveTo(475,200-z,500,200);
+            ctx.quadraticCurveTo(525,200+z,550,200);
+            ctx.quadraticCurveTo(575,200-z,600,200);
+            ctx.quadraticCurveTo(625,200+z,650,200);
+            ctx.quadraticCurveTo(675,200-z,700,200);
+            ctx.quadraticCurveTo(725,200+z,750,200);
+            ctx.quadraticCurveTo(775,200-z,800,200);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.moveTo(50,200);
+            ctx.strokeStyle = "red";
+            ctx.quadraticCurveTo(100,200+z,150,200);
+            ctx.quadraticCurveTo(200,200-z,250,200);
+            ctx.quadraticCurveTo(300,200+z,350,200);
+            ctx.quadraticCurveTo(400,200-z,450,200);
+            ctx.quadraticCurveTo(500,200+z,550,200);
+            ctx.quadraticCurveTo(600,200-z,650,200);
+            ctx.quadraticCurveTo(700,200+z,750,200);
+            ctx.quadraticCurveTo(800,200-z,850,200);            
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "orange";
+            ctx.moveTo(50, 220);
+            ctx.quadraticCurveTo(75, 220+z, 100, 220);
+            ctx.quadraticCurveTo(125, 220-z, 150, 220);
+            ctx.quadraticCurveTo(175,220+z,200,220);
+            ctx.quadraticCurveTo(225,220-z,250,220);
+            ctx.quadraticCurveTo(275,220+z,300,220);
+            ctx.quadraticCurveTo(325,220-z,350,220);
+            ctx.quadraticCurveTo(375,220+z,400,220);
+            ctx.quadraticCurveTo(425,220-z,450,220);
+            ctx.quadraticCurveTo(475,220+z,500,220);
+            ctx.quadraticCurveTo(525,220-z,550,220);
+            ctx.quadraticCurveTo(575,220+z,600,220);
+            ctx.quadraticCurveTo(625,220-z,650,220);
+            ctx.quadraticCurveTo(675,220+z,700,220);
+            ctx.quadraticCurveTo(725,220-z,750,220);
+            ctx.quadraticCurveTo(775,220+z,800,220);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "orange";
+            ctx.moveTo(50,220);
+            ctx.quadraticCurveTo(100,220+z,150,220);
+            ctx.quadraticCurveTo(200,220-z,250,220);
+            ctx.quadraticCurveTo(300,220+z,350,220);
+            ctx.quadraticCurveTo(400,220-z,450,220);
+            ctx.quadraticCurveTo(500,220+z,550,220);
+            ctx.quadraticCurveTo(600,220-z,650,220);
+            ctx.quadraticCurveTo(700,220+z,750,220);
+            ctx.quadraticCurveTo(800,220-z,850,220);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "yellow";
+            ctx.moveTo(50, 240);
+            ctx.quadraticCurveTo(75, 240-z, 100, 240);
+            ctx.quadraticCurveTo(125, 240+z, 150, 240);
+            ctx.quadraticCurveTo(175,240-z,200,240);
+            ctx.quadraticCurveTo(225,240+z,250,240);
+            ctx.quadraticCurveTo(275,240-z,300,240);
+            ctx.quadraticCurveTo(325,240+z,350,240);
+            ctx.quadraticCurveTo(375,240-z,400,240);
+            ctx.quadraticCurveTo(425,240+z,450,240);
+            ctx.quadraticCurveTo(475,240-z,500,240);
+            ctx.quadraticCurveTo(525,240+z,550,240);
+            ctx.quadraticCurveTo(575,240-z,600,240);
+            ctx.quadraticCurveTo(625,240+z,650,240);
+            ctx.quadraticCurveTo(675,240-z,700,240);
+            ctx.quadraticCurveTo(725,240+z,750,240);
+            ctx.quadraticCurveTo(775,240-z,800,240);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "yellow";
+            ctx.moveTo(50,240);
+            ctx.quadraticCurveTo(100,240-z,150,240);
+            ctx.quadraticCurveTo(200,240+z,250,240);
+            ctx.quadraticCurveTo(300,240-z,350,240);
+            ctx.quadraticCurveTo(400,240+z,450,240);
+            ctx.quadraticCurveTo(500,240-z,550,240);
+            ctx.quadraticCurveTo(600,240+z,650,240);
+            ctx.quadraticCurveTo(700,240-z,750,240);
+            ctx.quadraticCurveTo(800,240+z,850,240);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "green";
+            ctx.moveTo(50, 260);
+            ctx.quadraticCurveTo(75, 260-z, 100, 260);
+            ctx.quadraticCurveTo(125, 260+z, 150, 260);
+            ctx.quadraticCurveTo(175,260-z,200,260);
+            ctx.quadraticCurveTo(225,260+z,250,260);
+            ctx.quadraticCurveTo(275,260-z,300,260);
+            ctx.quadraticCurveTo(325,260+z,350,260);
+            ctx.quadraticCurveTo(375,260-z,400,260);
+            ctx.quadraticCurveTo(425,260+z,450,260);
+            ctx.quadraticCurveTo(475,260-z,500,260);
+            ctx.quadraticCurveTo(525,260+z,550,260);
+            ctx.quadraticCurveTo(575,260-z,600,260);
+            ctx.quadraticCurveTo(625,260+z,650,260);
+            ctx.quadraticCurveTo(675,260-z,700,260);
+            ctx.quadraticCurveTo(725,260+z,750,260);
+            ctx.quadraticCurveTo(775,260-z,800,260);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "green";
+            ctx.moveTo(50,260);
+            ctx.quadraticCurveTo(100,260-z,150,260);
+            ctx.quadraticCurveTo(200,260+z,250,260);
+            ctx.quadraticCurveTo(300,260-z,350,260);
+            ctx.quadraticCurveTo(400,260+z,450,260);
+            ctx.quadraticCurveTo(500,260-z,550,260);
+            ctx.quadraticCurveTo(600,260+z,650,260);
+            ctx.quadraticCurveTo(700,260-z,750,260);
+            ctx.quadraticCurveTo(800,260+z,850,260);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "#55A9A9";
+            ctx.moveTo(50, 280);
+            ctx.quadraticCurveTo(75, 280+z, 100, 280);
+            ctx.quadraticCurveTo(125, 280-z, 150, 280);
+            ctx.quadraticCurveTo(175,280+z,200,280);
+            ctx.quadraticCurveTo(225,280-z,250,280);
+            ctx.quadraticCurveTo(275,280+z,300,280);
+            ctx.quadraticCurveTo(325,280-z,350,280);
+            ctx.quadraticCurveTo(375,280+z,400,280);
+            ctx.quadraticCurveTo(425,280-z,450,280);
+            ctx.quadraticCurveTo(475,280+z,500,280);
+            ctx.quadraticCurveTo(525,280-z,550,280);
+            ctx.quadraticCurveTo(575,280+z,600,280);
+            ctx.quadraticCurveTo(625,280-z,650,280);
+            ctx.quadraticCurveTo(675,280+z,700,280);
+            ctx.quadraticCurveTo(725,280-z,750,280);
+            ctx.quadraticCurveTo(775,280+z,800,280);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "#55A9A9";
+            ctx.moveTo(50,280);
+            ctx.quadraticCurveTo(100,280-z,150,280);
+            ctx.quadraticCurveTo(200,280+z,250,280);
+            ctx.quadraticCurveTo(300,280-z,350,280);
+            ctx.quadraticCurveTo(400,280+z,450,280);
+            ctx.quadraticCurveTo(500,280-z,550,280);
+            ctx.quadraticCurveTo(600,280+z,650,280);
+            ctx.quadraticCurveTo(700,280-z,750,280);
+            ctx.quadraticCurveTo(800,280+z,850,280);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "blue";
+            ctx.moveTo(50, 300);
+            ctx.quadraticCurveTo(75, 300-z, 100, 300);
+            ctx.quadraticCurveTo(125, 300+z, 150, 300);
+            ctx.quadraticCurveTo(175,300-z,200,300);
+            ctx.quadraticCurveTo(225,300+z,250,300);
+            ctx.quadraticCurveTo(275,300-z,300,300);
+            ctx.quadraticCurveTo(325,300+z,350,300);
+            ctx.quadraticCurveTo(375,300-z,400,300);
+            ctx.quadraticCurveTo(425,300+z,450,300);
+            ctx.quadraticCurveTo(475,300-z,500,300);
+            ctx.quadraticCurveTo(525,300+z,550,300);
+            ctx.quadraticCurveTo(575,300-z,600,300);
+            ctx.quadraticCurveTo(625,300+z,650,300);
+            ctx.quadraticCurveTo(675,300-z,700,300);
+            ctx.quadraticCurveTo(725,300+z,750,300);
+            ctx.quadraticCurveTo(775,300-z,800,300);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "blue";
+            ctx.moveTo(50,300);
+            ctx.quadraticCurveTo(100,300-z,150,300);
+            ctx.quadraticCurveTo(200,300+z,250,300);
+            ctx.quadraticCurveTo(300,300-z,350,300);
+            ctx.quadraticCurveTo(400,300+z,450,300);
+            ctx.quadraticCurveTo(500,300-z,550,300);
+            ctx.quadraticCurveTo(600,300+z,650,300);
+            ctx.quadraticCurveTo(700,300-z,750,300);
+            ctx.quadraticCurveTo(800,300+z,850,300);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "purple";
+            ctx.moveTo(50, 320);
+            ctx.quadraticCurveTo(75, 320+z, 100, 320);
+            ctx.quadraticCurveTo(125, 320-z, 150, 320);
+            ctx.quadraticCurveTo(175,320+z,200,320);
+            ctx.quadraticCurveTo(225,320-z,250,320);
+            ctx.quadraticCurveTo(275,320+z,300,320);
+            ctx.quadraticCurveTo(325,320-z,350,320);
+            ctx.quadraticCurveTo(375,320+z,400,320);
+            ctx.quadraticCurveTo(425,320-z,450,320);
+            ctx.quadraticCurveTo(475,320+z,500,320);
+            ctx.quadraticCurveTo(525,320-z,550,320);
+            ctx.quadraticCurveTo(575,320+z,600,320);
+            ctx.quadraticCurveTo(625,320-z,650,320);
+            ctx.quadraticCurveTo(675,320+z,700,320);
+            ctx.quadraticCurveTo(725,320-z,750,320);
+            ctx.quadraticCurveTo(775,320+z,800,320);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "purple";
+            ctx.moveTo(50,320);
+            ctx.quadraticCurveTo(100,320-z,150,320);
+            ctx.quadraticCurveTo(200,320+z,250,320);
+            ctx.quadraticCurveTo(300,320-z,350,320);
+            ctx.quadraticCurveTo(400,320+z,450,320);
+            ctx.quadraticCurveTo(500,320-z,550,320);
+            ctx.quadraticCurveTo(600,320+z,650,320);
+            ctx.quadraticCurveTo(700,320-z,750,320);
+            ctx.quadraticCurveTo(800,320+z,850,320);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "red";
+            ctx.moveTo(50, 340);
+            ctx.quadraticCurveTo(75, 340-z, 100, 340);
+            ctx.quadraticCurveTo(125, 340+z, 150, 340);
+            ctx.quadraticCurveTo(175,340-z,200,340);
+            ctx.quadraticCurveTo(225,340+z,250,340);
+            ctx.quadraticCurveTo(275,340-z,300,340);
+            ctx.quadraticCurveTo(325,340+z,350,340);
+            ctx.quadraticCurveTo(375,340-z,400,340);
+            ctx.quadraticCurveTo(425,340+z,450,340);
+            ctx.quadraticCurveTo(475,340-z,500,340);
+            ctx.quadraticCurveTo(525,340+z,550,340);
+            ctx.quadraticCurveTo(575,340-z,600,340);
+            ctx.quadraticCurveTo(625,340+z,650,340);
+            ctx.quadraticCurveTo(675,340-z,700,340);
+            ctx.quadraticCurveTo(725,340+z,750,340);
+            ctx.quadraticCurveTo(775,340-z,800,340);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "red";
+            ctx.moveTo(50,340);
+            ctx.quadraticCurveTo(100,340-z,150,340);
+            ctx.quadraticCurveTo(200,340+z,250,340);
+            ctx.quadraticCurveTo(300,340-z,350,340);
+            ctx.quadraticCurveTo(400,340+z,450,340);
+            ctx.quadraticCurveTo(500,340-z,550,340);
+            ctx.quadraticCurveTo(600,340+z,650,340);
+            ctx.quadraticCurveTo(700,340-z,750,340);
+            ctx.quadraticCurveTo(800,340+z,850,340);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "orange";
+            ctx.moveTo(50, 360);
+            ctx.quadraticCurveTo(75, 360+z, 100, 360);
+            ctx.quadraticCurveTo(125, 360-z, 150, 360);
+            ctx.quadraticCurveTo(175,360+z,200,360);
+            ctx.quadraticCurveTo(225,360-z,250,360);
+            ctx.quadraticCurveTo(275,360+z,300,360);
+            ctx.quadraticCurveTo(325,360-z,350,360);
+            ctx.quadraticCurveTo(375,360+z,400,360);
+            ctx.quadraticCurveTo(425,360-z,450,360);
+            ctx.quadraticCurveTo(475,360+z,500,360);
+            ctx.quadraticCurveTo(525,360-z,550,360);
+            ctx.quadraticCurveTo(575,360+z,600,360);
+            ctx.quadraticCurveTo(625,360-z,650,360);
+            ctx.quadraticCurveTo(675,360+z,700,360);
+            ctx.quadraticCurveTo(725,360-z,750,360);
+            ctx.quadraticCurveTo(775,360+z,800,360);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "orange";
+            ctx.moveTo(50,360);
+            ctx.quadraticCurveTo(100,360-z,150,360);
+            ctx.quadraticCurveTo(200,360+z,250,360);
+            ctx.quadraticCurveTo(300,360-z,350,360);
+            ctx.quadraticCurveTo(400,360+z,450,360);
+            ctx.quadraticCurveTo(500,360-z,550,360);
+            ctx.quadraticCurveTo(600,360+z,650,360);
+            ctx.quadraticCurveTo(700,360-z,750,360);
+            ctx.quadraticCurveTo(800,360+z,850,360);            
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "yellow";
+            ctx.moveTo(50, 380);
+            ctx.quadraticCurveTo(75, 380-z, 100, 380);
+            ctx.quadraticCurveTo(125, 380+z, 150, 380);
+            ctx.quadraticCurveTo(175,380-z,200,380);
+            ctx.quadraticCurveTo(225,380+z,250,380);
+            ctx.quadraticCurveTo(275,380-z,300,380);
+            ctx.quadraticCurveTo(325,380+z,350,380);
+            ctx.quadraticCurveTo(375,380-z,400,380);
+            ctx.quadraticCurveTo(425,380+z,450,380);
+            ctx.quadraticCurveTo(475,380-z,500,380);
+            ctx.quadraticCurveTo(525,380+z,550,380);
+            ctx.quadraticCurveTo(575,380-z,600,380);
+            ctx.quadraticCurveTo(625,380+z,650,380);
+            ctx.quadraticCurveTo(675,380-z,700,380);
+            ctx.quadraticCurveTo(725,380+z,750,380);
+            ctx.quadraticCurveTo(775,380-z,800,380);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "yellow";
+            ctx.moveTo(50,380);
+            ctx.quadraticCurveTo(100,380-z,150,380);
+            ctx.quadraticCurveTo(200,380+z,250,380);
+            ctx.quadraticCurveTo(300,380-z,350,380);
+            ctx.quadraticCurveTo(400,380+z,450,380);
+            ctx.quadraticCurveTo(500,380-z,550,380);
+            ctx.quadraticCurveTo(600,380+z,650,380);
+            ctx.quadraticCurveTo(700,380-z,750,380);
+            ctx.quadraticCurveTo(800,380+z,850,380);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "green";
+            ctx.moveTo(50, 400);
+            ctx.quadraticCurveTo(75, 400+z, 100, 400);
+            ctx.quadraticCurveTo(125, 400-z, 150, 400);
+            
+            ctx.quadraticCurveTo(175,400-z,200,400);
+            ctx.quadraticCurveTo(225,400+z,250,400);
+            ctx.quadraticCurveTo(275,400-z,300,400);
+            ctx.quadraticCurveTo(325,400+z,350,400);
+            ctx.quadraticCurveTo(375,400-z,400,400);
+            ctx.quadraticCurveTo(425,400+z,450,400);
+            ctx.quadraticCurveTo(475,400-z,500,400);
+            ctx.quadraticCurveTo(525,400+z,550,400);
+            ctx.quadraticCurveTo(575,400-z,600,400);
+            ctx.quadraticCurveTo(625,400+z,650,400);
+            ctx.quadraticCurveTo(675,400-z,700,400);
+            ctx.quadraticCurveTo(725,400+z,750,400);
+            ctx.quadraticCurveTo(775,400-z,800,400);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "green";
+            ctx.moveTo(50,400);
+            ctx.quadraticCurveTo(100,400-z,150,400);
+            ctx.quadraticCurveTo(200,400+z,250,400);
+            ctx.quadraticCurveTo(300,400-z,350,400);
+            ctx.quadraticCurveTo(400,400+z,450,400);
+            ctx.quadraticCurveTo(500,400-z,550,400);
+            ctx.quadraticCurveTo(600,400+z,650,400);
+            ctx.quadraticCurveTo(700,400-z,750,400);
+            ctx.quadraticCurveTo(800,400+z,850,400);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "#55A9A9";
+            ctx.moveTo(50, 420);
+            ctx.quadraticCurveTo(75, 420-z, 100, 420);
+            ctx.quadraticCurveTo(125, 420+z, 150, 420);
+            ctx.quadraticCurveTo(175,420-z,200,420);
+            ctx.quadraticCurveTo(225,420+z,250,420);
+            ctx.quadraticCurveTo(275,420-z,300,420);
+            ctx.quadraticCurveTo(325,420+z,350,420);
+            ctx.quadraticCurveTo(375,420-z,400,420);
+            ctx.quadraticCurveTo(425,420+z,450,420);
+            ctx.quadraticCurveTo(475,420-z,500,420);
+            ctx.quadraticCurveTo(525,420+z,550,420);
+            ctx.quadraticCurveTo(575,420-z,600,420);
+            ctx.quadraticCurveTo(625,420+z,650,420);
+            ctx.quadraticCurveTo(675,420-z,700,420);
+            ctx.quadraticCurveTo(725,420+z,750,420);
+            ctx.quadraticCurveTo(775,420-z,800,420);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "#55A9A9";
+            ctx.moveTo(50,420);
+            ctx.quadraticCurveTo(100,420-z,150,420);
+            ctx.quadraticCurveTo(200,420+z,250,420);
+            ctx.quadraticCurveTo(300,420-z,350,420);
+            ctx.quadraticCurveTo(400,420+z,450,420);
+            ctx.quadraticCurveTo(500,420-z,550,420);
+            ctx.quadraticCurveTo(600,420+z,650,420);
+            ctx.quadraticCurveTo(700,420-z,750,420);
+            ctx.quadraticCurveTo(800,420+z,850,420);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "blue";
+            ctx.moveTo(50, 440);
+            ctx.quadraticCurveTo(75, 440+z, 100, 440);
+            ctx.quadraticCurveTo(125, 440-z, 150, 440);
+            ctx.quadraticCurveTo(175,440+z,200,440);
+            ctx.quadraticCurveTo(225,440-z,250,440);
+            ctx.quadraticCurveTo(275,440+z,300,440);
+            ctx.quadraticCurveTo(325,440-z,350,440);
+            ctx.quadraticCurveTo(375,440+z,400,440);
+            ctx.quadraticCurveTo(425,440-z,450,440);
+            ctx.quadraticCurveTo(475,440+z,500,440);
+            ctx.quadraticCurveTo(525,440-z,550,440);
+            ctx.quadraticCurveTo(575,440+z,600,440);
+            ctx.quadraticCurveTo(625,440-z,650,440);
+            ctx.quadraticCurveTo(675,440+z,700,440);
+            ctx.quadraticCurveTo(725,440-z,750,440);
+            ctx.quadraticCurveTo(775,440+z,800,440);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "blue";
+            ctx.moveTo(50,440);
+            ctx.quadraticCurveTo(100,440-z,150,440);
+            ctx.quadraticCurveTo(200,440+z,250,440);
+            ctx.quadraticCurveTo(300,440-z,350,440);
+            ctx.quadraticCurveTo(400,440+z,450,440);
+            ctx.quadraticCurveTo(500,440-z,550,440);
+            ctx.quadraticCurveTo(600,440+z,650,440);
+            ctx.quadraticCurveTo(700,440-z,750,440);
+            ctx.quadraticCurveTo(800,440+z,850,440);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "purple";
+            ctx.moveTo(50, 460);
+            ctx.quadraticCurveTo(75, 460+z, 100, 460);
+            ctx.quadraticCurveTo(125, 460-z, 150, 460);
+            ctx.quadraticCurveTo(175,460+z,200,460);
+            ctx.quadraticCurveTo(225,460-z,250,460);
+            ctx.quadraticCurveTo(275,460+z,300,460);
+            ctx.quadraticCurveTo(325,460-z,350,460);
+            ctx.quadraticCurveTo(375,460+z,400,460);
+            ctx.quadraticCurveTo(425,460-z,450,460);
+            ctx.quadraticCurveTo(475,460+z,500,460);
+            ctx.quadraticCurveTo(525,460-z,550,460);
+            ctx.quadraticCurveTo(575,460+z,600,460);
+            ctx.quadraticCurveTo(625,460-z,650,460);
+            ctx.quadraticCurveTo(675,460+z,700,460);
+            ctx.quadraticCurveTo(725,460-z,750,460);
+            ctx.quadraticCurveTo(775,460+z,800,460);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "purple";
+            ctx.moveTo(50,460);
+            ctx.quadraticCurveTo(100,460+z,150,460);
+            ctx.quadraticCurveTo(200,460-z,250,460);
+            ctx.quadraticCurveTo(300,460+z,350,460);
+            ctx.quadraticCurveTo(400,460-z,450,460);
+            ctx.quadraticCurveTo(500,460+z,550,460);
+            ctx.quadraticCurveTo(600,460-z,650,460);
+            ctx.quadraticCurveTo(700,460+z,750,460);
+            ctx.quadraticCurveTo(800,460-z,850,460);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "red";
+            ctx.moveTo(50, 480);
+            ctx.quadraticCurveTo(75, 480-z, 100, 480);
+            ctx.quadraticCurveTo(125, 480+z, 150, 480);
+            ctx.quadraticCurveTo(175,480-z,200,480);
+            ctx.quadraticCurveTo(225,480+z,250,480);
+            ctx.quadraticCurveTo(275,480-z,300,480);
+            ctx.quadraticCurveTo(325,480+z,350,480);
+            ctx.quadraticCurveTo(375,480-z,400,480);
+            ctx.quadraticCurveTo(425,480+z,450,480);
+            ctx.quadraticCurveTo(475,480-z,500,480);
+            ctx.quadraticCurveTo(525,480+z,550,480);
+            ctx.quadraticCurveTo(575,480-z,600,480);
+            ctx.quadraticCurveTo(625,480+z,650,480);
+            ctx.quadraticCurveTo(675,480-z,700,480);
+            ctx.quadraticCurveTo(725,480+z,750,480);
+            ctx.quadraticCurveTo(775,480-z,800,480);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "red";
+            ctx.moveTo(50,480);
+            ctx.quadraticCurveTo(100,480-z,150,480);
+            ctx.quadraticCurveTo(200,480+z,250,480);
+            ctx.quadraticCurveTo(300,480-z,350,480);
+            ctx.quadraticCurveTo(400,480+z,450,480);
+            ctx.quadraticCurveTo(500,480-z,550,480);
+            ctx.quadraticCurveTo(600,480+z,650,480);
+            ctx.quadraticCurveTo(700,480-z,750,480);
+            ctx.quadraticCurveTo(800,480+z,850,480);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "orange";
+            ctx.moveTo(50, 500);
+            ctx.quadraticCurveTo(75, 500+z, 100, 500);
+            ctx.quadraticCurveTo(125, 500-z, 150, 500);
+            ctx.quadraticCurveTo(175,500+z,200,500);
+            ctx.quadraticCurveTo(225,500-z,250,500);
+            ctx.quadraticCurveTo(275,500+z,300,500);
+            ctx.quadraticCurveTo(325,500-z,350,500);
+            ctx.quadraticCurveTo(375,500+z,400,500);
+            ctx.quadraticCurveTo(425,500-z,450,500);
+            ctx.quadraticCurveTo(475,500+z,500,500);
+            ctx.quadraticCurveTo(525,500-z,550,500);
+            ctx.quadraticCurveTo(575,500+z,600,500);
+            ctx.quadraticCurveTo(625,500-z,650,500);
+            ctx.quadraticCurveTo(675,500+z,700,500);
+            ctx.quadraticCurveTo(725,500-z,750,500);
+            ctx.quadraticCurveTo(775,500+z,800,500);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "orange";
+            ctx.moveTo(50,500);
+            ctx.quadraticCurveTo(100,500-z,150,500);
+            ctx.quadraticCurveTo(200,500+z,250,500);
+            ctx.quadraticCurveTo(300,500-z,350,500);
+            ctx.quadraticCurveTo(400,500+z,450,500);
+            ctx.quadraticCurveTo(500,500-z,550,500);
+            ctx.quadraticCurveTo(600,500+z,650,500);
+            ctx.quadraticCurveTo(700,500-z,750,500);
+            ctx.quadraticCurveTo(800,500+z,850,500);    
+            ctx.stroke();
+         }
+
+         if(i>=50&&i<=150){
+
+            ctx.beginPath();
+            ctx.moveTo(550, 220);
+            ctx.lineTo(650, 480);
+            ctx.lineTo(450, 480);
+            ctx.lineTo(550, 220);
+            ctx.fill();
+      
+            ctx.beginPath();
+            ctx.lineWidth="10";
+            ctx.strokeStyle = "red";
+            ctx.moveTo(550, 220);
+            ctx.lineTo(650, 480);
+            ctx.lineTo(450, 480);
+            ctx.lineTo(550, 220);
+            ctx.stroke();
+
+         }
+
+         if(i>=200&&i<=300){
+
+ctx.beginPath();
+ctx.moveTo(550, 220);
+ctx.lineTo(650, 480);
+ctx.lineTo(450, 480);
+ctx.lineTo(550, 220);
+ctx.fill();
+
+ctx.beginPath();
+ctx.lineWidth="10";
+ctx.strokeStyle = "orange";
+ctx.moveTo(550, 220);
+ctx.lineTo(650, 480);
+ctx.lineTo(450, 480);
+ctx.lineTo(550, 220);
+ctx.stroke();
+
+}
+
+if(i>=350&&i<=500){
+
+ctx.beginPath();
+ctx.moveTo(550, 220);
+ctx.lineTo(650, 480);
+ctx.lineTo(450, 480);
+ctx.lineTo(550, 220);
+ctx.fill();
+
+ctx.beginPath();
+ctx.lineWidth="10";
+ctx.strokeStyle = "yellow";
+ctx.moveTo(550, 220);
+ctx.lineTo(650, 480);
+ctx.lineTo(450, 480);
+ctx.lineTo(550, 220);
+ctx.stroke();
+
+}
+
+if(i>=550&&i<=700){
+
+ctx.beginPath();
+ctx.moveTo(550, 220);
+ctx.lineTo(650, 480);
+ctx.lineTo(450, 480);
+ctx.lineTo(550, 220);
+ctx.fill();
+
+ctx.beginPath();
+ctx.lineWidth="10";
+ctx.strokeStyle = "green";
+ctx.moveTo(550, 220);
+ctx.lineTo(650, 480);
+ctx.lineTo(450, 480);
+ctx.lineTo(550, 220);
+ctx.stroke();
+
+}
+
+if(i>=750&&i<=900){
+
+ctx.beginPath();
+ctx.moveTo(550, 220);
+ctx.lineTo(650, 480);
+ctx.lineTo(450, 480);
+ctx.lineTo(550, 220);
+ctx.fill();
+
+ctx.beginPath();
+ctx.lineWidth="10";
+ctx.strokeStyle = "blue";
+ctx.moveTo(550, 220);
+ctx.lineTo(650, 480);
+ctx.lineTo(450, 480);
+ctx.lineTo(550, 220);
+ctx.stroke();
+
+}
+
+if(i==1000){
+   i=0;
+}
+
+            if(button2switch){
+               clearInterval(anim2);
+            }
+
+
+         },n)
+      })
+
+            button3.addEventListener("click",function(){
+             button3switch=false;
+             button1switch=true;
+             button2switch=true;
+             i=0;
+             n=20;
+
+             var anim3 =  setInterval(function(){
+            i++;
+            
+            if(y<=10&&y>=-10){
+               y++;
+               if(y==10){
+                  z=10;
+               }
+           
+            ctx.clearRect(0,0,900,700);
+
+            ctx.beginPath();
+            ctx.lineWidth="2";
+            ctx.strokeStyle = "red";
+            ctx.moveTo(50, 200);
+            ctx.quadraticCurveTo(75, 200-y, 100, 200);
+            ctx.quadraticCurveTo(125, 200+y, 150, 200);
+            ctx.quadraticCurveTo(175,200-y,200,200);
+            ctx.quadraticCurveTo(225,200+y,250,200);
+            ctx.quadraticCurveTo(275,200-y,300,200);
+            ctx.quadraticCurveTo(325,200+y,350,200);
+            ctx.quadraticCurveTo(375,200-y,400,200);
+            ctx.quadraticCurveTo(425,200+y,450,200);
+            ctx.quadraticCurveTo(475,200-y,500,200);
+            ctx.quadraticCurveTo(525,200+y,550,200);
+            ctx.quadraticCurveTo(575,200-y,600,200);
+            ctx.quadraticCurveTo(625,200+y,650,200);
+            ctx.quadraticCurveTo(675,200-y,700,200);
+            ctx.quadraticCurveTo(725,200+y,750,200);
+            ctx.quadraticCurveTo(775,200-y,800,200);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.moveTo(50,200);
+            ctx.strokeStyle = "red";
+            ctx.quadraticCurveTo(100,200+y,150,200);
+            ctx.quadraticCurveTo(200,200-y,250,200);
+            ctx.quadraticCurveTo(300,200+y,350,200);
+            ctx.quadraticCurveTo(400,200-y,450,200);
+            ctx.quadraticCurveTo(500,200+y,550,200);
+            ctx.quadraticCurveTo(600,200-y,650,200);
+            ctx.quadraticCurveTo(700,200+y,750,200);
+            ctx.quadraticCurveTo(800,200-y,850,200);            
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "orange";
+            ctx.moveTo(50, 220);
+            ctx.quadraticCurveTo(75, 220+y, 100, 220);
+            ctx.quadraticCurveTo(125, 220-y, 150, 220);
+            ctx.quadraticCurveTo(175,220+y,200,220);
+            ctx.quadraticCurveTo(225,220-y,250,220);
+            ctx.quadraticCurveTo(275,220+y,300,220);
+            ctx.quadraticCurveTo(325,220-y,350,220);
+            ctx.quadraticCurveTo(375,220+y,400,220);
+            ctx.quadraticCurveTo(425,220-y,450,220);
+            ctx.quadraticCurveTo(475,220+y,500,220);
+            ctx.quadraticCurveTo(525,220-y,550,220);
+            ctx.quadraticCurveTo(575,220+y,600,220);
+            ctx.quadraticCurveTo(625,220-y,650,220);
+            ctx.quadraticCurveTo(675,220+y,700,220);
+            ctx.quadraticCurveTo(725,220-y,750,220);
+            ctx.quadraticCurveTo(775,220+y,800,220);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "orange";
+            ctx.moveTo(50,220);
+            ctx.quadraticCurveTo(100,220+y,150,220);
+            ctx.quadraticCurveTo(200,220-y,250,220);
+            ctx.quadraticCurveTo(300,220+y,350,220);
+            ctx.quadraticCurveTo(400,220-y,450,220);
+            ctx.quadraticCurveTo(500,220+y,550,220);
+            ctx.quadraticCurveTo(600,220-y,650,220);
+            ctx.quadraticCurveTo(700,220+y,750,220);
+            ctx.quadraticCurveTo(800,220-y,850,220);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "yellow";
+            ctx.moveTo(50, 240);
+            ctx.quadraticCurveTo(75, 240-y, 100, 240);
+            ctx.quadraticCurveTo(125, 240+y, 150, 240);
+            ctx.quadraticCurveTo(175,240-y,200,240);
+            ctx.quadraticCurveTo(225,240+y,250,240);
+            ctx.quadraticCurveTo(275,240-y,300,240);
+            ctx.quadraticCurveTo(325,240+y,350,240);
+            ctx.quadraticCurveTo(375,240-y,400,240);
+            ctx.quadraticCurveTo(425,240+y,450,240);
+            ctx.quadraticCurveTo(475,240-y,500,240);
+            ctx.quadraticCurveTo(525,240+y,550,240);
+            ctx.quadraticCurveTo(575,240-y,600,240);
+            ctx.quadraticCurveTo(625,240+y,650,240);
+            ctx.quadraticCurveTo(675,240-y,700,240);
+            ctx.quadraticCurveTo(725,240+y,750,240);
+            ctx.quadraticCurveTo(775,240-y,800,240);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "yellow";
+            ctx.moveTo(50,240);
+            ctx.quadraticCurveTo(100,240-y,150,240);
+            ctx.quadraticCurveTo(200,240+y,250,240);
+            ctx.quadraticCurveTo(300,240-y,350,240);
+            ctx.quadraticCurveTo(400,240+y,450,240);
+            ctx.quadraticCurveTo(500,240-y,550,240);
+            ctx.quadraticCurveTo(600,240+y,650,240);
+            ctx.quadraticCurveTo(700,240-y,750,240);
+            ctx.quadraticCurveTo(800,240+y,850,240);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "green";
+            ctx.moveTo(50, 260);
+            ctx.quadraticCurveTo(75, 260-y, 100, 260);
+            ctx.quadraticCurveTo(125, 260+y, 150, 260);
+            ctx.quadraticCurveTo(175,260-y,200,260);
+            ctx.quadraticCurveTo(225,260+y,250,260);
+            ctx.quadraticCurveTo(275,260-y,300,260);
+            ctx.quadraticCurveTo(325,260+y,350,260);
+            ctx.quadraticCurveTo(375,260-y,400,260);
+            ctx.quadraticCurveTo(425,260+y,450,260);
+            ctx.quadraticCurveTo(475,260-y,500,260);
+            ctx.quadraticCurveTo(525,260+y,550,260);
+            ctx.quadraticCurveTo(575,260-y,600,260);
+            ctx.quadraticCurveTo(625,260+y,650,260);
+            ctx.quadraticCurveTo(675,260-y,700,260);
+            ctx.quadraticCurveTo(725,260+y,750,260);
+            ctx.quadraticCurveTo(775,260-y,800,260);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "green";
+            ctx.moveTo(50,260);
+            ctx.quadraticCurveTo(100,260-y,150,260);
+            ctx.quadraticCurveTo(200,260+y,250,260);
+            ctx.quadraticCurveTo(300,260-y,350,260);
+            ctx.quadraticCurveTo(400,260+y,450,260);
+            ctx.quadraticCurveTo(500,260-y,550,260);
+            ctx.quadraticCurveTo(600,260+y,650,260);
+            ctx.quadraticCurveTo(700,260-y,750,260);
+            ctx.quadraticCurveTo(800,260+y,850,260);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "#55A9A9";
+            ctx.moveTo(50, 280);
+            ctx.quadraticCurveTo(75, 280+y, 100, 280);
+            ctx.quadraticCurveTo(125, 280-y, 150, 280);
+            ctx.quadraticCurveTo(175,280+y,200,280);
+            ctx.quadraticCurveTo(225,280-y,250,280);
+            ctx.quadraticCurveTo(275,280+y,300,280);
+            ctx.quadraticCurveTo(325,280-y,350,280);
+            ctx.quadraticCurveTo(375,280+y,400,280);
+            ctx.quadraticCurveTo(425,280-y,450,280);
+            ctx.quadraticCurveTo(475,280+y,500,280);
+            ctx.quadraticCurveTo(525,280-y,550,280);
+            ctx.quadraticCurveTo(575,280+y,600,280);
+            ctx.quadraticCurveTo(625,280-y,650,280);
+            ctx.quadraticCurveTo(675,280+y,700,280);
+            ctx.quadraticCurveTo(725,280-y,750,280);
+            ctx.quadraticCurveTo(775,280+y,800,280);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "#55A9A9";
+            ctx.moveTo(50,280);
+            ctx.quadraticCurveTo(100,280-y,150,280);
+            ctx.quadraticCurveTo(200,280+y,250,280);
+            ctx.quadraticCurveTo(300,280-y,350,280);
+            ctx.quadraticCurveTo(400,280+y,450,280);
+            ctx.quadraticCurveTo(500,280-y,550,280);
+            ctx.quadraticCurveTo(600,280+y,650,280);
+            ctx.quadraticCurveTo(700,280-y,750,280);
+            ctx.quadraticCurveTo(800,280+y,850,280);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "blue";
+            ctx.moveTo(50, 300);
+            ctx.quadraticCurveTo(75, 300-y, 100, 300);
+            ctx.quadraticCurveTo(125, 300+y, 150, 300);
+            ctx.quadraticCurveTo(175,300-y,200,300);
+            ctx.quadraticCurveTo(225,300+y,250,300);
+            ctx.quadraticCurveTo(275,300-y,300,300);
+            ctx.quadraticCurveTo(325,300+y,350,300);
+            ctx.quadraticCurveTo(375,300-y,400,300);
+            ctx.quadraticCurveTo(425,300+y,450,300);
+            ctx.quadraticCurveTo(475,300-y,500,300);
+            ctx.quadraticCurveTo(525,300+y,550,300);
+            ctx.quadraticCurveTo(575,300-y,600,300);
+            ctx.quadraticCurveTo(625,300+y,650,300);
+            ctx.quadraticCurveTo(675,300-y,700,300);
+            ctx.quadraticCurveTo(725,300+y,750,300);
+            ctx.quadraticCurveTo(775,300-y,800,300);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "blue";
+            ctx.moveTo(50,300);
+            ctx.quadraticCurveTo(100,300-y,150,300);
+            ctx.quadraticCurveTo(200,300+y,250,300);
+            ctx.quadraticCurveTo(300,300-y,350,300);
+            ctx.quadraticCurveTo(400,300+y,450,300);
+            ctx.quadraticCurveTo(500,300-y,550,300);
+            ctx.quadraticCurveTo(600,300+y,650,300);
+            ctx.quadraticCurveTo(700,300-y,750,300);
+            ctx.quadraticCurveTo(800,300+y,850,300);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "purple";
+            ctx.moveTo(50, 320);
+            ctx.quadraticCurveTo(75, 320+y, 100, 320);
+            ctx.quadraticCurveTo(125, 320-y, 150, 320);
+            ctx.quadraticCurveTo(175,320+y,200,320);
+            ctx.quadraticCurveTo(225,320-y,250,320);
+            ctx.quadraticCurveTo(275,320+y,300,320);
+            ctx.quadraticCurveTo(325,320-y,350,320);
+            ctx.quadraticCurveTo(375,320+y,400,320);
+            ctx.quadraticCurveTo(425,320-y,450,320);
+            ctx.quadraticCurveTo(475,320+y,500,320);
+            ctx.quadraticCurveTo(525,320-y,550,320);
+            ctx.quadraticCurveTo(575,320+y,600,320);
+            ctx.quadraticCurveTo(625,320-y,650,320);
+            ctx.quadraticCurveTo(675,320+y,700,320);
+            ctx.quadraticCurveTo(725,320-y,750,320);
+            ctx.quadraticCurveTo(775,320+y,800,320);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "purple";
+            ctx.moveTo(50,320);
+            ctx.quadraticCurveTo(100,320-y,150,320);
+            ctx.quadraticCurveTo(200,320+y,250,320);
+            ctx.quadraticCurveTo(300,320-y,350,320);
+            ctx.quadraticCurveTo(400,320+y,450,320);
+            ctx.quadraticCurveTo(500,320-y,550,320);
+            ctx.quadraticCurveTo(600,320+y,650,320);
+            ctx.quadraticCurveTo(700,320-y,750,320);
+            ctx.quadraticCurveTo(800,320+y,850,320);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "red";
+            ctx.moveTo(50, 340);
+            ctx.quadraticCurveTo(75, 340-y, 100, 340);
+            ctx.quadraticCurveTo(125, 340+y, 150, 340);
+            ctx.quadraticCurveTo(175,340-y,200,340);
+            ctx.quadraticCurveTo(225,340+y,250,340);
+            ctx.quadraticCurveTo(275,340-y,300,340);
+            ctx.quadraticCurveTo(325,340+y,350,340);
+            ctx.quadraticCurveTo(375,340-y,400,340);
+            ctx.quadraticCurveTo(425,340+y,450,340);
+            ctx.quadraticCurveTo(475,340-y,500,340);
+            ctx.quadraticCurveTo(525,340+y,550,340);
+            ctx.quadraticCurveTo(575,340-y,600,340);
+            ctx.quadraticCurveTo(625,340+y,650,340);
+            ctx.quadraticCurveTo(675,340-y,700,340);
+            ctx.quadraticCurveTo(725,340+y,750,340);
+            ctx.quadraticCurveTo(775,340-y,800,340);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "red";
+            ctx.moveTo(50,340);
+            ctx.quadraticCurveTo(100,340-y,150,340);
+            ctx.quadraticCurveTo(200,340+y,250,340);
+            ctx.quadraticCurveTo(300,340-y,350,340);
+            ctx.quadraticCurveTo(400,340+y,450,340);
+            ctx.quadraticCurveTo(500,340-y,550,340);
+            ctx.quadraticCurveTo(600,340+y,650,340);
+            ctx.quadraticCurveTo(700,340-y,750,340);
+            ctx.quadraticCurveTo(800,340+y,850,340);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "orange";
+            ctx.moveTo(50, 360);
+            ctx.quadraticCurveTo(75, 360+y, 100, 360);
+            ctx.quadraticCurveTo(125, 360-y, 150, 360);
+            ctx.quadraticCurveTo(175,360+y,200,360);
+            ctx.quadraticCurveTo(225,360-y,250,360);
+            ctx.quadraticCurveTo(275,360+y,300,360);
+            ctx.quadraticCurveTo(325,360-y,350,360);
+            ctx.quadraticCurveTo(375,360+y,400,360);
+            ctx.quadraticCurveTo(425,360-y,450,360);
+            ctx.quadraticCurveTo(475,360+y,500,360);
+            ctx.quadraticCurveTo(525,360-y,550,360);
+            ctx.quadraticCurveTo(575,360+y,600,360);
+            ctx.quadraticCurveTo(625,360-y,650,360);
+            ctx.quadraticCurveTo(675,360+y,700,360);
+            ctx.quadraticCurveTo(725,360-y,750,360);
+            ctx.quadraticCurveTo(775,360+y,800,360);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "orange";
+            ctx.moveTo(50,360);
+            ctx.quadraticCurveTo(100,360-y,150,360);
+            ctx.quadraticCurveTo(200,360+y,250,360);
+            ctx.quadraticCurveTo(300,360-y,350,360);
+            ctx.quadraticCurveTo(400,360+y,450,360);
+            ctx.quadraticCurveTo(500,360-y,550,360);
+            ctx.quadraticCurveTo(600,360+y,650,360);
+            ctx.quadraticCurveTo(700,360-y,750,360);
+            ctx.quadraticCurveTo(800,360+y,850,360);            
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "yellow";
+            ctx.moveTo(50, 380);
+            ctx.quadraticCurveTo(75, 380-y, 100, 380);
+            ctx.quadraticCurveTo(125, 380+y, 150, 380);
+            ctx.quadraticCurveTo(175,380-y,200,380);
+            ctx.quadraticCurveTo(225,380+y,250,380);
+            ctx.quadraticCurveTo(275,380-y,300,380);
+            ctx.quadraticCurveTo(325,380+y,350,380);
+            ctx.quadraticCurveTo(375,380-y,400,380);
+            ctx.quadraticCurveTo(425,380+y,450,380);
+            ctx.quadraticCurveTo(475,380-y,500,380);
+            ctx.quadraticCurveTo(525,380+y,550,380);
+            ctx.quadraticCurveTo(575,380-y,600,380);
+            ctx.quadraticCurveTo(625,380+y,650,380);
+            ctx.quadraticCurveTo(675,380-y,700,380);
+            ctx.quadraticCurveTo(725,380+y,750,380);
+            ctx.quadraticCurveTo(775,380-y,800,380);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "yellow";
+            ctx.moveTo(50,380);
+            ctx.quadraticCurveTo(100,380-y,150,380);
+            ctx.quadraticCurveTo(200,380+y,250,380);
+            ctx.quadraticCurveTo(300,380-y,350,380);
+            ctx.quadraticCurveTo(400,380+y,450,380);
+            ctx.quadraticCurveTo(500,380-y,550,380);
+            ctx.quadraticCurveTo(600,380+y,650,380);
+            ctx.quadraticCurveTo(700,380-y,750,380);
+            ctx.quadraticCurveTo(800,380+y,850,380);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "green";
+            ctx.moveTo(50, 400);
+            ctx.quadraticCurveTo(75, 400+y, 100, 400);
+            ctx.quadraticCurveTo(125, 400-y, 150, 400);
+            
+            ctx.quadraticCurveTo(175,400-y,200,400);
+            ctx.quadraticCurveTo(225,400+y,250,400);
+            ctx.quadraticCurveTo(275,400-y,300,400);
+            ctx.quadraticCurveTo(325,400+y,350,400);
+            ctx.quadraticCurveTo(375,400-y,400,400);
+            ctx.quadraticCurveTo(425,400+y,450,400);
+            ctx.quadraticCurveTo(475,400-y,500,400);
+            ctx.quadraticCurveTo(525,400+y,550,400);
+            ctx.quadraticCurveTo(575,400-y,600,400);
+            ctx.quadraticCurveTo(625,400+y,650,400);
+            ctx.quadraticCurveTo(675,400-y,700,400);
+            ctx.quadraticCurveTo(725,400+y,750,400);
+            ctx.quadraticCurveTo(775,400-y,800,400);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "green";
+            ctx.moveTo(50,400);
+            ctx.quadraticCurveTo(100,400-y,150,400);
+            ctx.quadraticCurveTo(200,400+y,250,400);
+            ctx.quadraticCurveTo(300,400-y,350,400);
+            ctx.quadraticCurveTo(400,400+y,450,400);
+            ctx.quadraticCurveTo(500,400-y,550,400);
+            ctx.quadraticCurveTo(600,400+y,650,400);
+            ctx.quadraticCurveTo(700,400-y,750,400);
+            ctx.quadraticCurveTo(800,400+y,850,400);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "#55A9A9";
+            ctx.moveTo(50, 420);
+            ctx.quadraticCurveTo(75, 420-y, 100, 420);
+            ctx.quadraticCurveTo(125, 420+y, 150, 420);
+            ctx.quadraticCurveTo(175,420-y,200,420);
+            ctx.quadraticCurveTo(225,420+y,250,420);
+            ctx.quadraticCurveTo(275,420-y,300,420);
+            ctx.quadraticCurveTo(325,420+y,350,420);
+            ctx.quadraticCurveTo(375,420-y,400,420);
+            ctx.quadraticCurveTo(425,420+y,450,420);
+            ctx.quadraticCurveTo(475,420-y,500,420);
+            ctx.quadraticCurveTo(525,420+y,550,420);
+            ctx.quadraticCurveTo(575,420-y,600,420);
+            ctx.quadraticCurveTo(625,420+y,650,420);
+            ctx.quadraticCurveTo(675,420-y,700,420);
+            ctx.quadraticCurveTo(725,420+y,750,420);
+            ctx.quadraticCurveTo(775,420-y,800,420);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "#55A9A9";
+            ctx.moveTo(50,420);
+            ctx.quadraticCurveTo(100,420-y,150,420);
+            ctx.quadraticCurveTo(200,420+y,250,420);
+            ctx.quadraticCurveTo(300,420-y,350,420);
+            ctx.quadraticCurveTo(400,420+y,450,420);
+            ctx.quadraticCurveTo(500,420-y,550,420);
+            ctx.quadraticCurveTo(600,420+y,650,420);
+            ctx.quadraticCurveTo(700,420-y,750,420);
+            ctx.quadraticCurveTo(800,420+y,850,420);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "blue";
+            ctx.moveTo(50, 440);
+            ctx.quadraticCurveTo(75, 440+y, 100, 440);
+            ctx.quadraticCurveTo(125, 440-y, 150, 440);
+            ctx.quadraticCurveTo(175,440+y,200,440);
+            ctx.quadraticCurveTo(225,440-y,250,440);
+            ctx.quadraticCurveTo(275,440+y,300,440);
+            ctx.quadraticCurveTo(325,440-y,350,440);
+            ctx.quadraticCurveTo(375,440+y,400,440);
+            ctx.quadraticCurveTo(425,440-y,450,440);
+            ctx.quadraticCurveTo(475,440+y,500,440);
+            ctx.quadraticCurveTo(525,440-y,550,440);
+            ctx.quadraticCurveTo(575,440+y,600,440);
+            ctx.quadraticCurveTo(625,440-y,650,440);
+            ctx.quadraticCurveTo(675,440+y,700,440);
+            ctx.quadraticCurveTo(725,440-y,750,440);
+            ctx.quadraticCurveTo(775,440+y,800,440);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "blue";
+            ctx.moveTo(50,440);
+            ctx.quadraticCurveTo(100,440-y,150,440);
+            ctx.quadraticCurveTo(200,440+y,250,440);
+            ctx.quadraticCurveTo(300,440-y,350,440);
+            ctx.quadraticCurveTo(400,440+y,450,440);
+            ctx.quadraticCurveTo(500,440-y,550,440);
+            ctx.quadraticCurveTo(600,440+y,650,440);
+            ctx.quadraticCurveTo(700,440-y,750,440);
+            ctx.quadraticCurveTo(800,440+y,850,440);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "purple";
+            ctx.moveTo(50, 460);
+            ctx.quadraticCurveTo(75, 460+y, 100, 460);
+            ctx.quadraticCurveTo(125, 460-y, 150, 460);
+            ctx.quadraticCurveTo(175,460+y,200,460);
+            ctx.quadraticCurveTo(225,460-y,250,460);
+            ctx.quadraticCurveTo(275,460+y,300,460);
+            ctx.quadraticCurveTo(325,460-y,350,460);
+            ctx.quadraticCurveTo(375,460+y,400,460);
+            ctx.quadraticCurveTo(425,460-y,450,460);
+            ctx.quadraticCurveTo(475,460+y,500,460);
+            ctx.quadraticCurveTo(525,460-y,550,460);
+            ctx.quadraticCurveTo(575,460+y,600,460);
+            ctx.quadraticCurveTo(625,460-y,650,460);
+            ctx.quadraticCurveTo(675,460+y,700,460);
+            ctx.quadraticCurveTo(725,460-y,750,460);
+            ctx.quadraticCurveTo(775,460+y,800,460);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "purple";
+            ctx.moveTo(50,460);
+            ctx.quadraticCurveTo(100,460+y,150,460);
+            ctx.quadraticCurveTo(200,460-y,250,460);
+            ctx.quadraticCurveTo(300,460+y,350,460);
+            ctx.quadraticCurveTo(400,460-y,450,460);
+            ctx.quadraticCurveTo(500,460+y,550,460);
+            ctx.quadraticCurveTo(600,460-y,650,460);
+            ctx.quadraticCurveTo(700,460+y,750,460);
+            ctx.quadraticCurveTo(800,460-y,850,460);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "red";
+            ctx.moveTo(50, 480);
+            ctx.quadraticCurveTo(75, 480-y, 100, 480);
+            ctx.quadraticCurveTo(125, 480+y, 150, 480);
+            ctx.quadraticCurveTo(175,480-y,200,480);
+            ctx.quadraticCurveTo(225,480+y,250,480);
+            ctx.quadraticCurveTo(275,480-y,300,480);
+            ctx.quadraticCurveTo(325,480+y,350,480);
+            ctx.quadraticCurveTo(375,480-y,400,480);
+            ctx.quadraticCurveTo(425,480+y,450,480);
+            ctx.quadraticCurveTo(475,480-y,500,480);
+            ctx.quadraticCurveTo(525,480+y,550,480);
+            ctx.quadraticCurveTo(575,480-y,600,480);
+            ctx.quadraticCurveTo(625,480+y,650,480);
+            ctx.quadraticCurveTo(675,480-y,700,480);
+            ctx.quadraticCurveTo(725,480+y,750,480);
+            ctx.quadraticCurveTo(775,480-y,800,480);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "red";
+            ctx.moveTo(50,480);
+            ctx.quadraticCurveTo(100,480-y,150,480);
+            ctx.quadraticCurveTo(200,480+y,250,480);
+            ctx.quadraticCurveTo(300,480-y,350,480);
+            ctx.quadraticCurveTo(400,480+y,450,480);
+            ctx.quadraticCurveTo(500,480-y,550,480);
+            ctx.quadraticCurveTo(600,480+y,650,480);
+            ctx.quadraticCurveTo(700,480-y,750,480);
+            ctx.quadraticCurveTo(800,480+y,850,480);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "orange";
+            ctx.moveTo(50, 500);
+            ctx.quadraticCurveTo(75, 500+y, 100, 500);
+            ctx.quadraticCurveTo(125, 500-y, 150, 500);
+            ctx.quadraticCurveTo(175,500+y,200,500);
+            ctx.quadraticCurveTo(225,500-y,250,500);
+            ctx.quadraticCurveTo(275,500+y,300,500);
+            ctx.quadraticCurveTo(325,500-y,350,500);
+            ctx.quadraticCurveTo(375,500+y,400,500);
+            ctx.quadraticCurveTo(425,500-y,450,500);
+            ctx.quadraticCurveTo(475,500+y,500,500);
+            ctx.quadraticCurveTo(525,500-y,550,500);
+            ctx.quadraticCurveTo(575,500+y,600,500);
+            ctx.quadraticCurveTo(625,500-y,650,500);
+            ctx.quadraticCurveTo(675,500+y,700,500);
+            ctx.quadraticCurveTo(725,500-y,750,500);
+            ctx.quadraticCurveTo(775,500+y,800,500);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "orange";
+            ctx.moveTo(50,500);
+            ctx.quadraticCurveTo(100,500-y,150,500);
+            ctx.quadraticCurveTo(200,500+y,250,500);
+            ctx.quadraticCurveTo(300,500-y,350,500);
+            ctx.quadraticCurveTo(400,500+y,450,500);
+            ctx.quadraticCurveTo(500,500-y,550,500);
+            ctx.quadraticCurveTo(600,500+y,650,500);
+            ctx.quadraticCurveTo(700,500-y,750,500);
+            ctx.quadraticCurveTo(800,500+y,850,500);    
+            ctx.stroke();
+         }
+
+         if(z>=-10&&z<=10){
+               z--;
+               if(z==-10){
+                  y=-10;
+               }
+           
+            ctx.clearRect(0,0,900,700);
+
+            ctx.beginPath();
+            ctx.lineWidth="2";
+            ctx.strokeStyle = "green";
+            ctx.moveTo(50, 200);
+            ctx.quadraticCurveTo(75, 200-z, 100, 200);
+            ctx.quadraticCurveTo(125, 200+z, 150, 200);
+            ctx.quadraticCurveTo(175,200-z,200,200);
+            ctx.quadraticCurveTo(225,200+z,250,200);
+            ctx.quadraticCurveTo(275,200-z,300,200);
+            ctx.quadraticCurveTo(325,200+z,350,200);
+            ctx.quadraticCurveTo(375,200-z,400,200);
+            ctx.quadraticCurveTo(425,200+z,450,200);
+            ctx.quadraticCurveTo(475,200-z,500,200);
+            ctx.quadraticCurveTo(525,200+z,550,200);
+            ctx.quadraticCurveTo(575,200-z,600,200);
+            ctx.quadraticCurveTo(625,200+z,650,200);
+            ctx.quadraticCurveTo(675,200-z,700,200);
+            ctx.quadraticCurveTo(725,200+z,750,200);
+            ctx.quadraticCurveTo(775,200-z,800,200);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.moveTo(50,200);
+            ctx.strokeStyle = "green";
+            ctx.quadraticCurveTo(100,200+z,150,200);
+            ctx.quadraticCurveTo(200,200-z,250,200);
+            ctx.quadraticCurveTo(300,200+z,350,200);
+            ctx.quadraticCurveTo(400,200-z,450,200);
+            ctx.quadraticCurveTo(500,200+z,550,200);
+            ctx.quadraticCurveTo(600,200-z,650,200);
+            ctx.quadraticCurveTo(700,200+z,750,200);
+            ctx.quadraticCurveTo(800,200-z,850,200);            
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "orange";
+            ctx.moveTo(50, 220);
+            ctx.quadraticCurveTo(75, 220+z, 100, 220);
+            ctx.quadraticCurveTo(125, 220-z, 150, 220);
+            ctx.quadraticCurveTo(175,220+z,200,220);
+            ctx.quadraticCurveTo(225,220-z,250,220);
+            ctx.quadraticCurveTo(275,220+z,300,220);
+            ctx.quadraticCurveTo(325,220-z,350,220);
+            ctx.quadraticCurveTo(375,220+z,400,220);
+            ctx.quadraticCurveTo(425,220-z,450,220);
+            ctx.quadraticCurveTo(475,220+z,500,220);
+            ctx.quadraticCurveTo(525,220-z,550,220);
+            ctx.quadraticCurveTo(575,220+z,600,220);
+            ctx.quadraticCurveTo(625,220-z,650,220);
+            ctx.quadraticCurveTo(675,220+z,700,220);
+            ctx.quadraticCurveTo(725,220-z,750,220);
+            ctx.quadraticCurveTo(775,220+z,800,220);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "orange";
+            ctx.moveTo(50,220);
+            ctx.quadraticCurveTo(100,220+z,150,220);
+            ctx.quadraticCurveTo(200,220-z,250,220);
+            ctx.quadraticCurveTo(300,220+z,350,220);
+            ctx.quadraticCurveTo(400,220-z,450,220);
+            ctx.quadraticCurveTo(500,220+z,550,220);
+            ctx.quadraticCurveTo(600,220-z,650,220);
+            ctx.quadraticCurveTo(700,220+z,750,220);
+            ctx.quadraticCurveTo(800,220-z,850,220);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "yellow";
+            ctx.moveTo(50, 240);
+            ctx.quadraticCurveTo(75, 240-z, 100, 240);
+            ctx.quadraticCurveTo(125, 240+z, 150, 240);
+            ctx.quadraticCurveTo(175,240-z,200,240);
+            ctx.quadraticCurveTo(225,240+z,250,240);
+            ctx.quadraticCurveTo(275,240-z,300,240);
+            ctx.quadraticCurveTo(325,240+z,350,240);
+            ctx.quadraticCurveTo(375,240-z,400,240);
+            ctx.quadraticCurveTo(425,240+z,450,240);
+            ctx.quadraticCurveTo(475,240-z,500,240);
+            ctx.quadraticCurveTo(525,240+z,550,240);
+            ctx.quadraticCurveTo(575,240-z,600,240);
+            ctx.quadraticCurveTo(625,240+z,650,240);
+            ctx.quadraticCurveTo(675,240-z,700,240);
+            ctx.quadraticCurveTo(725,240+z,750,240);
+            ctx.quadraticCurveTo(775,240-z,800,240);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "yellow";
+            ctx.moveTo(50,240);
+            ctx.quadraticCurveTo(100,240-z,150,240);
+            ctx.quadraticCurveTo(200,240+z,250,240);
+            ctx.quadraticCurveTo(300,240-z,350,240);
+            ctx.quadraticCurveTo(400,240+z,450,240);
+            ctx.quadraticCurveTo(500,240-z,550,240);
+            ctx.quadraticCurveTo(600,240+z,650,240);
+            ctx.quadraticCurveTo(700,240-z,750,240);
+            ctx.quadraticCurveTo(800,240+z,850,240);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "green";
+            ctx.moveTo(50, 260);
+            ctx.quadraticCurveTo(75, 260-z, 100, 260);
+            ctx.quadraticCurveTo(125, 260+z, 150, 260);
+            ctx.quadraticCurveTo(175,260-z,200,260);
+            ctx.quadraticCurveTo(225,260+z,250,260);
+            ctx.quadraticCurveTo(275,260-z,300,260);
+            ctx.quadraticCurveTo(325,260+z,350,260);
+            ctx.quadraticCurveTo(375,260-z,400,260);
+            ctx.quadraticCurveTo(425,260+z,450,260);
+            ctx.quadraticCurveTo(475,260-z,500,260);
+            ctx.quadraticCurveTo(525,260+z,550,260);
+            ctx.quadraticCurveTo(575,260-z,600,260);
+            ctx.quadraticCurveTo(625,260+z,650,260);
+            ctx.quadraticCurveTo(675,260-z,700,260);
+            ctx.quadraticCurveTo(725,260+z,750,260);
+            ctx.quadraticCurveTo(775,260-z,800,260);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "green";
+            ctx.moveTo(50,260);
+            ctx.quadraticCurveTo(100,260-z,150,260);
+            ctx.quadraticCurveTo(200,260+z,250,260);
+            ctx.quadraticCurveTo(300,260-z,350,260);
+            ctx.quadraticCurveTo(400,260+z,450,260);
+            ctx.quadraticCurveTo(500,260-z,550,260);
+            ctx.quadraticCurveTo(600,260+z,650,260);
+            ctx.quadraticCurveTo(700,260-z,750,260);
+            ctx.quadraticCurveTo(800,260+z,850,260);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "#55A9A9";
+            ctx.moveTo(50, 280);
+            ctx.quadraticCurveTo(75, 280+z, 100, 280);
+            ctx.quadraticCurveTo(125, 280-z, 150, 280);
+            ctx.quadraticCurveTo(175,280+z,200,280);
+            ctx.quadraticCurveTo(225,280-z,250,280);
+            ctx.quadraticCurveTo(275,280+z,300,280);
+            ctx.quadraticCurveTo(325,280-z,350,280);
+            ctx.quadraticCurveTo(375,280+z,400,280);
+            ctx.quadraticCurveTo(425,280-z,450,280);
+            ctx.quadraticCurveTo(475,280+z,500,280);
+            ctx.quadraticCurveTo(525,280-z,550,280);
+            ctx.quadraticCurveTo(575,280+z,600,280);
+            ctx.quadraticCurveTo(625,280-z,650,280);
+            ctx.quadraticCurveTo(675,280+z,700,280);
+            ctx.quadraticCurveTo(725,280-z,750,280);
+            ctx.quadraticCurveTo(775,280+z,800,280);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "#55A9A9";
+            ctx.moveTo(50,280);
+            ctx.quadraticCurveTo(100,280-z,150,280);
+            ctx.quadraticCurveTo(200,280+z,250,280);
+            ctx.quadraticCurveTo(300,280-z,350,280);
+            ctx.quadraticCurveTo(400,280+z,450,280);
+            ctx.quadraticCurveTo(500,280-z,550,280);
+            ctx.quadraticCurveTo(600,280+z,650,280);
+            ctx.quadraticCurveTo(700,280-z,750,280);
+            ctx.quadraticCurveTo(800,280+z,850,280);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "blue";
+            ctx.moveTo(50, 300);
+            ctx.quadraticCurveTo(75, 300-z, 100, 300);
+            ctx.quadraticCurveTo(125, 300+z, 150, 300);
+            ctx.quadraticCurveTo(175,300-z,200,300);
+            ctx.quadraticCurveTo(225,300+z,250,300);
+            ctx.quadraticCurveTo(275,300-z,300,300);
+            ctx.quadraticCurveTo(325,300+z,350,300);
+            ctx.quadraticCurveTo(375,300-z,400,300);
+            ctx.quadraticCurveTo(425,300+z,450,300);
+            ctx.quadraticCurveTo(475,300-z,500,300);
+            ctx.quadraticCurveTo(525,300+z,550,300);
+            ctx.quadraticCurveTo(575,300-z,600,300);
+            ctx.quadraticCurveTo(625,300+z,650,300);
+            ctx.quadraticCurveTo(675,300-z,700,300);
+            ctx.quadraticCurveTo(725,300+z,750,300);
+            ctx.quadraticCurveTo(775,300-z,800,300);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "blue";
+            ctx.moveTo(50,300);
+            ctx.quadraticCurveTo(100,300-z,150,300);
+            ctx.quadraticCurveTo(200,300+z,250,300);
+            ctx.quadraticCurveTo(300,300-z,350,300);
+            ctx.quadraticCurveTo(400,300+z,450,300);
+            ctx.quadraticCurveTo(500,300-z,550,300);
+            ctx.quadraticCurveTo(600,300+z,650,300);
+            ctx.quadraticCurveTo(700,300-z,750,300);
+            ctx.quadraticCurveTo(800,300+z,850,300);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "purple";
+            ctx.moveTo(50, 320);
+            ctx.quadraticCurveTo(75, 320+z, 100, 320);
+            ctx.quadraticCurveTo(125, 320-z, 150, 320);
+            ctx.quadraticCurveTo(175,320+z,200,320);
+            ctx.quadraticCurveTo(225,320-z,250,320);
+            ctx.quadraticCurveTo(275,320+z,300,320);
+            ctx.quadraticCurveTo(325,320-z,350,320);
+            ctx.quadraticCurveTo(375,320+z,400,320);
+            ctx.quadraticCurveTo(425,320-z,450,320);
+            ctx.quadraticCurveTo(475,320+z,500,320);
+            ctx.quadraticCurveTo(525,320-z,550,320);
+            ctx.quadraticCurveTo(575,320+z,600,320);
+            ctx.quadraticCurveTo(625,320-z,650,320);
+            ctx.quadraticCurveTo(675,320+z,700,320);
+            ctx.quadraticCurveTo(725,320-z,750,320);
+            ctx.quadraticCurveTo(775,320+z,800,320);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "purple";
+            ctx.moveTo(50,320);
+            ctx.quadraticCurveTo(100,320-z,150,320);
+            ctx.quadraticCurveTo(200,320+z,250,320);
+            ctx.quadraticCurveTo(300,320-z,350,320);
+            ctx.quadraticCurveTo(400,320+z,450,320);
+            ctx.quadraticCurveTo(500,320-z,550,320);
+            ctx.quadraticCurveTo(600,320+z,650,320);
+            ctx.quadraticCurveTo(700,320-z,750,320);
+            ctx.quadraticCurveTo(800,320+z,850,320);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "red";
+            ctx.moveTo(50, 340);
+            ctx.quadraticCurveTo(75, 340-z, 100, 340);
+            ctx.quadraticCurveTo(125, 340+z, 150, 340);
+            ctx.quadraticCurveTo(175,340-z,200,340);
+            ctx.quadraticCurveTo(225,340+z,250,340);
+            ctx.quadraticCurveTo(275,340-z,300,340);
+            ctx.quadraticCurveTo(325,340+z,350,340);
+            ctx.quadraticCurveTo(375,340-z,400,340);
+            ctx.quadraticCurveTo(425,340+z,450,340);
+            ctx.quadraticCurveTo(475,340-z,500,340);
+            ctx.quadraticCurveTo(525,340+z,550,340);
+            ctx.quadraticCurveTo(575,340-z,600,340);
+            ctx.quadraticCurveTo(625,340+z,650,340);
+            ctx.quadraticCurveTo(675,340-z,700,340);
+            ctx.quadraticCurveTo(725,340+z,750,340);
+            ctx.quadraticCurveTo(775,340-z,800,340);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "red";
+            ctx.moveTo(50,340);
+            ctx.quadraticCurveTo(100,340-z,150,340);
+            ctx.quadraticCurveTo(200,340+z,250,340);
+            ctx.quadraticCurveTo(300,340-z,350,340);
+            ctx.quadraticCurveTo(400,340+z,450,340);
+            ctx.quadraticCurveTo(500,340-z,550,340);
+            ctx.quadraticCurveTo(600,340+z,650,340);
+            ctx.quadraticCurveTo(700,340-z,750,340);
+            ctx.quadraticCurveTo(800,340+z,850,340);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "orange";
+            ctx.moveTo(50, 360);
+            ctx.quadraticCurveTo(75, 360+z, 100, 360);
+            ctx.quadraticCurveTo(125, 360-z, 150, 360);
+            ctx.quadraticCurveTo(175,360+z,200,360);
+            ctx.quadraticCurveTo(225,360-z,250,360);
+            ctx.quadraticCurveTo(275,360+z,300,360);
+            ctx.quadraticCurveTo(325,360-z,350,360);
+            ctx.quadraticCurveTo(375,360+z,400,360);
+            ctx.quadraticCurveTo(425,360-z,450,360);
+            ctx.quadraticCurveTo(475,360+z,500,360);
+            ctx.quadraticCurveTo(525,360-z,550,360);
+            ctx.quadraticCurveTo(575,360+z,600,360);
+            ctx.quadraticCurveTo(625,360-z,650,360);
+            ctx.quadraticCurveTo(675,360+z,700,360);
+            ctx.quadraticCurveTo(725,360-z,750,360);
+            ctx.quadraticCurveTo(775,360+z,800,360);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "orange";
+            ctx.moveTo(50,360);
+            ctx.quadraticCurveTo(100,360-z,150,360);
+            ctx.quadraticCurveTo(200,360+z,250,360);
+            ctx.quadraticCurveTo(300,360-z,350,360);
+            ctx.quadraticCurveTo(400,360+z,450,360);
+            ctx.quadraticCurveTo(500,360-z,550,360);
+            ctx.quadraticCurveTo(600,360+z,650,360);
+            ctx.quadraticCurveTo(700,360-z,750,360);
+            ctx.quadraticCurveTo(800,360+z,850,360);            
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "yellow";
+            ctx.moveTo(50, 380);
+            ctx.quadraticCurveTo(75, 380-z, 100, 380);
+            ctx.quadraticCurveTo(125, 380+z, 150, 380);
+            ctx.quadraticCurveTo(175,380-z,200,380);
+            ctx.quadraticCurveTo(225,380+z,250,380);
+            ctx.quadraticCurveTo(275,380-z,300,380);
+            ctx.quadraticCurveTo(325,380+z,350,380);
+            ctx.quadraticCurveTo(375,380-z,400,380);
+            ctx.quadraticCurveTo(425,380+z,450,380);
+            ctx.quadraticCurveTo(475,380-z,500,380);
+            ctx.quadraticCurveTo(525,380+z,550,380);
+            ctx.quadraticCurveTo(575,380-z,600,380);
+            ctx.quadraticCurveTo(625,380+z,650,380);
+            ctx.quadraticCurveTo(675,380-z,700,380);
+            ctx.quadraticCurveTo(725,380+z,750,380);
+            ctx.quadraticCurveTo(775,380-z,800,380);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "yellow";
+            ctx.moveTo(50,380);
+            ctx.quadraticCurveTo(100,380-z,150,380);
+            ctx.quadraticCurveTo(200,380+z,250,380);
+            ctx.quadraticCurveTo(300,380-z,350,380);
+            ctx.quadraticCurveTo(400,380+z,450,380);
+            ctx.quadraticCurveTo(500,380-z,550,380);
+            ctx.quadraticCurveTo(600,380+z,650,380);
+            ctx.quadraticCurveTo(700,380-z,750,380);
+            ctx.quadraticCurveTo(800,380+z,850,380);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "green";
+            ctx.moveTo(50, 400);
+            ctx.quadraticCurveTo(75, 400+z, 100, 400);
+            ctx.quadraticCurveTo(125, 400-z, 150, 400);
+            
+            ctx.quadraticCurveTo(175,400-z,200,400);
+            ctx.quadraticCurveTo(225,400+z,250,400);
+            ctx.quadraticCurveTo(275,400-z,300,400);
+            ctx.quadraticCurveTo(325,400+z,350,400);
+            ctx.quadraticCurveTo(375,400-z,400,400);
+            ctx.quadraticCurveTo(425,400+z,450,400);
+            ctx.quadraticCurveTo(475,400-z,500,400);
+            ctx.quadraticCurveTo(525,400+z,550,400);
+            ctx.quadraticCurveTo(575,400-z,600,400);
+            ctx.quadraticCurveTo(625,400+z,650,400);
+            ctx.quadraticCurveTo(675,400-z,700,400);
+            ctx.quadraticCurveTo(725,400+z,750,400);
+            ctx.quadraticCurveTo(775,400-z,800,400);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "green";
+            ctx.moveTo(50,400);
+            ctx.quadraticCurveTo(100,400-z,150,400);
+            ctx.quadraticCurveTo(200,400+z,250,400);
+            ctx.quadraticCurveTo(300,400-z,350,400);
+            ctx.quadraticCurveTo(400,400+z,450,400);
+            ctx.quadraticCurveTo(500,400-z,550,400);
+            ctx.quadraticCurveTo(600,400+z,650,400);
+            ctx.quadraticCurveTo(700,400-z,750,400);
+            ctx.quadraticCurveTo(800,400+z,850,400);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "#55A9A9";
+            ctx.moveTo(50, 420);
+            ctx.quadraticCurveTo(75, 420-z, 100, 420);
+            ctx.quadraticCurveTo(125, 420+z, 150, 420);
+            ctx.quadraticCurveTo(175,420-z,200,420);
+            ctx.quadraticCurveTo(225,420+z,250,420);
+            ctx.quadraticCurveTo(275,420-z,300,420);
+            ctx.quadraticCurveTo(325,420+z,350,420);
+            ctx.quadraticCurveTo(375,420-z,400,420);
+            ctx.quadraticCurveTo(425,420+z,450,420);
+            ctx.quadraticCurveTo(475,420-z,500,420);
+            ctx.quadraticCurveTo(525,420+z,550,420);
+            ctx.quadraticCurveTo(575,420-z,600,420);
+            ctx.quadraticCurveTo(625,420+z,650,420);
+            ctx.quadraticCurveTo(675,420-z,700,420);
+            ctx.quadraticCurveTo(725,420+z,750,420);
+            ctx.quadraticCurveTo(775,420-z,800,420);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "#55A9A9";
+            ctx.moveTo(50,420);
+            ctx.quadraticCurveTo(100,420-z,150,420);
+            ctx.quadraticCurveTo(200,420+z,250,420);
+            ctx.quadraticCurveTo(300,420-z,350,420);
+            ctx.quadraticCurveTo(400,420+z,450,420);
+            ctx.quadraticCurveTo(500,420-z,550,420);
+            ctx.quadraticCurveTo(600,420+z,650,420);
+            ctx.quadraticCurveTo(700,420-z,750,420);
+            ctx.quadraticCurveTo(800,420+z,850,420);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "blue";
+            ctx.moveTo(50, 440);
+            ctx.quadraticCurveTo(75, 440+z, 100, 440);
+            ctx.quadraticCurveTo(125, 440-z, 150, 440);
+            ctx.quadraticCurveTo(175,440+z,200,440);
+            ctx.quadraticCurveTo(225,440-z,250,440);
+            ctx.quadraticCurveTo(275,440+z,300,440);
+            ctx.quadraticCurveTo(325,440-z,350,440);
+            ctx.quadraticCurveTo(375,440+z,400,440);
+            ctx.quadraticCurveTo(425,440-z,450,440);
+            ctx.quadraticCurveTo(475,440+z,500,440);
+            ctx.quadraticCurveTo(525,440-z,550,440);
+            ctx.quadraticCurveTo(575,440+z,600,440);
+            ctx.quadraticCurveTo(625,440-z,650,440);
+            ctx.quadraticCurveTo(675,440+z,700,440);
+            ctx.quadraticCurveTo(725,440-z,750,440);
+            ctx.quadraticCurveTo(775,440+z,800,440);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "blue";
+            ctx.moveTo(50,440);
+            ctx.quadraticCurveTo(100,440-z,150,440);
+            ctx.quadraticCurveTo(200,440+z,250,440);
+            ctx.quadraticCurveTo(300,440-z,350,440);
+            ctx.quadraticCurveTo(400,440+z,450,440);
+            ctx.quadraticCurveTo(500,440-z,550,440);
+            ctx.quadraticCurveTo(600,440+z,650,440);
+            ctx.quadraticCurveTo(700,440-z,750,440);
+            ctx.quadraticCurveTo(800,440+z,850,440);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "purple";
+            ctx.moveTo(50, 460);
+            ctx.quadraticCurveTo(75, 460+z, 100, 460);
+            ctx.quadraticCurveTo(125, 460-z, 150, 460);
+            ctx.quadraticCurveTo(175,460+z,200,460);
+            ctx.quadraticCurveTo(225,460-z,250,460);
+            ctx.quadraticCurveTo(275,460+z,300,460);
+            ctx.quadraticCurveTo(325,460-z,350,460);
+            ctx.quadraticCurveTo(375,460+z,400,460);
+            ctx.quadraticCurveTo(425,460-z,450,460);
+            ctx.quadraticCurveTo(475,460+z,500,460);
+            ctx.quadraticCurveTo(525,460-z,550,460);
+            ctx.quadraticCurveTo(575,460+z,600,460);
+            ctx.quadraticCurveTo(625,460-z,650,460);
+            ctx.quadraticCurveTo(675,460+z,700,460);
+            ctx.quadraticCurveTo(725,460-z,750,460);
+            ctx.quadraticCurveTo(775,460+z,800,460);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "purple";
+            ctx.moveTo(50,460);
+            ctx.quadraticCurveTo(100,460+z,150,460);
+            ctx.quadraticCurveTo(200,460-z,250,460);
+            ctx.quadraticCurveTo(300,460+z,350,460);
+            ctx.quadraticCurveTo(400,460-z,450,460);
+            ctx.quadraticCurveTo(500,460+z,550,460);
+            ctx.quadraticCurveTo(600,460-z,650,460);
+            ctx.quadraticCurveTo(700,460+z,750,460);
+            ctx.quadraticCurveTo(800,460-z,850,460);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "red";
+            ctx.moveTo(50, 480);
+            ctx.quadraticCurveTo(75, 480-z, 100, 480);
+            ctx.quadraticCurveTo(125, 480+z, 150, 480);
+            ctx.quadraticCurveTo(175,480-z,200,480);
+            ctx.quadraticCurveTo(225,480+z,250,480);
+            ctx.quadraticCurveTo(275,480-z,300,480);
+            ctx.quadraticCurveTo(325,480+z,350,480);
+            ctx.quadraticCurveTo(375,480-z,400,480);
+            ctx.quadraticCurveTo(425,480+z,450,480);
+            ctx.quadraticCurveTo(475,480-z,500,480);
+            ctx.quadraticCurveTo(525,480+z,550,480);
+            ctx.quadraticCurveTo(575,480-z,600,480);
+            ctx.quadraticCurveTo(625,480+z,650,480);
+            ctx.quadraticCurveTo(675,480-z,700,480);
+            ctx.quadraticCurveTo(725,480+z,750,480);
+            ctx.quadraticCurveTo(775,480-z,800,480);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "red";
+            ctx.moveTo(50,480);
+            ctx.quadraticCurveTo(100,480-z,150,480);
+            ctx.quadraticCurveTo(200,480+z,250,480);
+            ctx.quadraticCurveTo(300,480-z,350,480);
+            ctx.quadraticCurveTo(400,480+z,450,480);
+            ctx.quadraticCurveTo(500,480-z,550,480);
+            ctx.quadraticCurveTo(600,480+z,650,480);
+            ctx.quadraticCurveTo(700,480-z,750,480);
+            ctx.quadraticCurveTo(800,480+z,850,480);    
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "orange";
+            ctx.moveTo(50, 500);
+            ctx.quadraticCurveTo(75, 500+z, 100, 500);
+            ctx.quadraticCurveTo(125, 500-z, 150, 500);
+            ctx.quadraticCurveTo(175,500+z,200,500);
+            ctx.quadraticCurveTo(225,500-z,250,500);
+            ctx.quadraticCurveTo(275,500+z,300,500);
+            ctx.quadraticCurveTo(325,500-z,350,500);
+            ctx.quadraticCurveTo(375,500+z,400,500);
+            ctx.quadraticCurveTo(425,500-z,450,500);
+            ctx.quadraticCurveTo(475,500+z,500,500);
+            ctx.quadraticCurveTo(525,500-z,550,500);
+            ctx.quadraticCurveTo(575,500+z,600,500);
+            ctx.quadraticCurveTo(625,500-z,650,500);
+            ctx.quadraticCurveTo(675,500+z,700,500);
+            ctx.quadraticCurveTo(725,500-z,750,500);
+            ctx.quadraticCurveTo(775,500+z,800,500);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "orange";
+            ctx.moveTo(50,500);
+            ctx.quadraticCurveTo(100,500-z,150,500);
+            ctx.quadraticCurveTo(200,500+z,250,500);
+            ctx.quadraticCurveTo(300,500-z,350,500);
+            ctx.quadraticCurveTo(400,500+z,450,500);
+            ctx.quadraticCurveTo(500,500-z,550,500);
+            ctx.quadraticCurveTo(600,500+z,650,500);
+            ctx.quadraticCurveTo(700,500-z,750,500);
+            ctx.quadraticCurveTo(800,500+z,850,500);    
+            ctx.stroke();
+         }
+        
+        /* if(i>=450&&i<=1080){
+
+            
+               ctx.fillRect(300,250,200,200);
+               ctx.lineWidth="10";
+               ctx.strokeStyle="green";
+               ctx.strokeRect(300, 250, 200, 200);
+
+         }*/
+         const currentTime = Date.now();
+          if (currentTime - lastUpdate >= 200) {
+         if(i>=50&&i<=150){
+
+            var x1 = Math.random() * (900 - 100 + 1) + 100;
+            var y1 = Math.random() * (450 - 200 + 1) + 200;
+
+            var x2 = Math.random() * (900 - 100 + 1) + 100;
+            var y2 = Math.random() * (450 - 200 + 1) + 200;
+
+            var x3 = Math.random() * (900 - 100 + 1) + 100;
+            var y3 = Math.random() * (450 - 200 + 1) + 200;
+
+            var x4 = Math.random() * (900 - 100 + 1) + 100;
+            var y4 = Math.random() * (450 - 200 + 1) + 200;
+
+            var x5 = Math.random() * (900 - 100 + 1) + 100;
+            var y5 = Math.random() * (450 - 200 + 1) + 200;
+
+             
+ctx.fillRect(x1,y1,100,100);
+ctx.lineWidth="10";
+ctx.strokeStyle="blue";
+ctx.strokeRect(x1,y1,100,100);
+
+ctx.fillRect(x2,y2,100,100);
+ctx.lineWidth="10";
+ctx.strokeStyle="red";
+ctx.strokeRect(x2,y2,100,100);
+
+ctx.fillRect(x3,y3,100,100);
+ctx.lineWidth="10";
+ctx.strokeStyle="orange";
+ctx.strokeRect(x3,y3,100,100);
+
+ctx.fillRect(x4,y4,100,100);
+ctx.lineWidth="10";
+ctx.strokeStyle="yellow";
+ctx.strokeRect(x4,y4,100,100);
+
+ctx.fillRect(x5,y5,100,100);
+ctx.lineWidth="10";
+ctx.strokeStyle="purple";
+ctx.strokeRect(x5,y5,100,100);
+
+lastUpdate = currentTime;
+            }
+
+}
+if(i>=200&&i<=300){
+
+            
+ctx.fillRect(300,250,200,200);
+ctx.lineWidth="10";
+ctx.strokeStyle="red";
+ctx.strokeRect(300, 250, 200, 200);
+
+}
+if(i>=350&&i<=500){
+
+            
+ctx.fillRect(300,250,200,200);
+ctx.lineWidth="10";
+ctx.strokeStyle="orange";
+ctx.strokeRect(300, 250, 200, 200);
+
+}
+if(i>=550&&i<=700){
+
+            
+ctx.fillRect(300,250,200,200);
+ctx.lineWidth="10";
+ctx.strokeStyle="yellow";
+ctx.strokeRect(300, 250, 200, 200);
+
+}
+if(i>=750&&i<=900){
+
+ctx.fillRect(300,250,200,200);
+ctx.lineWidth="10";
+ctx.strokeStyle="purple";
+ctx.strokeRect(300, 250, 200, 200);       
+
+
+}
+
+if(i==1000){
+   i=0;
+}
+
+
+         if(button3switch){
+                clearInterval(anim3);
+         }
+
+
+         },n)
+
+      })
+    </script>
+
+</body>
+<footer class="hfbackground" id="fixed-bottom">
+   <table>
+    <tr>
+     <td style="width:100%;text-align: center;">
+      <img class="text" id="footer" src="Musimorph---Blue.png" style="width: 100px;height:20px"></img>
+     </td>
+      <td>
+         <img src="social.png" alt="social" height="30" usemap="#workmap2">
+        <map name="workmap2">
+               <area shape="circle" coords="15,15,12" href="https://www.facebook.com/CymaticUniverse">
+           <area shape="circle" coords="48,16,12" href="https://twitter.com/search?q=cymatic&src=typed_query">
+           <area shape="circle" coords="83,16,12" href="https://www.instagram.com/cymatics.worldwide/">
+        </map>
+      </td>
+    </tr>
+  </table>
+ </footer>
+</html>    

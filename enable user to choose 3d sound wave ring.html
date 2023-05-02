@@ -1,0 +1,370 @@
+<html>
+   <head style="padding:0px;width:100%;margin:0px">
+      <link type="text/css" rel="stylesheet" href="webpage css.css">
+        <table style = "width:100%;padding:10px;background-color:black;position:fixed;z-index:2">
+             <th>
+              <a href="homepage 2 titles in centre sound objects and combination.html"><img class="text" id="footer" src="Musimorph---Blue.png" style="width: 100px;height:20px"></img></a>
+            </th>
+            <th style = "width:40%;">
+            </th>
+            <th>
+              <label class="headlabelcolor headlabelhover" id="label">Make</label>
+            </th>
+            <th>
+               <label class="headlabelcolor headlabelhover" id="label">Position</label>
+            </th>
+            
+            <th>
+              <label style = "text-align:right;" class="headlabelcolor headlabelhover">Use</label>
+            </th>
+          </table>
+   
+   </head>
+    </head>
+    <body style="background-color:gray;margin:0px;">
+      <div style="height: 80px"></div>
+      <div style="text-align: center">
+         <img src="Musimorph---Blue.png" style="width: 200px;height:50px"></img>
+      </div>
+      <hr></hr>   
+      <div style="text-align: center;">
+        <canvas id = "myCanvas" style="filter: blur(1.5px);"></canvas>
+         <table style="border-spacing:10px;margin-left:42%;text-align: center">
+            <td class="td tdlabelbuttonhover" style="background-color:black">
+        <label id="button1"  style="margin:10px" class="labelbuttonhover">Type 1</label>
+            </td>
+            <td class="td tdlabelbuttonhover" style="background-color:black">
+        <label id="button2"  style="margin:10px" class="labelbuttonhover">Type 2</label>
+            </td>
+            <td class="td tdlabelbuttonhover" style="background-color:black">
+        <label id="button3"  style="margin:10px" class="labelbuttonhover">Type 3</label>
+            </td>
+         </table>
+      </div>
+      <hr></hr>
+   
+        <script>
+            var button1 = document.getElementById("button1");
+            var button2 = document.getElementById("button2");
+            var button3 = document.getElementById("button3");
+            var myCanvas = document.getElementById("myCanvas");
+            myCanvas.width=500;
+            myCanvas.height=500;
+            myCanvas.style.background = "black";
+            var ctx = myCanvas.getContext("2d");
+            var i=0;
+            var closetype1=false,closetype2=false,closetype3=false;
+            var n=0;
+
+            button1.addEventListener("click", ()=>{
+               i=0;
+               n=500;
+               closetype2 = true;
+               closetype3 = true;
+               closetype1 = false;
+               
+               ctx.clearRect(0,0,500,500);
+           var ani1 = setInterval(() => {
+                ctx.clearRect(0,0,500,500);
+                i= Math.random()*100;
+                
+                
+                  switch(true){
+                     case i<=40:
+                        
+                     ctx.beginPath();
+                        ctx.lineWidth="13";
+                        ctx.strokeStyle = "green";
+                        ctx.ellipse(250,266, 99+i,49+i, 0, 0, 2*Math.PI);
+                        ctx.stroke();
+                        
+                        
+                     ctx.beginPath();
+                        ctx.lineWidth="13";
+                        ctx.strokeStyle = "red";
+                        ctx.ellipse(250,253, 99+i,49+i, 0, 0, 2*Math.PI);
+                        ctx.stroke();
+
+
+                        ctx.beginPath();
+                        ctx.lineWidth="15";
+                        ctx.strokeStyle = "blue";
+                        ctx.ellipse(250,240, 100+i,50+i, 0, 0, 2*Math.PI);
+                        ctx.stroke();
+                        
+
+                        break;
+                     case i>40 && i<=80:
+
+                       
+                     ctx.beginPath();
+                        ctx.lineWidth="13";
+                        ctx.strokeStyle = "red";
+                        ctx.ellipse(250,266, 99+i,49+i, 0, 0, 2*Math.PI);
+                        ctx.stroke();
+                        
+                        
+                     ctx.beginPath();
+                        ctx.lineWidth="13";
+                        ctx.strokeStyle = "blue";
+                        ctx.ellipse(250,253, 99+i,49+i, 0, 0, 2*Math.PI);
+                        ctx.stroke();
+
+
+                        ctx.beginPath();
+                        ctx.lineWidth="15";
+                        ctx.strokeStyle = "pink";
+                        ctx.ellipse(250,240, 100+i,50+i, 0, 0, 2*Math.PI);
+                        ctx.stroke();
+                        
+                      
+                        break;
+                     case i>80 && i<=120:
+
+                   
+                     ctx.beginPath();
+                        ctx.lineWidth="13";
+                        ctx.strokeStyle = "green";
+                        ctx.ellipse(250,266, 99+i,49+i, 0, 0, 2*Math.PI);
+                        ctx.stroke();
+                        
+                        
+                     ctx.beginPath();
+                        ctx.lineWidth="13";
+                        ctx.strokeStyle = "yellow";
+                        ctx.ellipse(250,253, 99+i,49+i, 0, 0, 2*Math.PI);
+                        ctx.stroke();
+
+
+                        ctx.beginPath();
+                        ctx.lineWidth="15";
+                        ctx.strokeStyle = "blue";
+                        ctx.ellipse(250,240, 100+i,50+i, 0, 0, 2*Math.PI);
+                        ctx.stroke();
+                        
+                        
+                      
+                    
+                        break;
+                    default: 
+
+                     ctx.beginPath();
+                        ctx.lineWidth="13";
+                        ctx.strokeStyle = "blue";
+                        ctx.ellipse(250,266, 99+i,49+i, 0, 0, 2*Math.PI);
+                        ctx.stroke();
+                        
+                        
+                     ctx.beginPath();
+                        ctx.lineWidth="13";
+                        ctx.strokeStyle = "red";
+                        ctx.ellipse(250,253, 99+i,49+i, 0, 0, 2*Math.PI);
+                        ctx.stroke();
+
+
+                        ctx.beginPath();
+                        ctx.lineWidth="15";
+                        ctx.strokeStyle = "green";
+                        ctx.ellipse(250,240, 100+i,50+i, 0, 0, 2*Math.PI);
+                        ctx.stroke();
+                        
+                        
+                        
+                }
+
+                if(closetype1){
+                  clearInterval(ani1);
+                }
+                
+            }, n);
+         });
+        button2.addEventListener("click",()=>{
+           i=0;
+           n=50;
+           closetype1 = true;
+           closetype3 = true;
+           closetype2 = false;
+           
+           ctx.clearRect(0,0,500,500);
+           var ani2 = setInterval(() => {
+                ctx.clearRect(0,0,500,500);
+                        
+                i++;
+                switch(true){
+                  case i%4==0:
+                
+                     ctx.beginPath();
+                        ctx.lineWidth="15";
+                        ctx.strokeStyle = "green";
+                        ctx.ellipse(250,266, 200,100, 0, 0, 2*Math.PI);
+                        ctx.stroke();
+                        
+                        
+                     ctx.beginPath();
+                        ctx.lineWidth="15";
+                        ctx.strokeStyle = "red";
+                        ctx.ellipse(250,253, 200,100, 0, 0, 2*Math.PI);
+                        ctx.stroke();
+
+
+                        ctx.beginPath();
+                        ctx.lineWidth="15";
+                        ctx.strokeStyle = "blue";
+                        ctx.ellipse(250,240, 200,100, 0, 0, 2*Math.PI);
+                        ctx.stroke();
+                        
+
+                        break;
+                     case i%4==1:
+
+                       
+                     ctx.beginPath();
+                        ctx.lineWidth="15";
+                        ctx.strokeStyle = "yellow";
+                        ctx.ellipse(250,266, 200,100, 0, 0, 2*Math.PI);
+                        ctx.stroke();
+                        
+                        
+                     ctx.beginPath();
+                        ctx.lineWidth="15";
+                        ctx.strokeStyle = "green";
+                        ctx.ellipse(250,253, 200,100, 0, 0, 2*Math.PI);
+                        ctx.stroke();
+
+
+                        ctx.beginPath();
+                        ctx.lineWidth="15";
+                        ctx.strokeStyle = "red";
+                        ctx.ellipse(250,240, 200,100, 0, 0, 2*Math.PI);
+                        ctx.stroke();
+                        
+                      
+                        break;
+                     case i%6==0:
+
+                   
+                     ctx.beginPath();
+                        ctx.lineWidth="15";
+                        ctx.strokeStyle = "blue";
+                        ctx.ellipse(250,266, 200,100, 0, 0, 2*Math.PI);
+                        ctx.stroke();
+                        
+                        
+                     ctx.beginPath();
+                        ctx.lineWidth="15";
+                        ctx.strokeStyle = "yellow";
+                        ctx.ellipse(250,253, 200,100, 0, 0, 2*Math.PI);
+                        ctx.stroke();
+
+
+                        ctx.beginPath();
+                        ctx.lineWidth="15";
+                        ctx.strokeStyle = "green";
+                        ctx.ellipse(250,240, 200,100, 0, 0, 2*Math.PI);
+                        ctx.stroke();
+                        
+                        
+                      
+                    
+                        break;
+                    case i%6==1: 
+
+                    ctx.beginPath();
+                        ctx.lineWidth="15";
+                        ctx.strokeStyle = "red";
+                        ctx.ellipse(250,266, 200,100, 0, 0, 2*Math.PI);
+                        ctx.stroke();
+                        
+                        
+                     ctx.beginPath();
+                        ctx.lineWidth="15";
+                        ctx.strokeStyle = "blue";
+                        ctx.ellipse(250,253, 200,100, 0, 0, 2*Math.PI);
+                        ctx.stroke();
+
+
+                        ctx.beginPath();
+                        ctx.lineWidth="15";
+                        ctx.strokeStyle = "yellow";
+                        ctx.ellipse(250,240, 200,100, 0, 0, 2*Math.PI);
+                        ctx.stroke();
+                        
+                        
+                        
+                }
+                
+
+                if(closetype2){
+                  clearInterval(ani2);
+                }
+                
+            }, n);
+        })
+
+        button3.addEventListener("click",()=>{
+           i=0;
+           n=50;
+           closetype1 = true;
+           closetype2 = true;
+           closetype3 = false;
+           
+           ctx.clearRect(0,0,500,500);
+           var ani3 = setInterval(() => {
+                ctx.clearRect(0,0,500,500);
+                        i++;
+                    
+                        ctx.beginPath();
+                        ctx.lineWidth="15";
+                        ctx.strokeStyle = "green";
+                        ctx.ellipse(250-i,266, 200,100, 0, 0, 2*Math.PI);
+                        ctx.stroke();
+                        
+                        
+                        ctx.beginPath();
+                        ctx.lineWidth="15";
+                        ctx.strokeStyle = "red";
+                        ctx.ellipse(250,253-i, 200,100, 0, 0, 2*Math.PI);
+                        ctx.stroke();
+
+
+                        ctx.beginPath();
+                        ctx.lineWidth="15";
+                        ctx.strokeStyle = "blue";
+                        ctx.ellipse(250,240+i, 200,100, 0, 0, 2*Math.PI);
+                        ctx.stroke();
+
+                        ctx.beginPath();
+                        ctx.lineWidth="15";
+                        ctx.strokeStyle = "yellow";
+                        ctx.ellipse(250+i,240, 200,100, 0, 0, 2*Math.PI);
+                        ctx.stroke();
+                if(i>50)i=0;
+                     
+                if(closetype3){
+                  clearInterval(ani3);
+                }
+                
+            }, n);
+        })
+
+      
+      </script>
+    </body>
+    <footer class="hfbackground" id="fixed-bottom">
+      <table>
+       <tr>
+        <td style="width:100%;text-align: center;">
+         <img class="text" id="footer" src="Musimorph---Blue.png" style="width: 100px;height:20px"></img>
+        </td>
+         <td>
+            <img src="social.png" alt="social" height="30" usemap="#workmap2">
+           <map name="workmap2">
+                  <area shape="circle" coords="15,15,12" href="https://www.facebook.com/CymaticUniverse">
+              <area shape="circle" coords="48,16,12" href="https://twitter.com/search?q=cymatic&src=typed_query">
+              <area shape="circle" coords="83,16,12" href="https://www.instagram.com/cymatics.worldwide/">
+           </map>
+         </td>
+       </tr>
+     </table>
+    </footer>
+</html>

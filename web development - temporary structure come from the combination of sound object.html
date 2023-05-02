@@ -1,0 +1,160 @@
+<html>
+    <head style="padding:0px;width:100%;margin:0px">
+        <link type="text/css" rel="stylesheet" href="webpage css.css">
+          <table style = "width:100%;padding:10px;background-color:black;position:fixed;z-index:2">
+                 <th>
+                   <a href="homepage 2 titles in centre sound objects and combination.html"><img class="text" id="footer" src="Musimorph---Blue.png" style="width: 100px;height:20px"></img></a>
+                 </th>
+                 <th style = "width:40%;">
+                 </th>
+                 <th>
+                   <label class="headlabelcolor headlabelhover" id="label">Make</label>
+                 </th>
+                 <th>
+                     <label class="headlabelcolor headlabelhover" id="label">Position</label>
+                 </th>
+                 
+                 <th>
+                   <label style = "text-align:right;" class="headlabelcolor headlabelhover">Use</label>
+                 </th>
+              </table>
+        <style>
+            canvas{
+               border:1px solid black;
+            }
+         </style>
+    </head>
+    <body>
+        <canvas id = "myCanvas" style="filter: blur(1.5px);"></canvas>
+        <hr></hr>
+        <button id="button1">combination 1</button>
+        <button id="button2">combination 2</button>
+        <script>
+            var button1 = document.getElementById("button1");
+            var button2 = document.getElementById("button2");
+            var myCanvas = document.getElementById("myCanvas");
+            myCanvas.width=900;
+            myCanvas.height=700;
+            myCanvas.style.background = "gray";
+            var ctx = myCanvas.getContext("2d");
+            var i=0;
+            var combination1Switch, combination2Switch;
+
+          button1.addEventListener("click",function(){
+            combination1Switch = false;
+            combination2Switch = true;
+            i=0,n=50;
+        
+          var anim1 = setInterval(function(){
+
+                i++;
+               
+                if(i<=90){
+               ctx.clearRect(0,0,900,700);
+               ctx.lineWidth="10";
+               ctx.strokeStyle="red";
+               ctx.strokeRect(200+i,100+i,100,100);
+
+               ctx.lineWidth="10";
+               ctx.strokeStyle="orange";
+               ctx.strokeRect(400,100+i,100,100);
+
+               ctx.lineWidth="10";
+               ctx.strokeStyle="yellow";
+               ctx.strokeRect(600-i,100+i,100,100);
+
+               ctx.lineWidth="10";
+               ctx.strokeStyle="green";
+               ctx.strokeRect(600-i,300,100,100);
+
+               ctx.lineWidth="10";
+               ctx.strokeStyle="#459795";
+               ctx.strokeRect(600-i,500-i,100,100);
+
+               ctx.lineWidth="10";
+               ctx.strokeStyle="blue";
+               ctx.strokeRect(400,500-i,100,100);
+
+               ctx.lineWidth="10";
+               ctx.strokeStyle="purple";
+               ctx.strokeRect(200+i,500-i,100,100);
+
+               ctx.lineWidth="10";
+               ctx.strokeStyle="#D35400";
+               ctx.strokeRect(200+i,300,100,100);
+
+                }else{
+                    clearInterval(anim1);
+                }
+
+                if(combination1Switch){
+                    clearInterval(anim1);
+                }
+
+            },n)
+        })
+
+        button2.addEventListener("click",function(){
+            combination1Switch = true;
+            combination2Switch = false;
+            i=0,n=50;
+        
+          var anim2 = setInterval(function(){
+
+                i++;
+ 
+                if(i<=90){
+                ctx.clearRect(0,0,900,700);
+                ctx.beginPath();
+                ctx.lineWidth="10";
+                ctx.strokeStyle="red";
+                ctx.moveTo(450, 100+i);
+                ctx.lineTo(500, 200+i);
+                ctx.lineTo(400, 200+i);
+                ctx.lineTo(450, 100+i);
+                ctx.stroke();
+
+                ctx.beginPath();
+                ctx.lineWidth="10";
+                ctx.strokeStyle="orange";
+                ctx.moveTo(700-i, 350);
+                ctx.lineTo(600-i, 400);
+                ctx.lineTo(600-i, 300);
+                ctx.lineTo(700-i, 350);
+                ctx.stroke();
+
+                ctx.beginPath();
+                ctx.lineWidth="10";
+                ctx.strokeStyle="blue";
+                ctx.moveTo(450, 600-i);
+                ctx.lineTo(400, 500-i);
+                ctx.lineTo(500, 500-i);
+                ctx.lineTo(450, 600-i);
+                ctx.stroke();
+
+                ctx.beginPath();
+                ctx.lineWidth="10";
+                ctx.strokeStyle="purple";
+                ctx.moveTo(200+i, 350);
+                ctx.lineTo(300+i, 300);
+                ctx.lineTo(300+i, 400);
+                ctx.lineTo(200+i, 350);
+                ctx.stroke();
+
+                
+                ctx.lineWidth="10";
+                ctx.strokeStyle="pink";
+                ctx.strokeRect(400,300,100,100);
+                }else{
+                    clearInterval(anim2);
+                }
+
+                if(combination2Switch){
+                    clearInterval(anim2);
+                }
+          },n)
+        })
+               
+        </script>
+    </body>
+</html>
